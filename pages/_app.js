@@ -3,10 +3,22 @@ import Background from '../components/background'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <main>
-      <Component {...pageProps} />
+    <>
+      <main>
+        <Component {...pageProps} />
+      </main>
       <Background />
-    </main>
+      <style jsx>{`
+        main {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+        }
+      `}</style>
+    </>
   )
 }
 

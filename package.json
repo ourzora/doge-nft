@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@svgr/webpack": "^5.5.0",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "granim": "^2.0.0",
     "next": "^10.2.0",
     "react": "^17.0.2",

@@ -1,10 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Granim from 'granim'
+import Stroke from '../public/svg/brush-stroke.svg'
 
 const Background = () => {
-  
   const canvasRef = useRef(null);
-  
   useEffect(() => {
     if(typeof window !== 'undefined') {
       var granimInstance = new Granim({
@@ -26,17 +25,58 @@ const Background = () => {
 
   return (
     <aside className="doge-bg">
-      <canvas ref={canvasRef} id="doge-gradient"></canvas> 
+      <div className="strokes">
+        <div className="paint-1-wrapper">
+          <Stroke className="paint-1" />
+        </div>
+        <div className="paint-2-wrapper">
+          <Stroke className="paint-2" />
+        </div>
+        <div className="paint-3-wrapper">
+          <Stroke className="paint-3" />
+        </div>
+      </div>
+      <canvas ref={canvasRef} id="doge-gradient"></canvas>
       <style jsx>{`
+        .paint-1-wrapper,
+        .paint-2-wrapper,
+        .paint-3-wrapper {
+          position: fixed;
+        }
+        .paint-1-wrapper {
+          width: 20vw;
+          height: 50vh;
+          transform: rotate(120deg);
+          top: 0;
+          left: 0;
+        }
+        .paint-2-wrapper {
+          width: 20vw;
+          height: 50vh;
+          transform: rotate(-120deg);
+          top: 0;
+          right: 0;
+        }
+        .paint-3-wrapper {
+          width: 20vw;
+          height: 50vh;
+          transform: rotate(-50deg);
+          bottom: -20vh;
+          right: 20vw;
+        }
         .doge-bg,
-        #doge-gradient {
+        #doge-gradient,
+        .strokes {
           width: 100vw;
           height: 100vh;
           position: fixed;
           top: 0;
           left: 0;
-          background-color: var(--pink);
           z-index: 0;
+          pointer-events: none;
+        }
+        .strokes {
+          z-index: 1;
         }
       `}</style>
     </aside>

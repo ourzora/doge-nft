@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'animations';
 
 @font-face {
   font-family: 'Comic Sans MS';
@@ -6,10 +7,32 @@
 }
 
 :root {
-  --font: 'Comic Sans MS', arial;
+  /* COLORS ~ STYLE */
   --pink: pink;
-  --big-pad: 4rem;
-  --sidebar: 35rem;
+  --red: red;
+  --white: #FFFFFF;
+  --border-width: 4px;
+  --color-border: 2px solid var(--red);
+  --black-shadow: drop-shadow(0px 0px 5px rgba(0,0,0,.35));
+
+  /* TYPOGRAPHY */
+  --font: 'Comic Sans MS', arial;
+  --text-01: 1.5rem;
+  --text-02: 2.25rem;
+  --text-03: 3rem;
+  --text-04: 5vmin;
+
+  /* SPACING */
+  --space-lg: 6rem;
+  --space-md: 4rem;
+  --space-sm: 2rem;
+  --space-micro: calc(var(--space-sm) / 2);
+
+  /* LAYOUT */
+  --sidebar: 40rem;
+  
+  /* ANIMATION */
+  --ease: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 * {
@@ -24,4 +47,76 @@ html {
 body {
   font-size: 16px;
   font-family: var(--font);
+}
+
+// UI
+.lozenge-button {
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--color-border);
+  background-color: var(--white);
+  filter: var(--black-shadow);
+  color: var(--red);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: var(--text-03);
+  height: var(--space-lg);
+  padding-bottom: .2rem;
+  border-radius: 50rem;
+  text-transform: lowercase;
+}
+
+@media(hover:hover) {
+  .lozenge-button:hover {
+    color: var(--white);
+    background: var(--red);
+  }
+}
+
+// STROKES
+.paint-1 * {
+  fill: blue;
+}
+.paint-2 * {
+  fill: yellow;
+}
+.paint-3 * {
+  fill: red;
+}
+
+
+// ANIMATIONS
+@keyframes shadowColor {
+  0% {
+    filter: drop-shadow(0 0 1.5rem yellow);
+    border-color: white;
+    background-color: red;
+  }
+  25% {
+    filter: drop-shadow(0 0 0.75rem blue);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.75rem green);
+  }
+  75% {
+    filter: drop-shadow(0 0 0.75rem orange);
+  }
+  100% {
+    filter: drop-shadow(0 0 1.75rem red);
+    border-color: yellow;
+    background: green;
+  }
+}
+
+:root {
+  --shadow-animation: shadowColor 2000ms alternate inifinite;
+}
+
+.shadow-animation {
+  animation: shadowColor 2000ms alternate inifinite;
 }

@@ -1,0 +1,29 @@
+@keyframes shadowColor {
+  0% {
+    filter: drop-shadow(0 0 1.5rem yellow);
+    border-color: white;
+    background-color: red;
+  }
+  25% {
+    filter: drop-shadow(0 0 0.75rem blue);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.75rem green);
+  }
+  75% {
+    filter: drop-shadow(0 0 0.75rem orange);
+  }
+  100% {
+    filter: drop-shadow(0 0 1.75rem red);
+    border-color: yellow;
+    background: green;
+  }
+}
+
+:root {
+  --shadow-animation: shadowColor 2000ms alternate inifinite;
+}
+
+.shadow-animation {
+  animation: shadowColor 2000ms alternate inifinite;
+}
