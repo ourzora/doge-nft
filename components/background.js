@@ -14,8 +14,8 @@ const Background = () => {
         states : {
           "default-state": {
             gradients: [
-              ['#FF6347', '#00ff00'],
-              ['#00ffff', '#ffff00']
+              ['#f6f6f6', '#ffffff'],
+              ['#cccccc', '#dddddd']
             ]
           }
         }
