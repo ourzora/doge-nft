@@ -1,0 +1,27 @@
+@import 'reset';
+
+@font-face {
+  font-family: 'Comic Sans MS';
+  src: url('/comic-sans-ms.ttf');
+}
+
+:root {
+  --font: 'Comic Sans MS', arial;
+  --pink: pink;
+  --big-pad: 4rem;
+  --sidebar: 35rem;
+}
+
+* {
+  box-sizing: border-box; 
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font);
+}
