@@ -10,9 +10,10 @@
   /* COLORS ~ STYLE */
   --pink: pink;
   --red: red;
+  --blue: blue;
   --white: #FFFFFF;
   --border-width: 4px;
-  --color-border: 2px solid var(--red);
+  --color-border: 2px solid var(--blue);
   --black-shadow: drop-shadow(0px 0px 5px rgba(0,0,0,.35));
 
   /* TYPOGRAPHY */
@@ -20,24 +21,43 @@
   --text-01: 1.5rem;
   --text-02: 2.25rem;
   --text-03: 3rem;
-  --text-04: 5vmin;
+  --text-04: 4vmin;
 
   /* SPACING */
   --space-lg: 6rem;
   --space-md: 4rem;
   --space-sm: 2rem;
   --space-micro: calc(var(--space-sm) / 2);
+  --gutter: var(--space-sm);
 
   /* LAYOUT */
-  --sidebar: 40rem;
+  --sidebar: 20rem;
+  --innerheight: calc(100vh - (var(--space-md) * 2));
+  --content-wrapper: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
+  --button-height: var(--space-lg);
   
   /* ANIMATION */
   --ease: cubic-bezier(0.7, 0, 0.3, 1);
+  --boing: cubic-bezier(.3,1.64,.83,-0.18);
+}
+
+@media screen and (min-width: 1500px) {
+  :root {
+    --sidebar: 35rem;
+  }
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
 }
 
 * {
   box-sizing: border-box; 
   outline: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -49,6 +69,25 @@ body {
   font-family: var(--font);
 }
 
+// TYPEOGRAPHY
+.text-01 {
+  font-size: var(--text-01);
+}
+.text-02 {
+  font-size: var(--text-02);
+}
+.text-03 {
+  font-size: var(--text-03);
+}
+.text-04 {
+  font-size: var(--text-04);
+}
+
+// EFFECT
+.shadow {
+  filter: var(--black-shadow);
+}
+
 // UI
 .lozenge-button {
   font-family: var(--font);
@@ -58,7 +97,7 @@ body {
   border: var(--color-border);
   background-color: var(--white);
   filter: var(--black-shadow);
-  color: var(--red);
+  color: var(--blue);
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
@@ -74,19 +113,22 @@ body {
 @media(hover:hover) {
   .lozenge-button:hover {
     color: var(--white);
-    background: var(--red);
+    background: var(--blue);
   }
 }
 
 // STROKES
 .paint-1 * {
-  fill: rgb(243, 243, 243);
+  // fill: rgb(243, 243, 243);
+  fill: beige
 }
 .paint-2 * {
-  fill: rgb(233, 233, 233);
+  // fill: rgb(233, 233, 233);
+  fill: pink;
 }
 .paint-3 * {
-  fill: rgb(214, 214, 214);
+  // fill: rgb(214, 214, 214);
+  fill: beige;
 }
 
 

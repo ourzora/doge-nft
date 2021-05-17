@@ -1,21 +1,32 @@
 import Head from '../components/head'
 import Image from 'next/image'
-import Link from 'next/link';
+import Link from 'next/link'
+import characterRandomColor from '../scripts/characterRandomColor'
 
-const Index = () => {
+import DogeCard from '../components/doge-card'
+import DogeHead from '../components/doge-head'
+
+const API_URL = process.env.WORDPRESS_API_URL
+
+export default function Index({ data, title }) {
   return (
-    <div className="home-wrapper">
+    <section className="home-wrapper">
       <Head title="Home" />
-      <ul className="doge-wrapper">
-
-      </ul>
+      <div className="doge-border"/>
+      <nav className="doge-nav-wrapper">
+        {data.options.doge_list.map(
+          (item) => (
+            <DogeCard 
+              key={item.image}
+              doge={item}
+            />
+          )
+        )}
+      </nav>
       <div className="doge-sidebar">
-        <div className="doggie">
-          <Image
-            src="/icons/the-doge.png"
-            alt="Picture of the Doge"
-            layout="fill"
-          />
+        <DogeHead/>
+        <div className="doge-title">
+          <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }}/>
         </div>
         <div className="doge-ui">
           <Link href={'/doge-history'}>
@@ -51,19 +62,48 @@ const Index = () => {
           left: 0;
           z-index: 1;
         }
-        .doge-wrapper {
+        .doge-border,
+        .doge-nav-wrapper {
           width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
           height: calc(100vh - (var(--space-md) * 2));
           position: fixed;
           top: var(--space-md);
           left: var(--space-md);
         }
+        .doge-nav-wrapper {
+          width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
+          height: calc(100vh - (var(--space-md) * 2));
+          position: fixed;
+          top: var(--space-md);
+          left: var(--space-md);
+          overflow-y: scroll;
+          scroll-snap-type: y proximity;
+          display: grid;
+          grid-column-gap: var(--gutter);
+          padding: var(--gutter);
+          grid-template-columns: 1fr 1fr;
+        }
+        .doge-nav-wrapper::-webkit-scrollbar {
+          display: none;
+        }
+        .doge-nav-wrapper:after {
+          content: '';
+          width: 100%;
+          position: relative;
+          height: 6rem;
+        }
+        .doge-border {
+          border: var(--border-width) solid var(--white);
+          border-radius: var(--space-md);
+          animation: shadowColor 14000ms alternate infinite;
+          z-index: 1000;
+          pointer-events: none;
+        }
         .doge-sidebar {
           position: fixed;
           top: var(--space-md);
           right: var(--space-md);
           width: var(--sidebar);
-          height: calc(100vh - (var(--space-md) * 2));
           background-color: var(--white);
           border-radius: var(--space-md);
           animation: shadowColor 14000ms alternate infinite;
@@ -71,37 +111,45 @@ const Index = () => {
           flex-direction: column;
           padding: var(--space-lg) var(--space-sm);
         }
-        .doge-wrapper:after {
-          content: '';
-          position: absolute;
-          top: calc((var(--border-width)) * -1);
-          left: calc((var(--border-width)) * -1);
+        .doge-title {
           width: 100%;
-          height: 100%;
-          border: var(--border-width) solid var(--white);
-          border-radius: var(--space-md);
-          animation: shadowColor 14000ms alternate infinite;
-        }
-        .doggie {
-          width: 20rem;
-          height: 20rem;
-          position: relative;
-          margin: 0 auto;
-          animation: shadowColor 14000ms alternate-reverse infinite;
-        }
-        .doggie img {
-          image-rendering: pixelate;
+          text-align: center;
+          padding-top: var(--space-md);
         }
         .doge-ui {
           position: relative;
           padding: var(--space-md) 0;
         }
         .doge-history-button {
-          transform: rotate(2deg);
+          transform: rotate(2deg) scale(0.95);
+          transition: transform 250ms var(--boing);
+          will-change: transform;
+        }
+        @media(hover:hover) {
+          .doge-history-button:hover {
+            transform: rotate(-2deg) scale(1);
+          }
         }
       `}</style>
-    </div>
+    </section>
   )
 };
 
-export default Index
+export async function getStaticProps() {
+  const res = await fetch(API_URL)
+  const data = await res.json()
+
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
+  
+  const title = characterRandomColor('Good Doge', 'span', 'doge-title');
+  return {
+    props: { data, title },
+  }
+}

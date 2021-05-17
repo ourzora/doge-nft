@@ -15,7 +15,7 @@ const Background = () => {
           "default-state": {
             gradients: [
               ['#f6f6f6', '#ffffff'],
-              ['#cccccc', '#dddddd']
+              ['#e3e3e3', '#dddddd']
             ]
           }
         }
@@ -62,7 +62,7 @@ const Background = () => {
           height: 50vh;
           transform: rotate(-50deg);
           bottom: -20vh;
-          right: 20vw;
+          right: 0;
         }
         .doge-bg,
         #doge-gradient,
@@ -82,6 +82,5 @@ const Background = () => {
     </aside>
   )
 }
-
 
 export default Background;
