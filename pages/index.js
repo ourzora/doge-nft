@@ -26,7 +26,8 @@ export default function Index({ data, title }) {
       <div className="doge-sidebar">
         <DogeHead/>
         <div className="doge-title">
-          <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }}/>
+          <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }} />
+          <p className="text-02 doge-intro" dangerouslySetInnerHTML={{ __html: data.options.intro_copy }} />
         </div>
         <div className="doge-ui">
           <Link href={'/doge-history'}>
@@ -116,14 +117,21 @@ export default function Index({ data, title }) {
           text-align: center;
           padding-top: var(--space-md);
         }
+        .doge-title h1 {
+          transform: rotate(-1deg);
+        }
         .doge-ui {
           position: relative;
-          padding: var(--space-md) 0;
+          padding: var(--space-sm) 0;
         }
         .doge-history-button {
           transform: rotate(2deg) scale(0.95);
           transition: transform 250ms var(--boing);
           will-change: transform;
+        }
+        .doge-intro {
+          padding-top: var(--space-sm);
+          color: var(--blue);
         }
         @media(hover:hover) {
           .doge-history-button:hover {
@@ -148,7 +156,7 @@ export async function getStaticProps() {
     }
   }
   
-  const title = characterRandomColor('Good Doge', 'span', 'doge-title');
+  const title = characterRandomColor('good doge', 'span', 'doge-title');
   return {
     props: { data, title },
   }

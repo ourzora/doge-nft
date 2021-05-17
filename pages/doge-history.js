@@ -8,9 +8,9 @@ const DogeHistory = ({data}) => {
     <section>
       <Head title="ABOUT DOGE" />
       <GoHome />
-      <article className="doge-story text-04">
-        <h1>Doge-Story</h1>
-        <div className="doge-copy" dangerouslySetInnerHTML={{ __html: data.options.about_copy }}/>
+      <article className="doge-story">
+        <h1 className="title-pill">Doge-Story</h1>
+        <div className="doge-copy text-04" dangerouslySetInnerHTML={{ __html: data.options.about_copy }}/>
       </article>
       <style jsx global>{`
         .doge-story {
