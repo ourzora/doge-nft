@@ -2,26 +2,28 @@ import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
 import Image from 'next/image'
+import { css } from '@emotion/css'
 // import { useNFT, useNFTMetadata } from "@zoralabs/nft-hooks"
-import { NFTFullPage } from "@zoralabs/nft-components"
+import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
 
-export const DarkTheme = {
+export const style = {
   theme: {
     previewCard: {
-      background:
-        "linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #696969",
+      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #696969",
     },
     titleFont: {
-      color: "#fff",
+      color: "var(--black)",
       fontWeight: 400,
       fontSize: '14px',
+      fontFamily: 'var(--font)'
     },
     bodyFont: {
-      color: "#fff",
+      color: "var(--black)",
       fontWeight: 300,
-      fontSize: '14px',
+      fontSize: 'var(--text-02)',
+      fontFamily: 'var(--font)'
     },
-    borderStyle: "0",
+    borderStyle: "1",
     lineSpacing: 28,
   },
   styles: {
@@ -37,36 +39,47 @@ const Doge = ({ post }) => {
       <Head title={`${post.title}`} />
       <GoHome />
       <article className="doge-nft">
-        <NFTFullPage
-          id={post.nft_id}
-          showFull={false}
-        />
-        <h1 className="title-pill">{post.title}</h1>
-        <div className="image-container">
-          <div className="doge-nft-image">
-            <Image
-              className="image-wrapper"
-              src={post.image}
-              alt={post.title}
-              layout="fill"
-            />
-          </div>
+        <div className="title-wrapper">
+          <h1 className="title-pill">{post.title}</h1>
         </div>
-        <div className="doge-copy text-04" dangerouslySetInnerHTML={{ __html: post.description }}/>
+        <MediaConfiguration style={style}>
+          <NFTFullPage
+            id={post.nft_id}
+            showFull={false}
+          />
+        </MediaConfiguration>
+        {/*
+          
+          <div className="image-container">
+            <div className="doge-nft-image">
+              <Image
+                className="image-wrapper"
+                src={post.image}
+                alt={post.title}
+                layout="fill"
+              />
+            </div>
+        </div>
+        */}
+        {/* <div className="doge-copy text-04" dangerouslySetInnerHTML={{ __html: post.description }}/> */}
       </article>
       <style jsx global>{`
         .doge-nft {
-          width: calc(100vw - var(--sidebar));
-          left: calc(var(--sidebar) + var(--space-md));
+          width: 100%;
           padding-top: var(--space-lg);
           padding-bottom: var(--space-lg);
           z-index: 1200;
           position: relative;
           margin: 0 auto;
+          max-width: 96rem;
+        }
+        .title-wrapper {
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
         }
         .doge-copy {
           width: 100%;
-          max-width: 150rem;
           line-height: 1.2;
         }
         .doge-copy p {

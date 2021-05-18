@@ -117,12 +117,14 @@ body {
   }
 }
 
-.title-pill {
+.title-pill,
+.zora-fullTitle {
+  font-family: var(--font);
   background-color: var(--white);
   display: inline-flex;
   margin-bottom: var(--space-lg);
   position: relative;
-  font-size: var(--text-05);
+  font-size: var(--text-04);
   padding: 1.5vmin 3vmin 1.85vmin;
   text-transform: lowercase;
   border-radius: 50rem;
@@ -190,4 +192,13 @@ body {
 
 .teeter-animation {
   animation: teeter 2000ms alternate inifinite;
+}
+
+// NFT COMPONENT STYLING
+.zora-fullTitle {
+  display: none;
+}
+.zora-fullMediaWrapper {
+  margin: 0 auto var(--space-lg)!important;
+  filter: drop-shadow(0 0 0.75rem grey);
 }
