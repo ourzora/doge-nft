@@ -2,19 +2,45 @@ import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
 import Image from 'next/image'
-import {useNFT, useNFTMetadata} from "@zoralabs/nft-hooks"
+// import { useNFT, useNFTMetadata } from "@zoralabs/nft-hooks"
+import { NFTFullPage } from "@zoralabs/nft-components"
 
-const API_URL = process.env.WORDPRESS_API_URL
+export const DarkTheme = {
+  theme: {
+    previewCard: {
+      background:
+        "linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #696969",
+    },
+    titleFont: {
+      color: "#fff",
+      fontWeight: 400,
+      fontSize: '14px',
+    },
+    bodyFont: {
+      color: "#fff",
+      fontWeight: 300,
+      fontSize: '14px',
+    },
+    borderStyle: "0",
+    lineSpacing: 28,
+  },
+  styles: {
+    cardItemInfo: () => (css`
+      background: red;
+    `)
+  }
+};
 
 const Doge = ({ post }) => {
-  const { data } = useNFT("3128");
-  console.log(data)
-  
   return (
     <section>
       <Head title={`${post.title}`} />
       <GoHome />
       <article className="doge-nft">
+        <NFTFullPage
+          id={post.nft_id}
+          showFull={false}
+        />
         <h1 className="title-pill">{post.title}</h1>
         <div className="image-container">
           <div className="doge-nft-image">
@@ -70,6 +96,8 @@ const Doge = ({ post }) => {
     </section>
   ) 
 }
+
+const API_URL = process.env.WORDPRESS_API_URL
 
 export async function getStaticPaths() {
   const res = await fetch(API_URL)

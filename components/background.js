@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import Granim from 'granim'
 import Stroke from '../public/svg/brush-stroke.svg'
+import { useRouter } from 'next/router'
 
 const Background = () => {
   const canvasRef = useRef(null);
+  
   useEffect(() => {
     if(typeof window !== 'undefined') {
       var granimInstance = new Granim({

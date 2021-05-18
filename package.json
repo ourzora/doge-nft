@@ -12,13 +12,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.4.0",
     "@svgr/webpack": "^5.5.0",
-    "@zoralabs/nft-hooks": "^0.1.4",
+    "@types/react": "^17.0.5",
+    "@zoralabs/nft-components": "^0.0.2-pre",
+    "@zoralabs/nft-hooks": "^0.1.5",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "granim": "^2.0.0",
+    "merge-anything": "^4.0.1",
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "rm": "^0.1.8",
     "sass": "^1.32.12",
     "tslib": "^2.2.0"
   }
