@@ -41,7 +41,7 @@
   --gutter: var(--space-sm);
 
   /* LAYOUT */
-  --sidebar: 100%;
+  --sidebar: calc(100% - (var(--space-sm) * 2));
   --innerheight: calc(100vh - (var(--space-md) * 2));
   --content-wrapper: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
   --button-height: var(--space-lg);
@@ -189,6 +189,8 @@ body {
   padding-bottom: .2rem;
   border-radius: 50rem;
   text-transform: lowercase;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media(hover:hover) {
@@ -265,15 +267,12 @@ body {
   }
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(-40rem);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -313,6 +312,19 @@ body {
   to {
     transform:rotate(360deg);
   }
+}
+
+@media(--lg) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-40rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }  
 }
 
 :root {

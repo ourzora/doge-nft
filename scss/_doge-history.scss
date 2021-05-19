@@ -1,8 +1,7 @@
 .doge-history {
   &_wrapper {
     width: 100%;
-    padding-top: var(--space-lg);
-    padding-bottom: calc(var(--space-lg) * 2);
+    padding: var(--space-lg) var(--space-md) calc(var(--space-lg) * 2);
     z-index: 1200;
     position: relative;
     margin: 0 auto;

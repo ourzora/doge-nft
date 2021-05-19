@@ -1,14 +1,13 @@
 .doge-nft {
   &_wrapper {
     width: 100%;
-    padding-top: var(--space-lg);
-    padding-bottom: calc(var(--space-lg) * 2);
     z-index: 1200;
     position: relative;
     margin: 0 auto;
     max-width: 70rem;
     animation: fadeUp 250ms var(--ease) 700ms;
     animation-fill-mode: both;
+    padding: var(--space-sm) var(--space-sm) 8rem;
   }
   &_title-wrapper {
     display: flex;
@@ -20,6 +19,15 @@
     line-height: 1.2;
     p {
       padding-bottom: var(--space-lg);
+    }
+  }
+}
+
+@media(--lg) {
+  .doge-nft {
+    &_wrapper {
+      padding-top: var(--space-lg);
+      padding-bottom: calc(var(--space-lg) * 2);
     }
   }
 }

@@ -6,9 +6,13 @@
     height: auto;
     position: relative;
     z-index: 1;
+    animation-fill-mode: both;
   }
   &_wrapper {
     padding: var(--space-sm);
+    opacity: 0;
+    animation: fadeIn 750ms var(--ease) 450ms;
+    animation-fill-mode: both;
   }
   &_nav-wrapper {
     display: grid;
@@ -25,11 +29,14 @@
   &_sidebar {
     position: relative;
     width: var(--sidebar);
+    margin-left: var(--space-sm);
+    margin-top: var(--space-sm);
     background-color: var(--white);
     border-radius: var(--space-md);
     animation: shadowColor 14000ms alternate infinite;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: var(--space-sm);
   }
   &_title {
@@ -72,8 +79,6 @@
       top: 0;
       left: 0;
       z-index: 1;
-      animation: fadeIn 750ms var(--ease) 450ms;
-      animation-fill-mode: both;
     }
     &_left {
       animation: fadeIn 750ms var(--ease) 450ms;
@@ -84,9 +89,9 @@
       top: var(--space-md);
       right: var(--space-md);
       animation: fadeInRight 750ms var(--ease) 450ms;
-      animation-fill-mode: both;
       filter: var(--black-shadow);
       z-index: 10;
+      animation-fill-mode: both;
     }
     &_border,
     &_nav-wrapper {
