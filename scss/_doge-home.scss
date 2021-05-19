@@ -124,7 +124,8 @@
 @media(--xxl) {
   .doge-home {
     &_nav-wrapper {
-      grid-column-gap: var(--gutter);
+      grid-row-gap: 7rem;
+      grid-column-gap: 5rem;
       &:after {
         height: 6rem;
       }

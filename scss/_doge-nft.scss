@@ -1,0 +1,23 @@
+.doge-nft {
+  &_wrapper {
+    width: 100%;
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    z-index: 1200;
+    position: relative;
+    margin: 0 auto;
+    max-width: 68rem;
+  }
+  &_title-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &_copy {
+    width: 100%;
+    line-height: 1.2;
+    p {
+      padding-bottom: var(--space-lg);
+    }
+  }
+}

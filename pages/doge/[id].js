@@ -38,8 +38,8 @@ const Doge = ({ post }) => {
     <section>
       <Head title={`${post.title}`} />
       <GoHome />
-      <article className="doge-nft">
-        <div className="title-wrapper">
+      <article className="doge-nft_wrapper">
+        <div className="doge-nft_title-wrapper">
           <h1 className="title-pill">{post.title}</h1>
         </div>
         <MediaConfiguration style={style}>
@@ -62,49 +62,6 @@ const Doge = ({ post }) => {
         */}
         {/* <div className="doge-copy text-04" dangerouslySetInnerHTML={{ __html: post.description }}/> */}
       </article>
-      <style jsx global>{`
-        .doge-nft {
-          width: 100%;
-          padding-top: var(--space-lg);
-          padding-bottom: var(--space-lg);
-          z-index: 1200;
-          position: relative;
-          margin: 0 auto;
-          max-width: 96rem;
-        }
-        .title-wrapper {
-          display: flex;
-          justify-content: center;
-          margin: 0 auto;
-        }
-        .doge-copy {
-          width: 100%;
-          line-height: 1.2;
-        }
-        .doge-copy p {
-          padding-bottom: var(--space-lg);
-        }
-        .image-container {
-          width: 100%;
-          position: relative;
-          height: 50rem;
-          margin-bottom: var(--space-lg);
-        }
-        .image-wrapper {
-          border-radius: 2rem;
-        }
-        .doge-nft-image {
-          width: 50rem;
-          height: 100%;
-          position: relative;
-        }
-        .doge-nft-image img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-        }
-      `}</style>
     </section>
   ) 
 }
