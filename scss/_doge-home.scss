@@ -72,11 +72,21 @@
       top: 0;
       left: 0;
       z-index: 1;
+      animation: fadeIn 750ms var(--ease) 450ms;
+      animation-fill-mode: both;
+    }
+    &_left {
+      animation: fadeIn 750ms var(--ease) 450ms;
+      position: fixed;
     }
     &_sidebar {
       position: fixed;
       top: var(--space-md);
       right: var(--space-md);
+      animation: fadeInRight 750ms var(--ease) 450ms;
+      animation-fill-mode: both;
+      filter: var(--black-shadow);
+      z-index: 10;
     }
     &_border,
     &_nav-wrapper {
@@ -85,6 +95,8 @@
       position: fixed;
       top: var(--space-md);
       left: var(--space-md);
+      animation: shadowColor 11750ms var(--ease) alternate infinite;
+      animation-fill-mode: both;
     }
     &_nav-wrapper {
       overflow-y: scroll;
@@ -94,6 +106,7 @@
       padding: var(--gutter);
       grid-template-columns: 1fr;
       padding:  6% 5rem;
+      border-radius: var(--space-lg);
       &::-webkit-scrollbar {
         display: none;
       }

@@ -4,7 +4,7 @@ import find from 'lodash/find'
 import Image from 'next/image'
 import { css } from '@emotion/css'
 // import { useNFT, useNFTMetadata } from "@zoralabs/nft-hooks"
-import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
+import { NFTFullPage, FullComponents, NFTPageWrapper, MediaConfiguration } from "@zoralabs/nft-components"
 
 export const style = {
   theme: {
@@ -14,24 +14,32 @@ export const style = {
     titleFont: {
       color: "var(--black)",
       fontWeight: 400,
-      fontSize: '14px',
+      fontSize: 'var(--text-02)',
       fontFamily: 'var(--font)'
     },
     bodyFont: {
-      color: "var(--black)",
+      color: "var(--blue)",
       fontWeight: 300,
       fontSize: 'var(--text-02)',
       fontFamily: 'var(--font)'
     },
-    borderStyle: "1",
-    lineSpacing: 28,
-  },
-  styles: {
-    cardItemInfo: () => (css`
-      background: red;
-    `)
+    defaultBorderRadius: 20
   }
 };
+/*
+const NFTFullPage = ({id}) => {
+  return (
+    <NFTPageWrapper id={id}>
+      <FullComponents.MediaInfo />
+      <FullComponents.PlaceOfferButton />
+      <FullComponents.AuctionInfo />
+      <FullComponents.ProofAuthenticity />
+      <FullComponents.BidHistory />
+      <FullComponents.CreatorEquity />
+    </NFTPageWrapper>
+  );
+};
+*/
 
 const Doge = ({ post }) => {
   return (
@@ -39,28 +47,20 @@ const Doge = ({ post }) => {
       <Head title={`${post.title}`} />
       <GoHome />
       <article className="doge-nft_wrapper">
-        <div className="doge-nft_title-wrapper">
-          <h1 className="title-pill">{post.title}</h1>
-        </div>
+        {/*<NFTPageWrapper id={post.nft_id}>
+            <FullComponents.MediaInfo />
+            <FullComponents.PlaceOfferButton />
+            <FullComponents.AuctionInfo />
+            <FullComponents.ProofAuthenticity />
+            <FullComponents.BidHistory />
+            <FullComponents.CreatorEquity />
+          </NFTPageWrapper>*/}
         <MediaConfiguration style={style}>
           <NFTFullPage
             id={post.nft_id}
-            showFull={false}
+            showFull={true}
           />
         </MediaConfiguration>
-        {/*   
-          <div className="image-container">
-            <div className="doge-nft-image">
-              <Image
-                className="image-wrapper"
-                src={post.image}
-                alt={post.title}
-                layout="fill"
-              />
-            </div>
-        </div>
-        */}
-        {/* <div className="doge-copy text-04" dangerouslySetInnerHTML={{ __html: post.description }}/> */}
       </article>
     </section>
   ) 

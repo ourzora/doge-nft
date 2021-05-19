@@ -1,0 +1,28 @@
+.doge-history {
+  &_wrapper {
+    width: 100%;
+    padding-top: var(--space-lg);
+    padding-bottom: calc(var(--space-lg) * 2);
+    z-index: 1200;
+    position: relative;
+    margin: 0 auto;
+    max-width: 70rem;
+    animation: fadeUp 650ms var(--ease);
+    animation-fill-mode: both;
+    p {
+      padding-bottom: var(--space-lg);
+      line-height: 1.2;
+      color: var(--blue);
+    }
+  }
+  &_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-image: url('/doge-bitmap-bg.png');
+    mix-blend-mode: multiply;
+  }
+}

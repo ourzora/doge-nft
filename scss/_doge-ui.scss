@@ -23,6 +23,8 @@
     overflow: visible;
     z-index: 10;
     transition: all 250ms var(--boing);
+    animation: fadeIn 550ms var(--ease) 250ms;
+    animation-fill-mode: both;
     * {
       transition: all 250ms var(--boing);
     }
@@ -44,8 +46,11 @@
     left: -15rem;
     z-index: 0;
   }
-  &_paint * {
-    fill: yellow;
+  &_paint {
+    overflow: visible;
+    * {
+      fill: yellow;
+    }
   }
 }
 
@@ -77,6 +82,9 @@
     &_wrapper:hover {
       path {
         animation: shadowColor 500ms alternate-reverse infinite;
+      }
+      .doggie {
+        animation: spin 5000ms infinite linear;
       }
       .go-home_cta {
         transform: translateY(-.75rem) rotate(2deg) scale(1.125);

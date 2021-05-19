@@ -1,0 +1,104 @@
+// NFT COMPONENT STYLING
+.zora {
+  &-fullMediaWrapper {
+    margin: 0 auto var(--space-md)!important;
+    filter: drop-shadow(0 0 0.75rem grey);
+  }
+  &-fullItemInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &-fullLabel {
+    opacity: 1!important;
+  }
+  &-pricingAmount,
+  &-fullPageHistoryItemDatestamp {
+    color: var(--price-color)!important;
+    opacity: 1!important;
+  }
+  &-fullTitle {
+    margin: 0 auto!important;
+  }
+  &-fullDescription {
+    text-align: center;
+    padding: var(--space-sm) 0 var(--space-md);
+    font-size: var(--text-03);
+    border-bottom: 3px solid var(--blue);
+    margin-bottom: var(--space-md)!important;
+    position: relative;
+    display: flex;
+  }
+  &-infoContainer {
+    background-color: white;
+    border-radius: var(--gutter);
+    padding: var(--gutter);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: var(--gutter);
+    filter: var(--sm-shadow);
+  }
+  &-fullPageHistoryItem {
+    width: 100%;
+    display: flex;
+    flex-direction: row!important;
+    border-bottom: 1px dashed var(--light-grey);
+    padding: 1rem 0;
+    justify-content: space-between;
+    * {
+      font-size: var(--text-01)!important;
+    }
+  }
+  &-fullCreatorOwnerSection {
+    grid-column-gap: 2rem!important;
+    align-items: center!important;
+    .zora-fullLabel {
+      margin: auto!important;
+    }
+    * {
+      text-align: center!important;
+    }
+  }
+  &-fullProofLink {
+    border: 0!important;
+    font-size: var(--text-01);
+    color: var(--blue)!important;
+    text-decoration: underline!important;
+    &::after {
+      display: none!important;
+    }
+    &:hover {
+      background-color: transparent!important;
+      color: var(--price-color)!important;
+    }
+  }
+  &-textSubdued {
+    color: orange!important;
+    opacity: 1!important;
+  }
+  &-fullLabel {
+    display: flex;
+    align-items: center;
+  }
+  &-button {
+    margin: 0 auto var(--space-sm)!important;
+    display: flex!important;
+    justify-content: center;
+    position: relative;
+    max-width: 14rem!important;
+    border-radius: 50rem!important;
+    animation: var(--teeter-animation);
+    animation-fill-mode: both;
+    background-color: var(--white)!important;
+    border: 3px solid var(--price-color)!important;
+    color: var(--price-color)!important;
+    &:hover {
+      animation: var(--shadow-animation);
+      color: var(--white)!important;
+      background-color: var(--price-color)!important;
+    }
+  }
+}

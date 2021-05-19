@@ -2,11 +2,13 @@
   &_wrapper {
     width: 100%;
     padding-top: var(--space-lg);
-    padding-bottom: var(--space-lg);
+    padding-bottom: calc(var(--space-lg) * 2);
     z-index: 1200;
     position: relative;
     margin: 0 auto;
-    max-width: 68rem;
+    max-width: 70rem;
+    animation: fadeUp 250ms var(--ease) 700ms;
+    animation-fill-mode: both;
   }
   &_title-wrapper {
     display: flex;

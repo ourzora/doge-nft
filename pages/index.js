@@ -10,7 +10,7 @@ const API_URL = process.env.WORDPRESS_API_URL
 
 export default function Index({ data, title }) {
   return (
-    <section className="doge-home_wrapper">
+    <>
       <Head title="Home" />
       <div className="doge-home_sidebar">
         <DogeHead/>
@@ -24,18 +24,20 @@ export default function Index({ data, title }) {
           </Link>
         </div>
       </div>
-      <div className="doge-home_border" />
-      <nav className="doge-home_nav-wrapper">
-        {data.options.doge_list.map(
-          (item) => (
-            <DogeCard 
-              key={item.image}
-              doge={item}
-            />
-          )
-        )}
-      </nav>
-    </section>
+      <section className="doge-home_wrapper">
+        <div className="doge-home_border" />
+        <nav className="doge-home_nav-wrapper">
+          {data.options.doge_list.map(
+            (item) => (
+              <DogeCard 
+                key={item.image}
+                doge={item}
+              />
+            )
+          )}
+        </nav>
+      </section>
+    </>
   )
 };
 

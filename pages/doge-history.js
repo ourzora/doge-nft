@@ -8,29 +8,11 @@ const DogeHistory = ({data}) => {
     <section>
       <Head title="ABOUT DOGE" />
       <GoHome />
-      <article className="doge-story">
+      <article className="doge-history_wrapper">
         <h1 className="title-pill">Doge-Story</h1>
-        <div className="doge-copy text-04" dangerouslySetInnerHTML={{ __html: data.options.about_copy }}/>
+        <div className="doge-copy text-03" dangerouslySetInnerHTML={{ __html: data.options.about_copy }}/>
       </article>
-      <style jsx global>{`
-        .doge-story {
-          width: calc(100vw - var(--sidebar));
-          left: calc(var(--sidebar) + var(--space-md));
-          padding-top: var(--space-lg);
-          padding-bottom: var(--space-lg);
-          z-index: 1200;
-          position: relative;
-          margin: 0 auto;
-        }
-        .doge-copy {
-          width: 100%;
-          max-width: 150rem;
-          line-height: 1.2;
-        }
-        .doge-copy p {
-          padding-bottom: var(--space-lg);
-        }
-      `}</style>
+      <aside className="doge-history_bg"></aside>
     </section>
   )
 }
