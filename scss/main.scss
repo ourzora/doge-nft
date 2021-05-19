@@ -2,6 +2,7 @@
 @import 'animations';
 @import 'doge-home';
 @import 'doge-card';
+@import 'doge-ui';
 
 @font-face {
   font-family: 'Comic Sans MS';
@@ -160,8 +161,8 @@ body {
   white-space: nowrap;
   position: relative;
   letter-spacing: 1px;
-  font-size: var(--text-03);
-  height: var(--space-lg);
+  font-size: var(--text-02);
+  height: 5rem;
   padding-bottom: .2rem;
   border-radius: 50rem;
   text-transform: lowercase;

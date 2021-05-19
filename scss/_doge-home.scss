@@ -1,7 +1,4 @@
 .doge-home {
-  &_wrapper {
-    padding: var(--space-sm);
-  }
   &_wrapper,
   &_nav-wrapper,
   &_border {
@@ -10,9 +7,17 @@
     position: relative;
     z-index: 1;
   }
+  &_wrapper {
+    padding: var(--space-sm);
+  }
+  &_nav-wrapper {
+    display: grid;
+    grid-row-gap: 6rem;
+    padding: 3rem 0 6rem;
+  }
   &_border {
     border: var(--border-width) solid var(--white);
-    border-radius: var(--space-md);
+    border-radius: var(--space-lg);
     animation: shadowColor 14000ms alternate infinite;
     z-index: 1000;
     pointer-events: none;
@@ -45,7 +50,7 @@
     will-change: transform;
   }
   &_intro {
-    padding-top: var(--space-sm);
+    padding: var(--space-md) 0;
     color: var(--blue);
   }
 }
@@ -85,9 +90,10 @@
       overflow-y: scroll;
       scroll-snap-type: y proximity;
       display: grid;
-      // 
+      grid-row-gap: 15%;
       padding: var(--gutter);
       grid-template-columns: 1fr;
+      padding:  6% 5rem;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -95,7 +101,7 @@
         content: '';
         width: 100%;
         position: relative;
-        height: 6rem;
+        height: 2rem;
       }
     }
   }
@@ -104,10 +110,13 @@
 @media(--xl) {
   .doge-home {
     &_sidebar {
-      padding: var(--space-lg) var(--space-sm);
+      padding: var(--space-md) var(--space-sm) var(--space-lg);
     }
     &_nav-wrapper {
       grid-template-columns: 1fr 1fr;
+      padding:  3rem;
+      grid-row-gap: 5rem;
+      grid-column-gap: 3rem;
     }
   } 
 }
@@ -116,6 +125,9 @@
   .doge-home {
     &_nav-wrapper {
       grid-column-gap: var(--gutter);
+      &:after {
+        height: 6rem;
+      }
     }
   }
 }
