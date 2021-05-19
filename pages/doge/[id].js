@@ -48,8 +48,7 @@ const Doge = ({ post }) => {
             showFull={false}
           />
         </MediaConfiguration>
-        {/*
-          
+        {/*   
           <div className="image-container">
             <div className="doge-nft-image">
               <Image

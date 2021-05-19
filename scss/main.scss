@@ -1,5 +1,7 @@
 @import 'reset';
 @import 'animations';
+@import 'doge-home';
+@import 'doge-card';
 
 @font-face {
   font-family: 'Comic Sans MS';
@@ -18,21 +20,21 @@
 
   /* TYPOGRAPHY */
   --font: 'Comic Sans MS', arial;
-  --text-01: 1.5rem;
-  --text-02: 2.25rem;
-  --text-03: 3rem;
-  --text-04: 3.5vmin;
-  --text-05: 5vmin;
+  --text-01: 1.25rem;
+  --text-02: 2rem;
+  --text-03: 2.5rem;
+  --text-04: 3rem;
+  --text-05: 4rem;
 
   /* SPACING */
-  --space-lg: 6rem;
-  --space-md: 4rem;
-  --space-sm: 2rem;
+  --space-lg: 3.5rem;
+  --space-md: 2.5rem;
+  --space-sm: 1.5rem;
   --space-micro: calc(var(--space-sm) / 2);
   --gutter: var(--space-sm);
 
   /* LAYOUT */
-  --sidebar: 20rem;
+  --sidebar: 100%;
   --innerheight: calc(100vh - (var(--space-md) * 2));
   --content-wrapper: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
   --button-height: var(--space-lg);
@@ -42,9 +44,46 @@
   --boing: cubic-bezier(.3,1.64,.83,-0.18);
 }
 
-@media screen and (min-width: 1500px) {
+@media (--lg) {
   :root {
-    --sidebar: 35rem;
+    --sidebar: 30rem;
+    /* SPACING */
+    --space-lg: 3.5rem;
+    --space-md: 2.5rem;
+    --space-sm: 1.5rem;
+    /* TYPOGRAPHY
+    --text-01: 1.25rem;
+    --text-02: 2rem;
+    --text-03: 2.5rem;
+    --text-04: 3rem;
+    --text-05: 4rem;
+     */
+  }
+}
+
+@media (--xl) {
+  :root {
+    --sidebar: 27rem;
+    /* SPACING */
+    --space-lg: 3.5rem;
+    --space-md: 2.5rem;
+    --space-sm: 1.5rem;
+    /* TYPOGRAPHY */
+    --text-01: 1.5rem;
+    --text-02: 2.25rem;
+    --text-03: 3rem;
+    --text-04: 3.5vmin;
+    --text-05: 5vmin;
+  }
+}
+
+@media (--xxl) {
+  :root {
+    --sidebar: 30rem;
+    /* SPACING */
+    --space-lg: 5rem;
+    --space-md: 3rem;
+    --space-sm: 2rem;
   }
 }
 
@@ -62,7 +101,25 @@ a {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 58%;
+}
+
+@media (--lg) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (--xl) {
+  html {
+    font-size: 64%;
+  }
+}
+
+@media (--xxl) {
+  html {
+    font-size: 80%;
+  }
 }
 
 body {

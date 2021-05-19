@@ -26,5 +26,9 @@
     "rm": "^0.1.8",
     "sass": "^1.32.12",
     "tslib": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss-custom-media": "^8.0.0"
   }
 }

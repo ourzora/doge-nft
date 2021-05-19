@@ -1,0 +1,129 @@
+.doge-home {
+  &_wrapper {
+    padding: var(--space-sm);
+  }
+  &_wrapper,
+  &_nav-wrapper,
+  &_border {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+  &_border {
+    border: var(--border-width) solid var(--white);
+    border-radius: var(--space-md);
+    animation: shadowColor 14000ms alternate infinite;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  &_sidebar {
+    position: relative;
+    width: var(--sidebar);
+    background-color: var(--white);
+    border-radius: var(--space-md);
+    animation: shadowColor 14000ms alternate infinite;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-sm);
+  }
+  &_title {
+    width: 100%;
+    text-align: center;
+    padding-top: var(--space-md);
+    h1 {
+      transform: rotate(-1deg);
+    }
+  }
+  &_ui {
+    position: relative;
+    padding: var(--space-sm) 0;
+  }
+  &_history-button {
+    transform: rotate(2deg) scale(0.95);
+    transition: transform 250ms var(--boing);
+    will-change: transform;
+  }
+  &_intro {
+    padding-top: var(--space-sm);
+    color: var(--blue);
+  }
+}
+
+@media(--portrait) {
+  .doge-home {
+    &_border {
+      display: none;
+    }
+  }
+}
+
+@media(--lg) {
+  .doge-home {
+    &_wrapper {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    &_sidebar {
+      position: fixed;
+      top: var(--space-md);
+      right: var(--space-md);
+    }
+    &_border,
+    &_nav-wrapper {
+      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
+      height: calc(100vh - (var(--space-md) * 2));
+      position: fixed;
+      top: var(--space-md);
+      left: var(--space-md);
+    }
+    &_nav-wrapper {
+      overflow-y: scroll;
+      scroll-snap-type: y proximity;
+      display: grid;
+      // 
+      padding: var(--gutter);
+      grid-template-columns: 1fr;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &:after {
+        content: '';
+        width: 100%;
+        position: relative;
+        height: 6rem;
+      }
+    }
+  }
+}
+
+@media(--xl) {
+  .doge-home {
+    &_sidebar {
+      padding: var(--space-lg) var(--space-sm);
+    }
+    &_nav-wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  } 
+}
+
+@media(--xxl) {
+  .doge-home {
+    &_nav-wrapper {
+      grid-column-gap: var(--gutter);
+    }
+  }
+}
+
+@media(--hover) {
+  .doge-home {
+    &_history-button:hover {
+      transform: rotate(-2deg) scale(1);
+    }
+  }
+}
