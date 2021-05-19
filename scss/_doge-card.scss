@@ -1,15 +1,10 @@
 .doge-card {
-  &_item {
-    position: relative;
-    width: 100%;
-    padding: var(--space-md);
-  }
   &_wrapper {
     position: relative;
-    height: 0;
-    overflow-y: visible;
-    padding-bottom: 75%;
+    height: calc(var(--innerheight) / 1.75);
+    min-height: 50rem;
     width: 100%;
+    padding: var(--space-md);
     transition: transform 450ms var(--boing);
     will-change: transform;
     cursor: pointer;
