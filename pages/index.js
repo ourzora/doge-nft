@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import characterRandomColor from '../scripts/characterRandomColor'
 
-import DogeCard from '../components/doge-card'
+import DogeCard from '../components/doge-nft-card'
 import DogeHead from '../components/doge-head'
 
 const API_URL = process.env.WORDPRESS_API_URL

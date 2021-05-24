@@ -16,7 +16,7 @@
     }
   }
   &_wrapper-inner {
-    padding: var(--space-md);
+    // padding: var(--space-md);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -55,6 +55,75 @@
   }
 }
 
+.doge-card_wrapper {
+  .zora {
+    &-cardOuter {
+      border: 0;
+      background-color: var(--transparent);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: visible;
+      * {
+        font-family: var(--font)!important;
+      }
+    }
+    &-cardMediaWrapper {
+      width: 100%!important;
+      height: 100%!important;
+      border-radius: 3rem;
+    }
+    &-cardAuctionPricing {
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      border-radius: 10px;
+      background-color: var(--blue);
+      filter: var(--black-shadow);
+      border: 0;
+      opacity: 0;
+      transform: scale(.8);
+      transition: transform 350ms var(--boing), opacity 150ms var(--ease);
+      * {
+        color: var(--white)!important;
+      }
+    }
+    &-pricingAmount {
+      padding-right: 1rem;
+    }
+    &-cardItemInfo {
+      border: 0;
+      padding: 0 var(--space-md);
+      height: var(--button-height);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: calc((var(--button-height) / 2) * -1);
+      right: 3rem;
+      z-index: 100;
+      font-size: var(--text-02);
+      border-radius: 50rem;
+      background: blue;
+      color: white;
+      transition: all 350ms var(--ease);
+      box-shadow:
+        0 0 5px 0px blue,
+        0 0 5px 5px #fff,
+        0 0 7px 9px #f0f,
+        0 0 10px 12px #0ff;
+      div {
+        display: none;
+      }
+      .zora-cardTitle {
+        display: block;
+      }
+    }
+  }
+}
+
 @media(--lg) {
   .doge-card {
     &_wrapper {
@@ -75,19 +144,21 @@
 }
 
 @media(hover:hover) {
-  .doge-card {
-    &_wrapper:hover {
-      transform: rotate(-2deg) scale(1.05);
-      animation: shadowColor 250ms alternate-reverse infinite;
-      z-index: 2000;
-      .card-title {
-        transform: rotate(2deg);
-        box-shadow:
-          0 0 10px 0px blue,
-          0 0 20px 10px #fff,
-          0 0 30px 30px #f0f,
-          0 0 35px 50px #0ff;
-      }
+  .doge-card_wrapper:hover {
+    transform: rotate(-2deg) scale(1.05);
+    animation: shadowColor 250ms alternate-reverse infinite;
+    z-index: 2000;
+    .zora-cardAuctionPricing {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .zora-cardItemInfo {
+      transform: rotate(2deg);
+      box-shadow:
+        0 0 10px 0px blue,
+        0 0 20px 10px #fff,
+        0 0 30px 30px #f0f,
+        0 0 35px 50px #0ff;
     }
   }
 }
