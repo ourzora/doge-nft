@@ -70,20 +70,24 @@
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 8rem;
     background-color: var(--kym-blue);
     color: var(--white);
-    padding: 1rem 2rem;
-    text-align: center;
-    border-radius: 50%;
+    padding: 0 2rem;
+    text-align: left;
+    border-radius: 2rem;
     overflow: hidden;
     filter: var(--black-shadow);
     font-size: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   &_kym-logo {
-    width: 9rem;
-    height: 9rem;
+    width: 22rem;
+    height: 100%;
     position: relative;
     margin: 0 auto;
   }
@@ -96,5 +100,16 @@
     z-index: 0;
     background-image: url('/doge-bitmap-bg.png');
     mix-blend-mode: multiply;
+  }
+}
+
+@media(--hover) {
+  .doge-history {
+    &_kym {
+      transition: transform 250ms var(--boing);
+    }
+    &_kym:hover {
+      transform: rotate(-1deg);
+    }
   }
 }

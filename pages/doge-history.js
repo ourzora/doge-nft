@@ -12,8 +12,8 @@ const DogeHistory = ({data}) => {
       <GoHome />
       <AboutCopy />
       <aside className="doge-history_bg"></aside>
-      <div className="doge-history_kym">
-        <p>Written and prepared by Know Your Meme</p>s
+      <a href="https://knowyourmeme.com/" target="_blank" className="doge-history_kym">
+        <p>Written and prepared by Know Your Meme</p>
         <div className="doge-history_kym-logo">
           <Image
             src={'/about-pictures/know-your-meme-logo.png'}
@@ -21,7 +21,7 @@ const DogeHistory = ({data}) => {
             objectFit="contain"
           />
         </div>
-      </div>
+      </a>
     </section>
   )
 }
