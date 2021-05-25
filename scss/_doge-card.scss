@@ -7,6 +7,7 @@
     overflow-y: visible;
     transition: transform 450ms var(--boing);
     will-change: transform;
+    animation: var(--teeter-animation);
     cursor: pointer;
     img {
       object-fit: cover;
@@ -16,7 +17,6 @@
     }
   }
   &_wrapper-inner {
-    // padding: var(--space-md);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -32,27 +32,6 @@
     border-radius: 3rem;
     overflow: hidden;
   }
-  &_title {
-    padding: 0 var(--space-md);
-    height: var(--button-height);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: calc((var(--button-height) / 2) * -1);
-    right: 3rem;
-    z-index: 100;
-    font-size: var(--text-02);
-    border-radius: 50rem;
-    background: blue;
-    color: white;
-    transition: all 350ms var(--ease);
-    box-shadow:
-      0 0 5px 0px blue,
-      0 0 5px 5px #fff,
-      0 0 7px 9px #f0f,
-      0 0 10px 12px #0ff;
-  }
 }
 
 .doge-card_wrapper {
@@ -66,6 +45,7 @@
       top: 0;
       left: 0;
       overflow: visible;
+      margin: 0!important;
       * {
         font-family: var(--font)!important;
       }
@@ -88,10 +68,12 @@
       transition: transform 350ms var(--boing), opacity 150ms var(--ease);
       * {
         color: var(--white)!important;
+        font-size: var(--text-01);
+        line-height: 1.25;
       }
     }
     &-pricingAmount {
-      padding-right: 1rem;
+      padding-right: 2rem;
     }
     &-cardItemInfo {
       border: 0;
@@ -139,6 +121,17 @@
     &_wrapper {
       padding-bottom: 78%;
       width: 100%;
+    }
+  }
+}
+
+@media (hover: none) {
+  .doge-card_wrapper {
+    .zora {
+      &-cardAuctionPricing {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 }

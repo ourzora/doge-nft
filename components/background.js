@@ -17,7 +17,7 @@ const Background = () => {
           "default-state": {
             gradients: [
               ['#f6f6f6', '#ffffff'],
-              ['#e3e3e3', '#dddddd']
+              ['#e3e3e3', '#f6f6f6']
             ]
           }
         }
@@ -29,13 +29,13 @@ const Background = () => {
     <aside className="doge-bg">
       <div className="strokes">
         <div className="paint-1-wrapper">
-          <Stroke className="paint-1" />
+          <Stroke className="paint-1 pulse-animation light-shadow" />
         </div>
         <div className="paint-2-wrapper">
-          <Stroke className="paint-2" />
+          <Stroke className="paint-2 pulse-animation light-shadow" />
         </div>
         <div className="paint-3-wrapper">
-          <Stroke className="paint-3" />
+          <Stroke className="paint-3 pulse-animation light-shadow" />
         </div>
       </div>
       <canvas ref={canvasRef} id="doge-gradient"></canvas>

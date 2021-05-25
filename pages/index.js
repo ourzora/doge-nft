@@ -29,7 +29,7 @@ export default function Index({ data, title }) {
         <nav className="doge-home_nav-wrapper">
           {data.options.doge_list.map(
             (item) => (
-              <DogeCard 
+              <DogeCard
                 key={item.image}
                 doge={item}
               />
