@@ -5,14 +5,91 @@
     z-index: 1200;
     position: relative;
     margin: 0 auto;
-    max-width: 70rem;
+    max-width: 76rem;
     animation: fadeUp 650ms var(--ease);
     animation-fill-mode: both;
+    display: grid;
+    grid-row-gap: var(--space-md);
     p {
       padding-bottom: var(--space-lg);
       line-height: 1.2;
-      color: var(--blue);
+      color: var(--black);
+      font-size: var(--text-02);
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
+    h1 {
+      margin: var(--space-lg) auto;
+    }
+  }
+  &_module {
+    &:nth-child(even) {
+      transform: rotate(-.5deg);
+    }
+    &:nth-child(odd) {
+      transform: rotate(.5deg);
+    }
+    &.copy {
+      background-color: var(--white);
+      filter: var(--black-shadow);
+      border-radius: 3rem;
+      padding: var(--space-md);
+    }
+    &.video {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: visible;
+      div:first-child,
+      iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+  &_images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--space-sm);
+    width: 100%;
+    position: relative;
+    filter: var(--black-shadow);
+  }
+  &_image-wrapper {
+    width: 100%;
+    padding-top: 75%;
+    position: relative;
+    img {
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+  }
+  &_kym {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 20rem;
+    height: 8rem;
+    background-color: var(--kym-blue);
+    color: var(--white);
+    padding: 0 2rem;
+    text-align: left;
+    border-radius: 2rem;
+    overflow: hidden;
+    filter: var(--black-shadow);
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  &_kym-logo {
+    width: 22rem;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
   }
   &_bg {
     position: fixed;
@@ -23,5 +100,16 @@
     z-index: 0;
     background-image: url('/doge-bitmap-bg.png');
     mix-blend-mode: multiply;
+  }
+}
+
+@media(--hover) {
+  .doge-history {
+    &_kym {
+      transition: transform 250ms var(--boing);
+    }
+    &_kym:hover {
+      transform: rotate(-1deg);
+    }
   }
 }

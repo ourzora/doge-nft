@@ -26,6 +26,24 @@
     z-index: 1000;
     pointer-events: none;
   }
+  &_hero {
+    width: 100%;
+    position: relative;
+    animation-fill-mode: both;
+    padding-top: 73%;
+  }
+  &_hero-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &_grid-item {
+    width: 100%;
+    position: relative;
+    padding-top: 75%;
+  }
   &_sidebar {
     position: relative;
     width: var(--sidebar);
@@ -37,7 +55,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--space-sm);
+    padding: var(--space-md) var(--space-sm) var(--space-sm);
   }
   &_title {
     width: 100%;
@@ -80,6 +98,10 @@
       left: 0;
       z-index: 1;
     }
+    &_hero {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
     &_left {
       animation: fadeIn 750ms var(--ease) 450ms;
       position: fixed;
@@ -92,6 +114,8 @@
       filter: var(--black-shadow);
       z-index: 10;
       animation-fill-mode: both;
+      margin-left: 0;
+      margin-top: 0;
     }
     &_border,
     &_nav-wrapper {
@@ -119,7 +143,8 @@
         content: '';
         width: 100%;
         position: relative;
-        height: 2rem;
+        height: 1rem;
+        grid-column: span 2;
       }
     }
   }
@@ -128,28 +153,34 @@
 @media(--xl) {
   .doge-home {
     &_sidebar {
-      padding: var(--space-md) var(--space-sm) var(--space-lg);
+      padding: var(--space-md) var(--space-sm) var(--space-sm);
     }
     &_nav-wrapper {
       grid-template-columns: 1fr 1fr;
-      padding:  3rem;
-      grid-row-gap: 5rem;
-      grid-column-gap: 3rem;
+      padding: 5rem 7rem 0;
+      grid-row-gap: 7rem;
+      grid-column-gap: 3.5rem;
     }
   } 
 }
 
 @media(--xxl) {
   .doge-home {
+    &_hero {
+      padding-top: 60%;
+    }
     &_nav-wrapper {
-      grid-row-gap: 7rem;
-      grid-column-gap: 5rem;
+      padding: 8rem 9rem 0;
+      grid-row-gap: 10rem;
+      grid-column-gap: 10rem;
       &:after {
-        height: 6rem;
+        height: 1rem;
       }
     }
   }
 }
+
+
 
 @media(--hover) {
   .doge-home {

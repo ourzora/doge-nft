@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import characterRandomColor from '../scripts/characterRandomColor'
 
-import DogeCard from '../components/doge-card'
+import DogeCard from '../components/doge-nft-card'
 import DogeHead from '../components/doge-head'
 
 const API_URL = process.env.WORDPRESS_API_URL
@@ -27,12 +27,16 @@ export default function Index({ data, title }) {
       <section className="doge-home_wrapper">
         <div className="doge-home_border" />
         <nav className="doge-home_nav-wrapper">
+          <div className="doge-home_hero">
+            <div className="doge-home_hero-inner">
+              <DogeCard doge={data.options.main_doge} />
+            </div>
+          </div>
           {data.options.doge_list.map(
-            (item) => (
-              <DogeCard 
-                key={item.image}
-                doge={item}
-              />
+            (item, i) => (
+              <div className="doge-home_grid-item" key={`${item.id}-${i}`}>
+                <DogeCard doge={item}/>
+              </div>
             )
           )}
         </nav>
