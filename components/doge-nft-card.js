@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import Link from 'next/link'
-
 import { NFTPreview } from "@zoralabs/nft-components";
 
 const DogeCard = (props) => {
@@ -8,7 +6,7 @@ const DogeCard = (props) => {
     <Link href={`/doge/${props.doge.slug}`}>
       <a className="doge-card_wrapper shadow">
         <div className="doge-card_wrapper-inner">
-          <NFTPreview id={'3102'} />
+          <NFTPreview id={props.doge.nft_id} />
         </div>
       </a>
     </Link>

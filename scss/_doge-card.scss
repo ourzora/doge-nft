@@ -1,13 +1,13 @@
 .doge-card {
   &_wrapper {
-    position: relative;
-    height: 0;
-    padding-bottom: 78%;
+    position: absolute;
+    // height: 0;
+    // padding-bottom: 78%;
+    height: 100%;
     width: 100%;
-    overflow-y: visible;
-    transition: transform 450ms var(--boing);
-    will-change: transform;
-    animation: var(--teeter-animation);
+    top: 0;
+    left: 0;
+    // overflow-y: visible;
     cursor: pointer;
     img {
       object-fit: cover;
@@ -109,8 +109,10 @@
 @media(--lg) {
   .doge-card {
     &_wrapper {
-      padding-bottom: 64%;
-      width: 85%;
+      transition: transform 450ms var(--boing);
+      will-change: transform;
+      animation: var(--teeter-animation);
+      width: 100%;
       margin: auto;
     }
   }
@@ -119,7 +121,6 @@
 @media(--xl) {
   .doge-card {
     &_wrapper {
-      padding-bottom: 78%;
       width: 100%;
     }
   }

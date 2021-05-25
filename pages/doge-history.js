@@ -9,7 +9,7 @@ const DogeHistory = ({data}) => {
       <Head title="ABOUT DOGE" />
       <GoHome />
       <article className="doge-history_wrapper">
-        <h1 className="title-pill">Doge-Story</h1>
+        <h1 className="title-pill">The History of Doge: From Humble Shiba to Meme Legend</h1>
         <div className="doge-copy text-03" dangerouslySetInnerHTML={{ __html: data.options.about_copy }}/>
       </article>
       <aside className="doge-history_bg"></aside>
