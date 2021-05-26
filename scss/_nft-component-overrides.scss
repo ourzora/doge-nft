@@ -40,6 +40,9 @@
     justify-content: space-between;
     border-radius: var(--gutter);
     filter: var(--sm-shadow);
+    &:last-child {
+      display: none;
+    }
   }
   &-fullPageHistoryItem {
     width: 100%;
