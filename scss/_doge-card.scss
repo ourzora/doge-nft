@@ -1,13 +1,10 @@
 .doge-card {
   &_wrapper {
     position: absolute;
-    // height: 0;
-    // padding-bottom: 78%;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    // overflow-y: visible;
     cursor: pointer;
     img {
       object-fit: cover;
@@ -111,7 +108,7 @@
     &_wrapper {
       transition: transform 450ms var(--boing);
       will-change: transform;
-      animation: var(--teeter-animation);
+      // animation: var(--teeter-animation);
       width: 100%;
       margin: auto;
     }

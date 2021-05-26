@@ -29,8 +29,6 @@
   &_hero {
     width: 100%;
     position: relative;
-    animation-fill-mode: both;
-    padding-top: 73%;
   }
   &_hero-inner {
     width: 100%;
@@ -98,10 +96,6 @@
       left: 0;
       z-index: 1;
     }
-    &_hero {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
     &_left {
       animation: fadeIn 750ms var(--ease) 450ms;
       position: fixed;
@@ -127,14 +121,19 @@
       animation: shadowColor 11750ms var(--ease) alternate infinite;
       animation-fill-mode: both;
     }
+    &_hero {
+      grid-column: span 2;
+      grid-row: span 2;
+      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 8rem);
+      height: calc(100vh - (var(--space-md) * 2) - 10rem);
+    }
     &_nav-wrapper {
       overflow-y: scroll;
       scroll-snap-type: y proximity;
       display: grid;
-      grid-row-gap: 15%;
-      padding: var(--gutter);
       grid-template-columns: 1fr;
-      padding:  6% 5rem;
+      padding: 5rem 4rem 0;
+      grid-row-gap: 7rem;
       border-radius: var(--space-lg);
       &::-webkit-scrollbar {
         display: none;
@@ -152,13 +151,19 @@
 
 @media(--xl) {
   .doge-home {
+    &_hero {
+      grid-column: span 2;
+      grid-row: span 2;
+      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 10rem);
+      height: calc(100vh - (var(--space-md) * 2) - 10rem);
+    }
     &_sidebar {
       padding: var(--space-md) var(--space-sm) var(--space-sm);
     }
     &_nav-wrapper {
       grid-template-columns: 1fr 1fr;
-      padding: 5rem 7rem 0;
-      grid-row-gap: 7rem;
+      padding: 5rem 5rem 0;
+      grid-row-gap: 5rem;
       grid-column-gap: 3.5rem;
     }
   } 
@@ -167,12 +172,13 @@
 @media(--xxl) {
   .doge-home {
     &_hero {
-      padding-top: 60%;
+      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 12rem);
+      height: calc(100vh - (var(--space-md) * 2) - 12rem);
     }
     &_nav-wrapper {
-      padding: 8rem 9rem 0;
-      grid-row-gap: 10rem;
-      grid-column-gap: 10rem;
+      padding: 5rem 6rem 0;
+      grid-row-gap: 7rem;
+      grid-column-gap: 6rem;
       &:after {
         height: 1rem;
       }

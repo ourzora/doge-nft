@@ -1,7 +1,105 @@
 import React, { useEffect, useRef } from 'react'
 import Granim from 'granim'
 import Stroke from '../public/svg/brush-stroke.svg'
-import { useRouter } from 'next/router'
+
+const words = [
+  {
+    word: 'Wow',
+    pos: 'foreground'
+  },
+  {
+    word: 'So scare',
+    pos: 'background'
+  },
+  {
+    word: 'What r u doing',
+    pos: 'foreground'
+  },
+  {
+    word: 'Concern',
+    pos: 'background'
+  },
+  {
+    word: 'r-a-p-e',
+    pos: 'foreground'
+  },
+  {
+    word: 'Keep ur hands away from me',
+    pos: 'background'
+  },
+  {
+    word: 'Wow',
+    pos: 'foreground'
+  },
+  {
+    word: 'So scare',
+    pos: 'background'
+  },
+  {
+    word: 'What r u doing',
+    pos: 'foreground'
+  },
+  {
+    word: 'Concern',
+    pos: 'background'
+  },
+  {
+    word: 'r-a-p-e',
+    pos: 'foreground'
+  },
+  {
+    word: 'Keep ur hands away from me',
+    pos: 'background'
+  },
+  {
+    word: 'Wow',
+    pos: 'foreground'
+  },
+  {
+    word: 'So scare',
+    pos: 'background'
+  },
+  {
+    word: 'What r u doing',
+    pos: 'foreground'
+  },
+  {
+    word: 'Concern',
+    pos: 'background'
+  },
+  {
+    word: 'r-a-p-e',
+    pos: 'foreground'
+  },
+  {
+    word: 'Keep ur hands away from me',
+    pos: 'background'
+  },
+  {
+    word: 'Wow',
+    pos: 'foreground'
+  },
+  {
+    word: 'So scare',
+    pos: 'background'
+  },
+  {
+    word: 'What r u doing',
+    pos: 'foreground'
+  },
+  {
+    word: 'Concern',
+    pos: 'background'
+  },
+  {
+    word: 'r-a-p-e',
+    pos: 'foreground'
+  },
+  {
+    word: 'Keep ur hands away from me',
+    pos: 'background'
+  }
+]
 
 const Background = () => {
   const canvasRef = useRef(null);
@@ -37,6 +135,16 @@ const Background = () => {
         <div className="paint-3-wrapper">
           <Stroke className="paint-3 light-shadow" />
         </div>
+      </div>
+      <div id="words">
+        {words.map((word, i) => (
+          <div
+            key={`word-${i}`}
+            className={`word ${word.pos} text-02`}
+          >
+            <span>{word.word}</span>
+          </div>
+        ))}
       </div>
       <canvas ref={canvasRef} id="doge-gradient"></canvas>
     </aside>
