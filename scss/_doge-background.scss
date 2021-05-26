@@ -70,6 +70,19 @@
   user-select: none;
   z-index: 10;
   pointer-events: none;
+  font-size: 2rem;
+}
+
+@media(--lg) {
+  #words {
+    font-size: 2.5rem;
+  }
+}
+
+@media(--xl) {
+  #words {
+    font-size: 2.5vmin;
+  }
 }
 
 $duration: 200s;

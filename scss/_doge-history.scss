@@ -100,8 +100,7 @@
     z-index: 0;
     background-image: url('/doge-bitmap-bg.png');
     mix-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
   }
 }
 
