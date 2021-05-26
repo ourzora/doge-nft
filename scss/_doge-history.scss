@@ -110,7 +110,7 @@
     }
     &_wrapper {
       width: 100%;
-      padding: var(--space-lg) var(--space-md) calc(var(--space-lg) * 3);
+      padding: var(--space-lg) var(--space-md);
       grid-row-gap: var(--space-lg);
     }
     &_module {
@@ -135,6 +135,8 @@
       flex-direction: row;
       justify-content: center;
       margin: 0;
+      animation: fadeInUp 750ms var(--ease) 650ms;
+      animation-fill-mode: both;
     }
     &_kym-logo {
       width: 22rem;
@@ -155,7 +157,7 @@
     }
     &_wrapper {
       width: 100%;
-      padding: var(--space-lg) var(--space-md) calc(var(--space-lg) * 3);
+      padding: var(--space-lg) var(--space-md) var(--space-lg);
       grid-row-gap: var(--space-md);
     }
     &_module {

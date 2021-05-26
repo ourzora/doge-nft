@@ -17,7 +17,7 @@
   &_nav-wrapper {
     display: grid;
     grid-row-gap: 6rem;
-    padding: 3rem 0 6rem;
+    padding: 3rem 0;
   }
   &_border {
     border: var(--border-width) solid var(--white);
@@ -43,40 +43,6 @@
     position: relative;
     padding-top: 75%;
   }
-  &_sidebar {
-    position: relative;
-    width: var(--sidebar);
-    margin-left: var(--space-sm);
-    margin-top: var(--space-sm);
-    background-color: var(--white);
-    border-radius: var(--space-md);
-    animation: shadowColor 14000ms alternate infinite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--space-md) var(--space-sm) var(--space-sm);
-  }
-  &_title {
-    width: 100%;
-    text-align: center;
-    padding-top: var(--space-md);
-    h1 {
-      transform: rotate(-1deg);
-    }
-  }
-  &_ui {
-    position: relative;
-    padding: var(--space-sm) 0;
-  }
-  &_history-button {
-    transform: rotate(2deg) scale(0.95);
-    transition: transform 250ms var(--boing);
-    will-change: transform;
-  }
-  &_intro {
-    padding: var(--space-md) 0;
-    color: var(--blue);
-  }
 }
 
 @media(--portrait) {
@@ -100,17 +66,6 @@
     &_left {
       animation: fadeIn 750ms var(--ease) 450ms;
       position: fixed;
-    }
-    &_sidebar {
-      position: fixed;
-      top: var(--space-md);
-      right: var(--space-md);
-      animation: fadeInRight 750ms var(--ease) 450ms;
-      filter: var(--black-shadow);
-      z-index: 10;
-      animation-fill-mode: both;
-      margin-left: 0;
-      margin-top: 0;
     }
     &_border,
     &_nav-wrapper {
@@ -159,9 +114,6 @@
       width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 10rem);
       height: calc(100vh - (var(--space-md) * 2) - 10rem);
     }
-    &_sidebar {
-      padding: var(--space-md) var(--space-sm) var(--space-sm);
-    }
     &_nav-wrapper {
       grid-template-columns: 1fr 1fr;
       padding: 5rem 5rem 0;
@@ -184,16 +136,6 @@
       &:after {
         height: 1rem;
       }
-    }
-  }
-}
-
-
-
-@media(--hover) {
-  .doge-home {
-    &_history-button:hover {
-      transform: rotate(-2deg) scale(1);
     }
   }
 }

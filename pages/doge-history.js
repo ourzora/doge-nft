@@ -2,12 +2,13 @@ import Head from '../components/head'
 import GoHome from '../components/go-home'
 import AboutCopy from '../components/about-copy'
 import Image from 'next/image'
+import DogeFooter from '../components/doge-footer'
 
 const API_URL = process.env.WORDPRESS_API_URL
 
 const DogeHistory = ({data}) => {
   return (
-    <section>
+    <>
       <Head title="ABOUT DOGE" />
       <GoHome />
       <AboutCopy />
@@ -22,7 +23,8 @@ const DogeHistory = ({data}) => {
           />
         </div>
       </a>
-    </section>
+      <DogeFooter location="history"/>
+    </>
   )
 }
 
