@@ -12,15 +12,63 @@ const words = [
     pos: 'background'
   },
   {
-    word: 'What r u doing',
+    word: 'Dogecoin',
     pos: 'foreground'
   },
   {
-    word: 'Concern',
+    word: 'Shiba Inu',
     pos: 'background'
   },
   {
-    word: 'r-a-p-e',
+    word: '“dog”',
+    pos: 'foreground'
+  },
+  {
+    word: '“Biz Cas Fri 1,”',
+    pos: 'background'
+  },
+  {
+    word: 'Wow',
+    pos: 'foreground'
+  },
+  {
+    word: 'Kabosu',
+    pos: 'background'
+  },
+  {
+    word: 'Kabosu loves having her photo taken',
+    pos: 'foreground'
+  },
+  {
+    word: 'Redditor',
+    pos: 'background'
+  },
+  {
+    word: 'Doge memes',
+    pos: 'foreground'
+  },
+  {
+    word: 'Bitcoin boom',
+    pos: 'background'
+  },
+  {
+    word: 'altcoin',
+    pos: 'foreground'
+  },
+  {
+    word: '“to the moon”',
+    pos: 'background'
+  },
+  {
+    word: '“wholesome” precursors',
+    pos: 'foreground'
+  },
+  {
+    word: '/r/DogeLore',
+    pos: 'background'
+  },
+  {
+    word: 'Cheems',
     pos: 'foreground'
   },
   {
@@ -32,71 +80,23 @@ const words = [
     pos: 'foreground'
   },
   {
-    word: 'So scare',
+    word: '“Meme of the Decade”',
     pos: 'background'
   },
   {
-    word: 'What r u doing',
+    word: 'Doge remains',
     pos: 'foreground'
   },
   {
-    word: 'Concern',
+    word: 'joy to people',
     pos: 'background'
   },
   {
-    word: 'r-a-p-e',
+    word: 'legacy',
     pos: 'foreground'
   },
   {
-    word: 'Keep ur hands away from me',
-    pos: 'background'
-  },
-  {
-    word: 'Wow',
-    pos: 'foreground'
-  },
-  {
-    word: 'So scare',
-    pos: 'background'
-  },
-  {
-    word: 'What r u doing',
-    pos: 'foreground'
-  },
-  {
-    word: 'Concern',
-    pos: 'background'
-  },
-  {
-    word: 'r-a-p-e',
-    pos: 'foreground'
-  },
-  {
-    word: 'Keep ur hands away from me',
-    pos: 'background'
-  },
-  {
-    word: 'Wow',
-    pos: 'foreground'
-  },
-  {
-    word: 'So scare',
-    pos: 'background'
-  },
-  {
-    word: 'What r u doing',
-    pos: 'foreground'
-  },
-  {
-    word: 'Concern',
-    pos: 'background'
-  },
-  {
-    word: 'r-a-p-e',
-    pos: 'foreground'
-  },
-  {
-    word: 'Keep ur hands away from me',
+    word: 'around the world',
     pos: 'background'
   }
 ]
@@ -140,7 +140,7 @@ const Background = () => {
         {words.map((word, i) => (
           <div
             key={`word-${i}`}
-            className={`word ${word.pos} text-02`}
+            className={`word ${word.pos}`}
           >
             <span>{word.word}</span>
           </div>
