@@ -29,6 +29,7 @@
   &_hero {
     width: 100%;
     position: relative;
+    padding-top: 75%;
   }
   &_hero-inner {
     width: 100%;
@@ -126,6 +127,7 @@
       grid-row: span 2;
       width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 8rem);
       height: calc(100vh - (var(--space-md) * 2) - 10rem);
+      padding-top: 0;
     }
     &_nav-wrapper {
       overflow-y: scroll;
