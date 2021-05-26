@@ -27,7 +27,7 @@
   .doge-nft {
     &_wrapper {
       padding-top: var(--space-lg);
-      padding-bottom: calc(var(--space-lg) * 2);
+      padding-bottom: var(--space-lg);
     }
   }
 }

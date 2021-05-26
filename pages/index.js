@@ -1,10 +1,10 @@
 import Head from '../components/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import characterRandomColor from '../scripts/characterRandomColor'
 
 import DogeCard from '../components/doge-nft-card'
 import DogeHead from '../components/doge-head'
+import DogeFooter from '../components/doge-footer'
 
 const API_URL = process.env.WORDPRESS_API_URL
 
@@ -12,16 +12,18 @@ export default function Index({ data, title }) {
   return (
     <>
       <Head title="Home" />
-      <div className="doge-home_sidebar">
-        <DogeHead/>
-        <div className="doge-home_title">
-          <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }} />
-          <p className="text-02 doge-home_intro" dangerouslySetInnerHTML={{ __html: data.options.intro_copy }} />
-        </div>
-        <div className="doge-home_ui">
-          <Link href={'/doge-history'}>
-            <a className="lozenge-button doge-home_history-button">Doge History</a>
-          </Link>
+      <div className="doge-sidebar_wrapper">
+        <div className="doge-sidebar_inner">
+          <DogeHead />
+          <div className="doge-sidebar_title">
+            <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }} />
+            <p className="text-02 doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: data.options.intro_copy }} />
+          </div>
+          <div className="doge-sidebar_ui">
+            <Link href={'/doge-history'}>
+              <a className="lozenge-button doge-sidebar_history-button">Doge History</a>
+            </Link>
+          </div>
         </div>
       </div>
       <section className="doge-home_wrapper">
@@ -41,6 +43,7 @@ export default function Index({ data, title }) {
           )}
         </nav>
       </section>
+      <DogeFooter location="index"/>
     </>
   )
 };

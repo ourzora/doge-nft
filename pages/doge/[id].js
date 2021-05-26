@@ -6,6 +6,8 @@ import { css } from '@emotion/css'
 // import { useNFT, useNFTMetadata } from "@zoralabs/nft-hooks"
 import { NFTFullPage, FullComponents, NFTPageWrapper, MediaConfiguration } from "@zoralabs/nft-components"
 
+import DogeFooter from '../../components/doge-footer'
+
 export const style = {
   theme: {
     previewCard: {
@@ -43,18 +45,10 @@ const NFTFullPage = ({id}) => {
 
 const Doge = ({ post }) => {
   return (
-    <section>
+    <>
       <Head title={`${post.title}`} />
       <GoHome />
       <article className="doge-nft_wrapper">
-        {/*<NFTPageWrapper id={post.nft_id}>
-            <FullComponents.MediaInfo />
-            <FullComponents.PlaceOfferButton />
-            <FullComponents.AuctionInfo />
-            <FullComponents.ProofAuthenticity />
-            <FullComponents.BidHistory />
-            <FullComponents.CreatorEquity />
-          </NFTPageWrapper>*/}
         <MediaConfiguration style={style}>
           <NFTFullPage
             id={post.nft_id}
@@ -62,7 +56,8 @@ const Doge = ({ post }) => {
           />
         </MediaConfiguration>
       </article>
-    </section>
+      <DogeFooter location="product"/>
+    </>
   ) 
 }
 

@@ -1,0 +1,76 @@
+.doge-sidebar {
+  &_wrapper {
+    position: relative;
+    padding: 0;
+    padding: var(--space-sm) var(--space-sm) 0;
+  }
+  &_inner {
+    position: relative;
+    width: var(--sidebar);
+    background-color: var(--white);
+    border-radius: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md) var(--space-sm) var(--space-sm);
+    filter: var(--black-shadow);
+  }
+  &_title {
+    width: 100%;
+    text-align: center;
+    padding-top: var(--space-md);
+    h1 {
+      transform: rotate(-1deg);
+    }
+  }
+  &_ui {
+    position: relative;
+    padding: var(--space-sm) 0;
+  }
+  &_history-button {
+    transform: rotate(2deg) scale(0.95);
+    transition: transform 250ms var(--boing);
+    will-change: transform;
+  }
+  &_intro {
+    padding: var(--space-md) 0 0;
+    color: var(--blue);
+  }
+}
+
+@media(--lg) {
+  .doge-sidebar {
+    &_wrapper {
+      position: fixed;
+      top: var(--space-md);
+      right: var(--space-md);
+      animation: fadeInRight 750ms var(--ease) 450ms;
+      z-index: 10;
+      animation-fill-mode: both;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: var(--space-md);
+      padding: 0;
+    }
+    &_inner {
+      position: relative;
+      filter: var(--black-shadow);
+    } 
+  }
+}
+
+@media(--xl) {
+  .doge-sidebar {
+    &_inner {
+      padding: var(--space-md) var(--space-sm) var(--space-sm);
+    }
+  } 
+}
+
+@media(--hover) {
+  .doge-sidebar {
+    &_history-button:hover {
+      transform: rotate(-2deg) scale(1);
+    }
+  }
+}

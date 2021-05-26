@@ -1,8 +1,8 @@
+// ANIMATIONS
 @keyframes shadowColor {
   0% {
     filter: drop-shadow(0 0 1.5rem yellow);
     border-color: white;
-    background-color: red;
   }
   25% {
     filter: drop-shadow(0 0 0.75rem blue);
@@ -16,8 +16,140 @@
   100% {
     filter: drop-shadow(0 0 1.75rem red);
     border-color: yellow;
-    background: green;
   }
+}
+
+@keyframes simpleShadow {
+  0% {
+    filter: drop-shadow(0 0 1.5rem #dbdbdb);
+  }
+  25% {
+    filter: drop-shadow(0 0 0.75rem #888);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.75rem #cbcbcb);
+  }
+  75% {
+    filter: drop-shadow(0 0 0.75rem #999);
+  }
+  100% {
+    filter: drop-shadow(0 0 1.75rem #222);
+  }
+}
+
+@keyframes pulseAnimation {
+  from {
+    transform: scale(.99);
+  }
+  to {
+    transform: scale(1.01);
+  }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(-6rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderPulse {
+  from {
+    border-radius: var(--space-md);
+  }
+  to {
+    border-radius: var(--space-lg);
+  }
+}
+
+@keyframes teeterAnimation {
+  0% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+@media(--lg) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-40rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }  
+}
+
+:root {
+  --shadow-animation: shadowColor 2000ms alternate infinite;
+  --teeter-animation: teeterAnimation 2000ms alternate infinite;
+  --simple-shadow-animation: simpleShadow 2000ms alternate infinite;
+  --pulse-animation: pulseAnimation 15000ms alternate infinite;
+}
+
+.shadow-animation {
+  animation: shadowColor 2000ms alternate infinite;
+}
+
+.simple-shadow-animation {
+  animation: simpleShadow 2000ms alternate infinite;
+}
+
+.teeter-animation {
+  animation: teeterAnimation 2000ms alternate infinite;
+}
+
+.pulse-animation {
+  animation: var(--pulse-animation);
 }
 
 :root {

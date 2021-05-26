@@ -6,6 +6,8 @@
 @import 'doge-nft';
 @import 'doge-history';
 @import 'doge-background';
+@import 'doge-sidebar';
+@import 'doge-footer';
 @import 'nft-component-overrides';
 
 @font-face {
@@ -45,7 +47,7 @@
   --gutter: var(--space-sm);
 
   /* LAYOUT */
-  --sidebar: calc(100% - (var(--space-sm) * 2));
+  --sidebar: 100%;
   --innerheight: calc(100vh - (var(--space-md) * 2));
   --content-wrapper: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
   --button-height: var(--space-lg);
@@ -136,6 +138,12 @@ html {
 body {
   font-size: 16px;
   font-family: var(--font);
+}
+
+main {
+  position: relative;
+  z-index: 10;
+  width: 100%;
 }
 
 // SCROLLBAR
@@ -242,146 +250,12 @@ body {
   fill: beige;
 }
 
-
-// ANIMATIONS
-@keyframes shadowColor {
-  0% {
-    filter: drop-shadow(0 0 1.5rem yellow);
-    border-color: white;
-  }
-  25% {
-    filter: drop-shadow(0 0 0.75rem blue);
-  }
-  50% {
-    filter: drop-shadow(0 0 0.75rem green);
-  }
-  75% {
-    filter: drop-shadow(0 0 0.75rem orange);
-  }
-  100% {
-    filter: drop-shadow(0 0 1.75rem red);
-    border-color: yellow;
-  }
-}
-
-@keyframes simpleShadow {
-  0% {
-    filter: drop-shadow(0 0 1.5rem #dbdbdb);
-  }
-  25% {
-    filter: drop-shadow(0 0 0.75rem #888);
-  }
-  50% {
-    filter: drop-shadow(0 0 0.75rem #cbcbcb);
-  }
-  75% {
-    filter: drop-shadow(0 0 0.75rem #999);
-  }
-  100% {
-    filter: drop-shadow(0 0 1.75rem #222);
-  }
-}
-
-@keyframes pulseAnimation {
-  from {
-    transform: scale(.99);
-  }
-  to {
-    transform: scale(1.01);
-  }
-}
-
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(-6rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes borderPulse {
-  from {
-    border-radius: var(--space-md);
-  }
-  to {
-    border-radius: var(--space-lg);
-  }
-}
-
-@keyframes teeterAnimation {
-  0% {
-    transform: rotate(-2deg);
-  }
-  100% {
-    transform: rotate(2deg);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform:rotate(0deg);
-  }
-  to {
-    transform:rotate(360deg);
-  }
-}
-
 @media(--lg) {
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(-40rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }  
-}
-
-:root {
-  --shadow-animation: shadowColor 2000ms alternate infinite;
-  --teeter-animation: teeterAnimation 2000ms alternate infinite;
-  --simple-shadow-animation: simpleShadow 2000ms alternate infinite;
-  --pulse-animation: pulseAnimation 15000ms alternate infinite;
-}
-
-.shadow-animation {
-  animation: shadowColor 2000ms alternate infinite;
-}
-
-.simple-shadow-animation {
-  animation: simpleShadow 2000ms alternate infinite;
-}
-
-.teeter-animation {
-  animation: teeterAnimation 2000ms alternate infinite;
-}
-
-.pulse-animation {
-  animation: var(--pulse-animation);
+  main {
+    // position: fixed;
+    z-index: 10;
+    // top: 0;
+    // left: 0;
+    // height: 100vh;
+  }
 }
