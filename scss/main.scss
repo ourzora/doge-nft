@@ -1,13 +1,14 @@
 @import 'reset';
 @import 'animations';
 @import 'doge-home';
-@import 'doge-card';
+@import 'doge-cards';
 @import 'doge-ui';
 @import 'doge-nft';
 @import 'doge-history';
 @import 'doge-background';
 @import 'doge-sidebar';
 @import 'doge-footer';
+@import 'zora-card';
 @import 'nft-component-overrides';
 
 @font-face {
@@ -21,6 +22,7 @@
   --red: red;
   --blue: #003CFF;
   --white: #FFFFFF;
+  --black: #000;
   --price-color: #E64783;
   --light-grey: #dbdbdb;
   --kym-blue: #12133f;
@@ -51,6 +53,7 @@
   --innerheight: calc(100vh - (var(--space-md) * 2));
   --content-wrapper: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
   --button-height: var(--space-lg);
+  --card-radius: 3rem;
   
   /* ANIMATION */
   --ease: cubic-bezier(0.7, 0, 0.3, 1);
@@ -64,13 +67,6 @@
     --space-lg: 3.5rem;
     --space-md: 2.5rem;
     --space-sm: 1.5rem;
-    /* TYPOGRAPHY
-    --text-01: 1.25rem;
-    --text-02: 2rem;
-    --text-03: 2.5rem;
-    --text-04: 3rem;
-    --text-05: 4rem;
-     */
   }
 }
 
@@ -189,7 +185,7 @@ main {
 }
 
 // UI
-.lozenge-button {
+@mixin lozengeButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,6 +205,10 @@ main {
   text-transform: lowercase;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.lozenge-button {
+  @include lozengeButton;
 }
 
 @media(hover:hover) {
@@ -234,28 +234,4 @@ main {
   animation: teeterAnimation 2000ms alternate infinite;
   animation-fill-mode: both;
   filter: var(--black-shadow);
-}
-
-// STROKES
-.paint-1 * {
-  // fill: rgb(243, 243, 243);
-  fill: beige
-}
-.paint-2 * {
-  // fill: rgb(233, 233, 233);
-  fill: pink;
-}
-.paint-3 * {
-  // fill: rgb(214, 214, 214);
-  fill: beige;
-}
-
-@media(--lg) {
-  main {
-    // position: fixed;
-    z-index: 10;
-    // top: 0;
-    // left: 0;
-    // height: 100vh;
-  }
 }

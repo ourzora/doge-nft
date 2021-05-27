@@ -38,11 +38,6 @@
     top: 0;
     left: 0;
   }
-  &_grid-item {
-    width: 100%;
-    position: relative;
-    padding-top: 75%;
-  }
 }
 
 @media(--portrait) {
@@ -77,20 +72,14 @@
       animation: shadowColor 11750ms var(--ease) alternate infinite;
       animation-fill-mode: both;
     }
-    &_grid-item:first-child {
-      grid-column: span 2;
-      grid-row: span 2;
-      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 8rem);
-      height: calc(100vh - (var(--space-md) * 2) - 10rem);
-      padding-top: 0;
-    }
     &_nav-wrapper {
       overflow-y: scroll;
       scroll-snap-type: y proximity;
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       padding: 5rem 4rem 0;
-      grid-row-gap: 7rem;
+      grid-row-gap: 5rem;
+      grid-column-gap: 3.5rem;
       border-radius: var(--space-lg);
       &::-webkit-scrollbar {
         display: none;
@@ -108,12 +97,6 @@
 
 @media(--xl) {
   .doge-home {
-    &_grid-item:first-child {
-      grid-column: span 2;
-      grid-row: span 2;
-      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 10rem);
-      height: calc(100vh - (var(--space-md) * 2) - 10rem);
-    }
     &_nav-wrapper {
       grid-template-columns: 1fr 1fr;
       padding: 5rem 5rem 0;
@@ -125,10 +108,6 @@
 
 @media(--xxl) {
   .doge-home {
-    &_grid-item:first-child {
-      width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 12rem);
-      height: calc(100vh - (var(--space-md) * 2) - 12rem);
-    }
     &_nav-wrapper {
       padding: 5rem 6rem 0;
       grid-row-gap: 7rem;

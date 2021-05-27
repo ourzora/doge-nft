@@ -1,0 +1,10 @@
+.zora-card {
+  &_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    border-radius: var(--card-radius);
+    padding: var(--space-md);
+    color: var(--white);
+  }
+}

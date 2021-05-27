@@ -1,10 +1,12 @@
 import NextHead from 'next/head';
 import { string } from 'prop-types';
 
-const defaultDescription = '';
-const defaultKeywords = '';
+import { INTRO_COPY } from '../lib/constants'
+
+const defaultDescription = INTRO_COPY;
+const defaultKeywords = 'Doge';
 const defaultOGURL = '';
-const defaultOGImage = '';
+const defaultOGImage = '/doge-pictures/d1.jpg';
 
 const Head = (props) => (
   <NextHead>
