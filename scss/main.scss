@@ -60,6 +60,16 @@
   --boing: cubic-bezier(.3,1.64,.83,-0.18);
 }
 
+@media(--sm) {
+  :root {
+    --text-01: 1.65rem;
+    --text-02: 2.25rem;
+    --text-03: 2.75rem;
+    --text-04: 3.75rem;
+    --text-05: 4rem;
+  }
+}
+
 @media (--lg) {
   :root {
     --sidebar: 30rem;
@@ -111,6 +121,12 @@ a {
 
 html {
   font-size: 58%;
+}
+
+@media (--sm) {
+  html {
+    font-size: 60.5%;
+  }
 }
 
 @media (--lg) {

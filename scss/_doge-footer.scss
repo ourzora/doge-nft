@@ -19,7 +19,24 @@
     text-decoration: underline;
     color: var(--blue);
     font-size: var(--text-01);
-    max-width: 12rem;
+    max-width: 30rem;
+    margin: 0 auto var(--space-sm);
+  }
+}
+
+@media (--sm) {
+  .doge-footer {
+    &_wrapper {
+      width: calc(var(--sidebar) - (var(--space-lg) * 2));
+    }
+  }
+}
+
+@media (--md) {
+  .doge-footer {
+    &_wrapper {
+      width: calc(var(--sidebar) - (var(--space-lg) * 4));
+    }
   }
 }
 

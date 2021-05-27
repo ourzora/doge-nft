@@ -1,7 +1,6 @@
 .doge-sidebar {
   &_wrapper {
     position: relative;
-    padding: 0;
     padding: var(--space-sm) var(--space-sm) 0;
   }
   &_inner {
@@ -35,6 +34,24 @@
   &_intro {
     padding: var(--space-md) 0 0;
     color: var(--blue);
+    max-width: 46rem;
+    margin: 0 auto;
+  }
+}
+
+@media(--sm) {
+  .doge-sidebar {
+    &_wrapper {
+      padding: var(--space-lg) var(--space-lg) 0;
+    }
+  }
+}
+
+@media (--md) {
+  .doge-sidebar {
+    &_wrapper {
+      padding: var(--space-lg) calc(var(--space-lg) * 2) 0;
+    }
   }
 }
 
