@@ -4,9 +4,7 @@ import AboutCopy from '../components/about-copy'
 import Image from 'next/image'
 import DogeFooter from '../components/doge-footer'
 
-const API_URL = process.env.WORDPRESS_API_URL
-
-const DogeHistory = ({data}) => {
+const DogeHistory = () => {
   return (
     <>
       <Head title="ABOUT DOGE" />
@@ -26,24 +24,6 @@ const DogeHistory = ({data}) => {
       <DogeFooter location="history"/>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const res = await fetch(API_URL)
-  const data = await res.json()
-
-  if (!data) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
-
-  return {
-    props: { data },
-  }
 }
 
 export default DogeHistory

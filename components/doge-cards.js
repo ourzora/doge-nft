@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { NFTPreview } from "@zoralabs/nft-components";
 
+import { NFT_LIST } from '../lib/constants'
+
 const DogeCard = (props) => {
   return (
     <Link href={`/doge/${props.doge.slug}`}>
@@ -13,4 +15,18 @@ const DogeCard = (props) => {
   )
 }
 
-export default DogeCard;
+const DogeCards = (props) => {
+  return (
+    <>
+      {NFT_LIST.map(
+        (item, i) => (
+          <div className="doge-cards_list-item" key={`${item.id}-${i}`}>
+            <DogeCard doge={item}/>
+          </div>
+        )
+      )}
+    </>
+  )
+}
+
+export default DogeCards

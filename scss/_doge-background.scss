@@ -24,6 +24,7 @@
   bottom: -20vh;
   right: 0;
 }
+
 .doge-bg,
 #doge-gradient,
 .strokes {
@@ -35,8 +36,19 @@
   z-index: 0;
   pointer-events: none;
 }
+
 .strokes {
   z-index: 1;
+}
+
+.paint-1 * {
+  fill: beige
+}
+.paint-2 * {
+  fill: pink;
+}
+.paint-3 * {
+  fill: beige;
 }
 
 @keyframes Float {

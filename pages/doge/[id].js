@@ -1,12 +1,11 @@
 import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
-import Image from 'next/image'
-import { css } from '@emotion/css'
-// import { useNFT, useNFTMetadata } from "@zoralabs/nft-hooks"
-import { NFTFullPage, FullComponents, NFTPageWrapper, MediaConfiguration } from "@zoralabs/nft-components"
+import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
 
 import DogeFooter from '../../components/doge-footer'
+
+import { NFT_LIST } from '../../lib/constants'
 
 export const style = {
   theme: {
@@ -28,20 +27,6 @@ export const style = {
     defaultBorderRadius: 20
   }
 };
-/*
-const NFTFullPage = ({id}) => {
-  return (
-    <NFTPageWrapper id={id}>
-      <FullComponents.MediaInfo />
-      <FullComponents.PlaceOfferButton />
-      <FullComponents.AuctionInfo />
-      <FullComponents.ProofAuthenticity />
-      <FullComponents.BidHistory />
-      <FullComponents.CreatorEquity />
-    </NFTPageWrapper>
-  );
-};
-*/
 
 const Doge = ({ post }) => {
   return (
@@ -51,7 +36,7 @@ const Doge = ({ post }) => {
       <article className="doge-nft_wrapper">
         <MediaConfiguration style={style}>
           <NFTFullPage
-            id={post.nft_id}
+            id={post.id}
             showFull={true}
           />
         </MediaConfiguration>
@@ -61,25 +46,15 @@ const Doge = ({ post }) => {
   ) 
 }
 
-const API_URL = process.env.WORDPRESS_API_URL
-
 export async function getStaticPaths() {
-  const res = await fetch(API_URL)
-  const posts = await res.json()
-
-  const paths = posts.options.doge_list.map((post) => ({
-    params: { id: post.slug },
+  const paths = NFT_LIST.map((nft) => ({
+    params: { id: nft.slug },
   }))
-
   return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(API_URL)
-  const data = await res.json()
-
-  const post = find(data.options.doge_list, { slug: params.id })
-
+  const post = find(NFT_LIST, { slug: params.id })
   return {
     props: { post },
   }
