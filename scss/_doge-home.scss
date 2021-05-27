@@ -48,6 +48,22 @@
   }
 }
 
+@media(--sm) {
+  .doge-home {
+    &_wrapper {
+      padding: var(--space-md) var(--space-lg) var(--space-sm);
+    }
+  }
+}
+
+@media(--md) {
+  .doge-home {
+    &_wrapper {
+      padding: var(--space-md) calc(var(--space-lg) * 2) var(--space-sm);
+    }
+  }
+}
+
 @media(--lg) {
   .doge-home {
     &_wrapper {

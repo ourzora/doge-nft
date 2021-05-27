@@ -102,6 +102,34 @@
   }
 }
 
+@media(--sm) {
+  .doge-history {
+    &_wrapper {
+      width: 100%;
+      padding: var(--space-md) calc(var(--space-lg) * 1.5 );
+      grid-row-gap: var(--space-lg);
+    }
+    &_kym {
+      position: relative;
+      width: calc(100% - (var(--space-lg) * 4));
+      margin: 0 auto 3rem;
+      height: 8rem;
+      background-color: var(--kym-blue);
+      color: var(--white);
+      padding: 0 3rem;
+      text-align: left;
+      border-radius: 2rem;
+      overflow: hidden;
+      filter: var(--black-shadow);
+      font-size: 1.25rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
 @media(--lg) {
   .doge-history {
     &_bg {
