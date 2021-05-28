@@ -129,6 +129,16 @@
   }  
 }
 
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.blink {
+  animation: blink-animation .5s steps(5, start) infinite;
+} 
+
 :root {
   --shadow-animation: shadowColor 2000ms alternate infinite;
   --teeter-animation: teeterAnimation 2000ms alternate infinite;

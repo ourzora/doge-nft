@@ -3,8 +3,7 @@
     background-color: var(--white);
     overflow: hidden;
     border-radius: var(--space-md);
-    padding: var(--space-sm);
-    padding-left: var(--space-md);
+    padding: var(--space-md) var(--space-sm);
     position: relative;
     filter: var(--black-shadow);
     width: calc(var(--sidebar) - (var(--space-sm) * 2));
@@ -16,6 +15,7 @@
     margin: 0 auto var(--space-lg);
     * {
       color: var(--black);
+      font-family: var(--terminal-font);
     }
   }
   &_zora-branding {
