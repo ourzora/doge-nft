@@ -242,8 +242,8 @@ main {
   display: inline-flex;
   margin-bottom: var(--space-lg);
   position: relative;
-  font-size: var(--text-04)!important;
-  padding: 1.5vmin 3vmin 1.85vmin;
+  font-size: var(--text-03)!important;
+  padding: 2rem 2rem;
   text-transform: lowercase;
   border-radius: 50rem;
   border: 3px solid var(--red);
@@ -251,4 +251,12 @@ main {
   animation: teeterAnimation 2000ms alternate infinite;
   animation-fill-mode: both;
   filter: var(--black-shadow);
+}
+
+@media(--lg) {
+  .title-pill,
+  .zora-fullTitle {
+    font-size: var(--text-04)!important;
+    padding: 1.5vmin 3vmin 1.85vmin;
+  }
 }
