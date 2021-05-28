@@ -1255,38 +1255,24 @@
   resolved "https://registry.yarnpkg.com/@ungap/promise-all-settled/-/promise-all-settled-1.1.2.tgz#aa58042711d6e3275dd37dc597e5d31e8c290a44"
   integrity sha512-sL/cEvJWAnClXw0wHk85/2L0G6Sj8UB0Ctc1TEMbKSsmpRosqhwj9gWgFRZSrBr2f9tiXISwNhCPmlfqUqyb9Q==
 
-"@zoralabs/nft-components@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.0.7.tgz#94788315d09cd1a053969c2618f755dd5ab5ac3c"
-  integrity sha512-uq7DAYrcneuCkBlzpjxnbX+Qbv1jKAX5x1HSDWvbMlsl5TA+GPTU/BiXAYXXaz24SiMTR2Bf5ctuM1O5CStVHg==
+"@zoralabs/nft-components@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.0.10.tgz#8796d4461c2989ae6b54fc186c5e43360b520bd0"
+  integrity sha512-tAz/knnVIsekY/jUldHd6GNQ7x6o31sfgS6rVhauBkUhmTWyS4XKqDSKtCjByogdwZAQimjbHbQhmg6bxBzB2w==
   dependencies:
     "@emotion/css" "^11.1.3"
     "@types/react" "^17.0.5"
-    "@zoralabs/nft-hooks" "^0.1.9"
+    "@zoralabs/nft-hooks" "^0.2.1"
     merge-anything "^4.0.1"
     react "^17.0.2"
     react-dom "^17.0.2"
     swr "^0.5.6"
     tslib "^2.2.0"
 
-"@zoralabs/nft-hooks@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.1.5.tgz#7d7cb460f58710f2ef3dfe15a3cabb7d13b99570"
-  integrity sha512-tgop1nByRZhopEGxpuHa456RI6ihakOekIf2O18U7BiDCHpD2NbUMYdMsnD3Z9dTkEenHxUuQQ+FjKN9ICUltA==
-  dependencies:
-    big.js "^6.1.0"
-    cross-fetch "^3.1.4"
-    dataloader "^2.0.0"
-    graphql "^15.5.0"
-    graphql-request "^3.4.0"
-    node-abort-controller "^2.0.0"
-    react "^17.0.2"
-    react-test-renderer "^17.0.2"
-
-"@zoralabs/nft-hooks@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.1.9.tgz#77216876089fa54b9087067b4fe216e576011bb4"
-  integrity sha512-ZXV/gcLgAar3LvNIIeXgzgWDWOQpx2/N7bS5YJ2e4N7eUfcNBVbl4YgEmHVKLqkIiDJ2YI2sczj67hMbggeMyg==
+"@zoralabs/nft-hooks@^0.2.1", "@zoralabs/nft-hooks@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.2.2.tgz#ad4e7aae015d040ecf7b738ea3eabd8ed7845d83"
+  integrity sha512-b/Tj/KYc5hy2WrLDrpy+FzuTfJl+ahos+53FypVv7rnzZ1I9EFHF/G4bu2Izhz65gGYFbw9N4tbojbtWZ3QyEQ==
   dependencies:
     big.js "^6.1.0"
     cross-fetch "^3.1.4"
