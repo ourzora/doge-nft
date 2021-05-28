@@ -31,6 +31,18 @@
   }
 }
 
+@media(--portrait) {
+  .hide-mobile {
+    display: none;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 @media (--sm) {
   .doge-footer {
     &_wrapper {

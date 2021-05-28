@@ -16,7 +16,7 @@ export default function Index({ data }) {
           <ZoraCard/>
         </nav>
       </section>
-      <DogeFooter location="index"/>
+      <DogeFooter location="index hide-mobile"/>
     </>
   )
 };

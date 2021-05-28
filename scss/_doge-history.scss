@@ -65,13 +65,13 @@
   &_kym {
     position: relative;
     width: calc(100% - var(--space-lg));
-    margin: 0 auto 8rem;
+    margin: 0 auto var(--space-md);
     height: 8rem;
     background-color: var(--kym-blue);
     color: var(--white);
     padding: 0 3rem;
     text-align: left;
-    border-radius: 2rem;
+    border-radius: var(--space-md);
     overflow: hidden;
     filter: var(--black-shadow);
     font-size: 1.25rem;
