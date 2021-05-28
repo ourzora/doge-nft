@@ -135,15 +135,15 @@
   }
 }
 
-.blink {
-  animation: blink-animation .5s steps(5, start) infinite;
-} 
+
 
 :root {
   --shadow-animation: shadowColor 2000ms alternate infinite;
   --teeter-animation: teeterAnimation 2000ms alternate infinite;
   --simple-shadow-animation: simpleShadow 2000ms alternate infinite;
   --pulse-animation: pulseAnimation 15000ms alternate infinite;
+  --blink-animation: blink-animation .5s steps(5, start) infinite;
+  --spin-animation: spin 5000ms infinite linear;
 }
 
 .shadow-animation {
@@ -162,9 +162,9 @@
   animation: var(--pulse-animation);
 }
 
-:root {
-  --shadow-animation: shadowColor 2000ms alternate inifinite;
-}
+.blink {
+  animation: var(--blink-animation);
+} 
 
 .shadow-animation {
   animation: shadowColor 2000ms alternate inifinite;

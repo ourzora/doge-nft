@@ -25,11 +25,18 @@
   &_ui {
     position: relative;
     padding: var(--space-sm) 0;
+    display: grid;
+    grid-row-gap: var(--space-sm);
   }
   &_history-button {
-    transform: rotate(2deg) scale(0.95);
     transition: transform 250ms var(--boing);
     will-change: transform;
+    &:nth-of-type(odd) {
+      transform: rotate(2deg) scale(0.95);
+    }
+    &:nth-of-type(even) {
+      transform: rotate(-2deg) scale(0.95);
+    }
   }
   &_intro {
     padding: var(--space-md) 0 0;

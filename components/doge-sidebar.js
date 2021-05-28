@@ -19,6 +19,9 @@ const DogeSidebar = () => {
           <p className="text-02 doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: INTRO_COPY }} />
         </div>
         <div className="doge-sidebar_ui">
+          <Link href={'/charities'}>
+            <a className="lozenge-button doge-sidebar_history-button">Charities</a>
+          </Link>
           <Link href={'/doge-history'}>
             <a className="lozenge-button doge-sidebar_history-button">Doge History</a>
           </Link>
