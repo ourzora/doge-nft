@@ -12,6 +12,8 @@
   }
   &-fullLabel {
     opacity: 1!important;
+    text-align: center;
+    margin: auto;
   }
   &-pricingAmount,
   &-fullPageHistoryItemDatestamp {
@@ -36,7 +38,7 @@
     border-radius: var(--gutter);
     padding: var(--gutter);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: var(--gutter);
@@ -59,8 +61,14 @@
   &-fullCreatorOwnerSection {
     grid-column-gap: 2rem!important;
     align-items: center!important;
+    grid-template-columns: 1fr 1fr!important;
+    display: flex!important;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0!important;
+    padding-bottom: 1.5rem!important;
     .zora-fullLabel {
-      margin: auto!important;
+      margin: 0!important;
     }
     * {
       text-align: center!important;
@@ -70,6 +78,18 @@
       &:nth-of-type(4) {
         display: none;
       }
+    }
+  }
+  &-fullInfoAuctionWrapper {
+    text-align: center!important;
+    * {
+      text-align: center;
+      margin: 0 auto!important;
+    }
+    .zora-fullLabel {
+      width: 100%!important;
+      justify-content: center;
+      padding-bottom: 5px;
     }
   }
   &-fullProofLink {
@@ -92,11 +112,15 @@
     align-items: center;
   }
   &-fullPlaceOfferButton {
-    margin-top: -5rem;
+    margin-top: -3rem;
     .zora-button {
       font-size: var(--text-04);
       max-width: 22rem!important;
     }
+  }
+  &-fullInfoProofAuthenticityContainer {
+    display: grid;
+    grid-template-columns: 1fr;
   }
   &-button,
   &-fullProofLink {
@@ -108,14 +132,55 @@
     border-radius: 50rem!important;
     animation: var(--teeter-animation);
     animation-fill-mode: both;
-    background-color: var(--white)!important;
+    background-color: var(--price-color)!important;
     border: 3px solid var(--price-color)!important;
-    color: var(--blue)!important;
+    color: var(--white)!important;
     text-decoration: none!important;
     &:hover {
       animation: var(--shadow-animation);
+      color: var(--blue)!important;
+      background-color: var(--white)!important;
+    }
+  }
+  &-fullProofLink {
+    padding: var(--space-sm)!important;
+  }
+  &-fullOwnerAddress {
+    color: var(--price-color)!important;
+  }
+  &-mediaLoader {
+    display: block;
+    width: 15rem!important;
+    height: 15rem!important;
+    border-radius: 7.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--blue);
+    animation: var(--spin-animation);
+    box-shadow:
+      0 0 5px 0px var(--blue),
+      0 0 5px 5px #fff,
+      0 0 7px 9px #f0f,
+      0 0 10px 12px #0ff;
+    span {
+      font-size: var(--text-02);
       color: var(--white)!important;
-      background-color: var(--price-color)!important;
+      position: relative;
+      animation: var(--blink-animation)!important;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+@media(--md) {
+  .zora {
+    &-fullInfoProofAuthenticityContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }

@@ -7,7 +7,7 @@
     max-width: 70rem;
     animation: fadeUp 250ms var(--ease) 700ms;
     animation-fill-mode: both;
-    padding: var(--space-sm) var(--space-sm) 8rem;
+    padding: var(--space-sm) var(--space-sm) var(--space-md);
   }
   &_title-wrapper {
     display: flex;
