@@ -7,7 +7,7 @@ const DogeCard = (props) => {
       <a className="doge-card_wrapper shadow">
         <div className="doge-card_wrapper-inner">
           <NFTPreview id={props.doge.id} />
-          <CountdownTimer id={props.doge.id} />
+          {/*<CountdownTimer id={props.doge.id} />*/}
         </div>
       </a>
     </Link>
