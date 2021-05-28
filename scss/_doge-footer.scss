@@ -14,6 +14,13 @@
     align-items: center;
     z-index: 1200;
     margin: 0 auto var(--space-lg);
+    * {
+      color: var(--black);
+    }
+  }
+  &_zora-branding {
+    display: flex;
+    flex-direction: row;
   }
   &_blog-link {
     text-decoration: underline;
@@ -68,14 +75,14 @@
 @media (--hover) {
   .doge-footer {
     &_blog-link,
-    &_zora-link {
+    &_wrapper {
       transition: transform 350ms var(--boing);
       will-change: transform;
     }
     &_blog-link:hover {
       transform: rotate(2deg);
     }
-    &_zora-link:hover {
+    &_wrapper:hover {
       transform: scale(1.15);
     }
   }
