@@ -35,19 +35,23 @@ const config = {
 }
 
 export const strings = {
-  strings: {
-    OPEN_OFFERS: ''
-  }
+  OPEN_OFFERS: '',
+  CREATED: 'Created By'
 }
 
-const Doge = ({ post }) => {
+const Doge = ({ post, nftData }) => {
   return (
     <>
-      <Head title={`${post.title}`} />
+      <Head
+        title={post.title}
+        description={nftData.description}
+        ogImage={`${nftData.zoraNFT.contentURI}`}
+      />
       <GoHome />
       <article className="doge-nft_wrapper">
         <MediaConfiguration
           style={style}
+          strings={strings}
         >
           <NFTFullPage
             id={post.id}
@@ -70,29 +74,26 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = find(NFT_LIST, { slug: params.id })
-  
   const fetcher = new MediaFetchAgent(Networks.MAINNET);
-  // console.log(fetcher)
-  
-  // Fetch the NFT information on the server-side
-  // const nft = await fetcher.loadNFTData(post.id);
-  // const metadata = await fetcher.fetchIPFSMetadata(nft.nft.metadataURI);
+
+  const nft = await fetcher.loadZNFTData(post.id);
+  const metadata = await fetcher.fetchIPFSMetadata(nft.nft.metadataURI);
 
   function prepareJson(json) {
     return JSON.parse(JSON.stringify(json));
   }
 
-  // console.log(nft)
+  console.log(metadata)
+
+  const nftData = prepareJson({
+    ...nft,
+    ...metadata
+  })
 
   return {
     props: {
       post,
-      /*
-      nft: prepareJson({
-        nft: nft,
-        metadata,
-        id,
-      })*/
+      nftData,
     },
   }
 }
