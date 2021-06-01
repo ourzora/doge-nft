@@ -1,7 +1,3 @@
-# DOGE NFT
+# Doge NFT Auction
 
-Website For the DOG NFT AUCTION.
-
-https://github.com/ourzora/nft-hooks/
-https://docs.zora.co/zoraos/dev/media-rendering/nft-hooks/usenftcontent
-https://docs.zora.co/zoraos/dev/media-rendering/nft-hooks/usenftcontent
+The original Doge memes are being auctioned off as 1/1 NFTs for charity. Own these pieces of internet history. Brought to you by Atsuko Sato and Kabosu

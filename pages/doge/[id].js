@@ -35,8 +35,7 @@ const config = {
 }
 
 export const strings = {
-  OPEN_OFFERS: '',
-  CREATED: 'Created By'
+  OPEN_OFFERS: ''
 }
 
 const Doge = ({ post, nftData }) => {
@@ -82,8 +81,6 @@ export async function getStaticProps({ params }) {
   function prepareJson(json) {
     return JSON.parse(JSON.stringify(json));
   }
-
-  console.log(metadata)
 
   const nftData = prepareJson({
     ...nft,
