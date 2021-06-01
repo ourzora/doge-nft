@@ -1,8 +1,5 @@
 // NFT COMPONENT STYLING
 .zora {
-  &-fullPlaceOfferButton {
-    // display: none!important;
-  }
   &-fullMediaWrapper {
     margin: 0 auto var(--space-md)!important;
     filter: drop-shadow(0 0 0.75rem grey);
@@ -28,12 +25,13 @@
   }
   &-fullDescription {
     text-align: center;
-    padding: var(--space-sm) 0 var(--space-md);
+    padding: var(--space-sm) 0 var(--space-lg);
     font-size: var(--text-03);
     border-bottom: 3px solid var(--blue);
     margin-bottom: var(--space-md)!important;
     position: relative;
     display: flex;
+    line-height: 1.35;
   }
   &-infoContainer,
   &-fullItemInfo {

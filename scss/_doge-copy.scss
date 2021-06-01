@@ -13,7 +13,7 @@
     p,
     ul {
       padding-bottom: var(--space-lg);
-      line-height: 1.2;
+      line-height: 1.5;
       color: var(--blue);
       font-size: var(--text-02);
       list-style: lower-roman outside;
@@ -31,6 +31,7 @@
     li {
       padding-left: 1rem;
       padding-bottom: 1rem;
+      line-height: 1.5;
       &:last-child {
         padding-bottom: 0;
       }
