@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
-import { NFTFullPage, MediaConfiguration, NFTDataContext } from "@zoralabs/nft-components"
+import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
 
 import DogeFooter from '../../components/doge-footer'
 
@@ -29,14 +29,30 @@ export const style = {
   }
 };
 
+const config = {
+  allowOffer: false
+}
+
+export const strings = {
+  strings: {
+    OPEN_OFFERS: ''
+  }
+}
+
 const Doge = ({ post }) => {
   return (
     <>
       <Head title={`${post.title}`} />
       <GoHome />
       <article className="doge-nft_wrapper">
-        <MediaConfiguration style={style}>
-          <NFTFullPage id={post.id}></NFTFullPage>
+        <MediaConfiguration
+          style={style}
+        >
+          <NFTFullPage
+            id={post.id}
+            config={config}
+          >  
+          </NFTFullPage>
         </MediaConfiguration>
       </article>
       <DogeFooter location="product"/>
@@ -53,6 +69,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const post = find(NFT_LIST, { slug: params.id })
+  
   return {
     props: { post },
   }
