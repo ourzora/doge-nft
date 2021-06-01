@@ -8,6 +8,7 @@ const ZoraCard = () => {
         <p><span className="blink">_ </span><a target="_blank" href="https://twitter.com/ourZORA">Twitter</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.mirror.xyz">Blog</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.engineering/">Documentation</a></p>
+        <p><span className="blink">_ </span><a target="_blank" href="https://github.com/ourzora/doge-nft/">Fork This Website</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/legal/tos">Terms of Service</a></p>
       </div>
       <a target="_blank" href="https://zora.co" className="zora-card_branding">
