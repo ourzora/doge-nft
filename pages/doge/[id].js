@@ -1,7 +1,8 @@
+import { useContext } from 'react'
 import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
-import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
+import { NFTFullPage, MediaConfiguration, NFTDataContext } from "@zoralabs/nft-components"
 
 import DogeFooter from '../../components/doge-footer'
 
@@ -35,10 +36,7 @@ const Doge = ({ post }) => {
       <GoHome />
       <article className="doge-nft_wrapper">
         <MediaConfiguration style={style}>
-          <NFTFullPage
-            id={post.id}
-            showFull={true}
-          />
+          <NFTFullPage id={post.id}></NFTFullPage>
         </MediaConfiguration>
       </article>
       <DogeFooter location="product"/>

@@ -65,12 +65,12 @@
     &_wrapper {
       padding: 0;
       &.product {
+        padding: 0 var(--space-md);
         width: 100%;
       }
       &.history {
         width: 100%;
-        // max-width: 70rem;
-        transform: translateX(-1rem);
+        display: none;
       }
       &.index {
         margin: 0;

@@ -18,7 +18,7 @@ const DogeHistory = () => {
         copy={copy}
       />
       <aside className="doge-history_bg"></aside>
-      <DogeFooter location="history"/>
+      <DogeFooter location="product"/>
     </>
   )
 }
