@@ -1,3 +1,12 @@
+// LAUNCH OVERRIDES
+.doge-cards {
+  &_list-item {
+    .zora-cardAuctionPricing {
+      display: none;
+    }
+  }
+}
+
 .doge-cards {
   &_list-item {
     width: 100%;
@@ -17,7 +26,7 @@
         }
         &-cardMediaWrapper {
           top:  5.5rem;
-          height: 72%!important;
+          height: 67%!important;
           transform: rotate(-1deg);
         }
         &-cardItemInfo {
@@ -99,10 +108,15 @@
       height: 100%!important;
       border-radius: 3rem;
     }
-    &-cardAuctionPricing {
+    &-cardAuctionPricing,
+    &-placeHolderInfo {
       position: absolute;
+      /*
       top: -1rem;
       left: -1rem;
+      */
+      top: -2rem;
+      left: -3rem;
       border-radius: 10px;
       background-color: var(--blue);
       filter: var(--black-shadow);
@@ -114,6 +128,14 @@
         color: var(--white)!important;
         font-size: var(--text-01);
         line-height: 1.25;
+      }
+    }
+    &-placeHolderInfo {
+      opacity: 1;
+      padding: 2rem;
+      z-index: 100;
+      * {
+        font-size: var(--text-03);
       }
     }
     &-pricingAmount {
@@ -169,6 +191,9 @@
             top: 0rem;
             height: 100%!important;
             transform: rotate(-.25deg);
+          }
+          &-placeHolderInfo {
+            left: 3rem;
           }
           &-cardItemInfo {
             border: 0;
