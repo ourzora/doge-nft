@@ -43,6 +43,8 @@
     color: var(--blue);
     max-width: 46rem;
     margin: 0 auto;
+    font-size: 2.25rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -76,6 +78,9 @@
       margin-bottom: var(--space-md);
       padding: 0;
     }
+    &_title {
+      padding-top: var(--space-sm);
+    }
     &_inner {
       position: relative;
       filter: var(--black-shadow);
@@ -87,6 +92,11 @@
   .doge-sidebar {
     &_inner {
       padding: var(--space-md) var(--space-sm) var(--space-sm);
+    }
+    &_intro {
+      font-size: 1.85rem;
+      line-height: 1.2;
+      padding-bottom: .5rem;
     }
   } 
 }

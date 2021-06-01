@@ -7,7 +7,10 @@ import ZoraCard from '../components/zora-card'
 export default function Index({ data }) {
   return (
     <>
-      <Head title="Home" />
+      <Head
+        title="Home"
+        description="The original Doge memes are being auctioned off as 1/1 NFTs for charity. Own these pieces of internet history. Brought to you by Atsuko Sato and Kabosu."
+      />
       <DogeSidebar/>
       <section className="doge-home_wrapper">
         <div className="doge-home_border" />

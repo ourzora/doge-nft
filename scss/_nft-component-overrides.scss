@@ -115,18 +115,22 @@
     margin-top: -3rem;
     .zora-button {
       font-size: var(--text-04);
-      max-width: 22rem!important;
+      max-width: 28rem!important;
+      height: 5rem;
+      text-align: center;
     }
   }
   &-fullInfoProofAuthenticityContainer {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   &-button,
-  &-fullProofLink {
+  &-fullProofLink,
+  &-fullPlaceOfferButton a {
     margin: 0 auto var(--space-sm)!important;
     display: flex!important;
     justify-content: center;
+    align-items: center;
     position: relative;
     max-width: 20rem!important;
     border-radius: 50rem!important;
@@ -136,6 +140,7 @@
     border: 3px solid var(--price-color)!important;
     color: var(--white)!important;
     text-decoration: none!important;
+    height: 3rem;
     &:hover {
       animation: var(--shadow-animation);
       color: var(--blue)!important;
@@ -181,6 +186,15 @@
     &-fullInfoProofAuthenticityContainer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media(--xl) {
+  .zora {
+    &-fullPlaceOfferButton a {
+      height: 5rem;
+      font-size: var(--text-04)!important;
     }
   }
 }

@@ -8,7 +8,10 @@ import copy from '../lib/charities-copy'
 const DogeHistory = () => {
   return (
     <>
-      <Head title="Charities"/>
+      <Head
+        title="Charities"
+        description="A portion of the proceeds from these auctions are being donated to charities across the world."
+      />
       <GoHome />
       <CopyBlock
         title="Charities"

@@ -8,7 +8,7 @@ import DogeHead from './doge-head'
 const DogeSidebar = () => {
   
   /* FIX THIS */
-  const title = characterRandomColor('good doge', 'span', 'doge-title')
+  const title = characterRandomColor('Doge NFT Auction', 'span', 'doge-title')
   
   return (
     <div className="doge-sidebar_wrapper">
@@ -16,7 +16,7 @@ const DogeSidebar = () => {
         <DogeHead />
         <div className="doge-sidebar_title">
           <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }} />
-          <p className="text-02 doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: INTRO_COPY }} />
+          <p className="doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: INTRO_COPY }} />
         </div>
         <div className="doge-sidebar_ui">
           <Link href={'/charities'}>
