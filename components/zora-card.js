@@ -4,7 +4,7 @@ const ZoraCard = () => {
       <div className="zora-card_wrapper-inner">
         <p><span className="blink">_ </span>Our Zora:</p><br></br>
         <p><span className="blink">_ </span>ZoraOS is a suite of developer tools that allow anyone to build on the Zora Protocol. The vision for ZoraOS is to build high quality tools across the entire development stack.</p><br></br>
-        <p><span className="blink">_ </span>We want to enable developers to explore new and interesting ideas for an Internet Renaissance. ZoraOS consists of three primary components</p><br></br>
+        <p><span className="blink">_ </span>We want to enable developers to explore new and interesting ideas for an Internet Renaissance.</p><br></br>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/manifesto">Manifesto</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/blog">Blog</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://help.zora.co/">FAQs</a></p>
