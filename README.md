@@ -17,4 +17,8 @@ This gallery uses `@zoralabs/nft-components` to render custom auctions. Fork thi
 - `public/`: Public assets
 - `pages/`: Static next.js pages and server-side content fetching
 
+#### How to make your own:
+1. Update content and referenced NFTs in `lib/` and in `pages/`
+2. Update styles in `scss/`
+3. Publish! Next.js works well with vercel and netlify
 
