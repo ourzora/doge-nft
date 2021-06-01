@@ -6,7 +6,7 @@ import { INTRO_COPY } from '../lib/constants'
 const defaultDescription = INTRO_COPY;
 const defaultKeywords = 'Doge';
 const defaultOGURL = '';
-const defaultOGImage = '/doge-pictures/d1.jpg';
+const defaultOGImage = '/doge-og-image.png';
 
 const Head = (props) => (
   <NextHead>

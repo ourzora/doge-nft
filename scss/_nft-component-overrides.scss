@@ -1,5 +1,8 @@
 // NFT COMPONENT STYLING
 .zora {
+  &-fullPlaceOfferButton {
+    display: none!important;
+  }
   &-fullMediaWrapper {
     margin: 0 auto var(--space-md)!important;
     filter: drop-shadow(0 0 0.75rem grey);
@@ -36,7 +39,7 @@
   &-fullItemInfo {
     background-color: white;
     border-radius: var(--gutter);
-    padding: var(--gutter);
+    padding: var(--gutter)!important;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -115,18 +118,21 @@
     margin-top: -3rem;
     .zora-button {
       font-size: var(--text-04);
-      max-width: 22rem!important;
+      max-width: 28rem!important;
+      height: 5rem;
+      text-align: center;
     }
   }
   &-fullInfoProofAuthenticityContainer {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   &-button,
-  &-fullProofLink {
+  &-fullPlaceOfferButton a {
     margin: 0 auto var(--space-sm)!important;
     display: flex!important;
     justify-content: center;
+    align-items: center;
     position: relative;
     max-width: 20rem!important;
     border-radius: 50rem!important;
@@ -136,14 +142,20 @@
     border: 3px solid var(--price-color)!important;
     color: var(--white)!important;
     text-decoration: none!important;
-    &:hover {
-      animation: var(--shadow-animation);
-      color: var(--blue)!important;
-      background-color: var(--white)!important;
-    }
+    height: 3rem;
   }
   &-fullProofLink {
     padding: var(--space-sm)!important;
+    text-align: center;
+    height: 4rem;
+    border-radius: 50rem!important;
+    color: var(--blue)!important;
+    border: 1px solid var(--blue)!important;
+    margin: 0 auto!important;
+    display: flex!important;
+    align-items: center!important;
+    animation: var(--teeter-animation);
+    justify-content: center!important;
   }
   &-fullOwnerAddress {
     color: var(--price-color)!important;
@@ -183,4 +195,31 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+}
+
+@media(--xl) {
+  .zora {
+    &-fullPlaceOfferButton a {
+      height: 5rem;
+      font-size: var(--text-04)!important;
+    }
+  }
+}
+
+@media(--hover) {
+  .zora {
+    &-fullProofLink {
+      &:hover {
+        color: var(--white)!important;
+        background-color: var(--blue)!important;
+      }
+    }
+    &-button,
+    &-fullPlaceOfferButton a {
+      animation: var(--shadow-animation);
+      color: var(--blue)!important;
+      background-color: var(--white)!important;
+    }
+  }
+    
 }

@@ -4,7 +4,7 @@ import { NFTPreview, CountdownTimer } from "@zoralabs/nft-components";
 const DogeCard = (props) => {
   return (
     <Link href={`/doge/${props.doge.slug}`}>
-      <a className="doge-card_wrapper shadow">
+      <a className="doge-card_wrapper">
         <div className="doge-card_wrapper-inner">
           <NFTPreview id={props.doge.id} />
           {/*<CountdownTimer id={props.doge.id} />*/}

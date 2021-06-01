@@ -1,17 +1,17 @@
 .doge-footer {
   &_wrapper {
-    background-color: var(--white);
-    overflow: hidden;
-    border-radius: var(--space-md);
-    padding: var(--space-sm);
+    // background-color: var(--white);
+    // overflow: hidden;
+    // border-radius: var(--space-md);
+    padding: 0 var(--space-md);
     position: relative;
-    filter: var(--black-shadow);
-    width: calc(var(--sidebar) - (var(--space-sm) * 2));
+    // filter: var(--black-shadow);
+    // width: calc(var(--sidebar) - (var(--space-sm) * 2));
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    z-index: 1200;
+    z-index: 0;
     margin: 0 auto var(--space-lg);
     * {
       color: var(--black);
@@ -21,6 +21,7 @@
   &_zora-branding {
     display: flex;
     flex-direction: row;
+    margin-left: 1.5rem;
   }
   &_blog-link {
     text-decoration: underline;
@@ -62,14 +63,14 @@
 @media(--lg) {
   .doge-footer {
     &_wrapper {
+      padding: 0;
       &.product {
+        padding: 0 var(--space-md);
         width: 100%;
-        max-width: 67rem;
       }
       &.history {
         width: 100%;
-        max-width: 70rem;
-        transform: translateX(-1rem);
+        display: none;
       }
       &.index {
         margin: 0;
@@ -84,6 +85,7 @@
   }
 }
 
+/*
 @media (--hover) {
   .doge-footer {
     &_blog-link,
@@ -99,3 +101,4 @@
     }
   }
 }
+*/

@@ -1,14 +1,12 @@
 const ZoraCard = () => {
   return (
-    <div className="zora-card_wrapper shadow">
+    <div className="zora-card_wrapper">
       <div className="zora-card_wrapper-inner">
-        <p><span className="blink">_ </span>Our Zora:</p><br></br>
-        <p><span className="blink">_ </span>ZoraOS is a suite of developer tools that allow anyone to build on the Zora Protocol. The vision for ZoraOS is to build high quality tools across the entire development stack.</p><br></br>
-        <p><span className="blink">_ </span>We want to enable developers to explore new and interesting ideas for an Internet Renaissance.</p><br></br>
-        <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/manifesto">Manifesto</a></p>
+        <p><span className="blink">_ </span>Zora:</p>
+        <p><span className="blink">_ </span>Decentralized Auction House.</p><br></br>
+        <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/">Website</a></p>
+        <p><span className="blink">_ </span><a target="_blank" href="https://twitter.com/ourZORA">Twitter</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/blog">Blog</a></p>
-        <p><span className="blink">_ </span><a target="_blank" href="https://help.zora.co/">FAQs</a></p>
-        <p><span className="blink">_ </span><a target="_blank" href="https://docs.zora.co/zoraos/">Whitepaper</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.engineering/">Documentation</a></p>
         <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/legal/tos">Terms of Service</a></p>
       </div>

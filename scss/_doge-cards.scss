@@ -12,6 +12,7 @@
     width: 100%;
     position: relative;
     padding-top: 75%;
+    animation: shadowColor 11750ms var(--ease) alternate infinite;
     &:first-child {
       padding-top: 110%;
       .zora {

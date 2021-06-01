@@ -85,8 +85,10 @@
       position: fixed;
       top: var(--space-md);
       left: var(--space-md);
-      animation: shadowColor 11750ms var(--ease) alternate infinite;
       animation-fill-mode: both;
+    }
+    &_border {
+      animation: shadowColor 11750ms var(--ease) alternate infinite;
     }
     &_nav-wrapper {
       overflow-y: scroll;
