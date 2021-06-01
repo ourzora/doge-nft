@@ -16,6 +16,11 @@
 .zora-card {
   &_wrapper {
     width: 100%;
+    padding-top: 110%;
+    position: relative;
+  }
+  &_wrapper-inner {
+    width: 100%;
     height: 100%;
     background-color: var(--black);
     border-radius: var(--card-radius);
@@ -25,12 +30,16 @@
     font-size: 14px;
     background: black;
     line-height: 1.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     a {
       color: #78c8cf;
       text-decoration: underline;
-    }
-    svg * {
-      fill: white;
     }
   }
   &_branding {
@@ -39,5 +48,19 @@
     flex-direction: row;
     bottom: var(--space-md);
     right: var(--space-md);
+    z-index: 100;
+    svg * {
+      fill: white;
+    }
+  }
+}
+
+@media(--lg) {
+  .zora-card {
+    &_wrapper {
+      width: 100%;
+      padding-top: 75%;
+      position: relative;
+    }
   }
 }
