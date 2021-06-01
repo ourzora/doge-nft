@@ -2,7 +2,8 @@ import { useContext } from 'react'
 import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
-import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
+import { NFTFullPage, MediaConfiguration, NFTDataContext } from "@zoralabs/nft-components"
+import { MediaFetchAgent, Networks } from "@zoralabs/nft-hooks";
 
 import DogeFooter from '../../components/doge-footer'
 
@@ -70,8 +71,29 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const post = find(NFT_LIST, { slug: params.id })
   
+  const fetcher = new MediaFetchAgent(Networks.MAINNET);
+  // console.log(fetcher)
+  
+  // Fetch the NFT information on the server-side
+  // const nft = await fetcher.loadNFTData(post.id);
+  // const metadata = await fetcher.fetchIPFSMetadata(nft.nft.metadataURI);
+
+  function prepareJson(json) {
+    return JSON.parse(JSON.stringify(json));
+  }
+
+  // console.log(nft)
+
   return {
-    props: { post },
+    props: {
+      post,
+      /*
+      nft: prepareJson({
+        nft: nft,
+        metadata,
+        id,
+      })*/
+    },
   }
 }
 
