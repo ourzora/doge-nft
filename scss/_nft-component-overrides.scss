@@ -93,17 +93,6 @@
       padding-bottom: 5px;
     }
   }
-  &-fullProofLink {
-    border: 0!important;
-    font-size: var(--text-01);
-    &::after {
-      display: none!important;
-    }
-    &:hover {
-      background-color: transparent!important;
-      color: var(--price-color)!important;
-    }
-  }
   &-textSubdued {
     color: orange!important;
     opacity: 1!important;
@@ -143,17 +132,24 @@
     height: 3rem;
   }
   &-fullProofLink {
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
     padding: var(--space-sm)!important;
     text-align: center;
     height: 4rem;
     border-radius: 50rem!important;
     color: var(--blue)!important;
     border: 1px solid var(--blue)!important;
-    margin: 0 auto!important;
-    display: flex!important;
-    align-items: center!important;
+    margin: 0 auto var(--space-sm)!important;
+    font-size: var(--text-01);
     animation: var(--teeter-animation);
-    justify-content: center!important;
+    &::after {
+      display: none!important;
+    }
+    &:last-child {
+      margin-bottom: 0!important;
+    }
   }
   &-fullOwnerAddress {
     color: var(--price-color)!important;
@@ -191,6 +187,9 @@
     &-fullInfoProofAuthenticityContainer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    &-fullProofLink {
+      margin-bottom: 0!important;
     }
   }
 }
