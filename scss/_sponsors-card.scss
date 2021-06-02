@@ -1,0 +1,100 @@
+.zora {
+  &-logo {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    background: radial-gradient( 75.29% 75.29% at 64.96% 24.36%, #dcc8d0 15.62%, #78c8cf 30.21%, #4d959e 42.71%, #305eb9 55.73%, #311f12 79.69%, #684232 90.62%, #2d1c13 100% );
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+  }
+  &-wordmark {
+    margin-left: .5rem;
+    width: 8rem;
+    svg {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.sponsors-card {
+  &_wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &_copy {
+    position: relative;
+    z-index: 100;
+    line-height: 1.35;
+    width: 100%;
+    max-width: 44rem;
+    a {
+      text-decoration: underline;
+    }
+    p {
+      font-family: var(--terminal-font);
+      font-size: var(--terminal-size);
+    }
+  }
+  &_zora-wrapper,
+  &_kym-wrapper {
+    position: relative;
+    border-radius: var(--card-radius);
+    width: 100%;
+    padding: var(--space-md);
+  }
+  &_zora-wrapper {
+    color: var(--black);
+    a {
+      color: var(--black);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--card-radius);
+      background: rgba(255,255,255,.65);
+      filter: blur(15px);
+      z-index: 0;
+    }
+  }
+  &_kym-wrapper {
+    color: var(--white);
+    background: var(--kym-blue);
+    a {
+      color: var(--white);
+    }
+  }
+  &_branding {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    float: right;
+    svg * {
+      fill: var(--black);
+    }
+  }
+  &_kym-logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: block;
+    float: right;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

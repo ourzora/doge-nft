@@ -64,12 +64,12 @@
   }
   &_kym {
     position: relative;
-    width: calc(100% - var(--space-lg));
+    width: calc(100% - (var(--space-md) * 2));
     margin: 0 auto var(--space-md);
     height: 8rem;
     background-color: var(--kym-blue);
     color: var(--white);
-    padding: 0 3rem;
+    padding: 0 var(--space-md);
     text-align: left;
     border-radius: var(--space-md);
     overflow: hidden;
@@ -78,14 +78,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   &_kym-logo {
-    width: 22rem;
+    width: 50px;
+    height: 50px;
     height: 100%;
     position: relative;
-    display: flex;
-    justify-content: flex-end;
+    float: right;
   }
   &_bg {
     position: fixed;

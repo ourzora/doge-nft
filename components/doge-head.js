@@ -4,7 +4,7 @@ const DogeHead = () => {
   return (
     <div className="doggie shadow">
       <Image
-        src="/icons/the-doge.png"
+        src="/atsuko-kabosu-crop.png"
         alt="Picture of the Doge"
         layout="fill"
       />

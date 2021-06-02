@@ -117,6 +117,7 @@
       width: 100%;
       padding: var(--space-lg) var(--space-md);
       grid-row-gap: var(--space-lg);
+      margin: 0 auto var(--space-lg);
     }
     &_module {
       &:nth-child(even) {

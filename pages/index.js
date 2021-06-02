@@ -2,7 +2,7 @@ import Head from '../components/head'
 import DogeCards from '../components/doge-cards'
 import DogeFooter from '../components/doge-footer'
 import DogeSidebar from '../components/doge-sidebar'
-import ZoraCard from '../components/zora-card'
+import ZoraCard from '../components/zora-kym-card'
 
 export default function Index({ data }) {
   return (

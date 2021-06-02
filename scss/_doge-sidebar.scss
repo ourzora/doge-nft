@@ -2,6 +2,7 @@
   &_wrapper {
     position: relative;
     padding: var(--space-sm) var(--space-sm) 0;
+    z-index: 100;
   }
   &_inner {
     position: relative;
@@ -17,7 +18,7 @@
   &_title {
     width: 100%;
     text-align: center;
-    padding-top: var(--space-md);
+    padding-top: 1rem;
     h1 {
       transform: rotate(-1deg);
     }
@@ -39,11 +40,11 @@
     }
   }
   &_intro {
-    padding: var(--space-md) 0 0;
+    font-size: 2.25rem;
+    padding: 1.5rem 0 0;
     color: var(--blue);
     max-width: 46rem;
     margin: 0 auto;
-    font-size: 2.25rem;
     line-height: 1.25;
     padding-bottom: 1rem;
   }
@@ -73,7 +74,7 @@
       }
     }
     &_intro {
-      font-size: 1.75rem;
+      font-size: 1.55rem;
       padding-bottom: 0;
     }
     &_wrapper {
@@ -81,7 +82,6 @@
       top: var(--space-md);
       right: var(--space-md);
       animation: fadeInRight 750ms var(--ease) 450ms;
-      z-index: 10;
       animation-fill-mode: both;
       margin-left: 0;
       margin-top: 0;
@@ -89,7 +89,7 @@
       padding: 0;
     }
     &_title {
-      padding-top: var(--space-sm);
+      padding-top: 1rem;
     }
     &_inner {
       position: relative;
@@ -104,7 +104,7 @@
       padding: var(--space-md) var(--space-sm) var(--space-sm);
     }
     &_intro {
-      font-size: 1.85rem;
+      font-size: 1.75rem;
       padding-bottom: .5rem;
     }
     &_title {
