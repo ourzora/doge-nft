@@ -17,7 +17,7 @@ const ZoraCard = () => {
       </div>
       <div className="zora-card_branding-wrapper">
         <a target="_blank" href="https://knowyourmeme.com/" className="zora-card_kym">
-          <img src="/kym-logo/kym-40px.png" alt="Know Your Meme Logo"/>
+          <img src="/about-pictures/600px-KnowYourMeme.png" alt="Know Your Meme Logo"/>
         </a>
         <a target="_blank" href="https://zora.co" className="zora-card_branding">
           <div className="zora-logo" />

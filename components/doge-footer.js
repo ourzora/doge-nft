@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 const DogeFooter = (props) => {
   return (
-    <a href="https://zora.co" target="_blank" className={`doge-footer_wrapper ${props.location}`}>
-      <p><span className="blink">_ </span>Curated by Know Your Meme</p>
-      <div className="doge-footer_zora-branding">
-        <div className="zora-logo" />
-      </div>
-    </a>
+    <div className={`doge-footer_wrapper ${props.location}`}>
+      <p>Curated by<br></br>Know Your Meme</p>
+      <a target="_blank" href="https://knowyourmeme.com/" className="doge-footer_kym-branding">
+        <img src="/kym-logo/kym-40px.png" alt="Know Your Meme Logo"/>
+      </a>
+    </div>
   )
 }
 
