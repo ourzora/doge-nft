@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'variables';
 @import 'animations';
 @import 'doge-home';
 @import 'doge-cards';
@@ -15,97 +16,6 @@
 @font-face {
   font-family: 'Comic Sans MS';
   src: url('/comic-sans-ms.ttf');
-}
-
-:root {
-  /* COLORS ~ STYLE */
-  --pink: pink;
-  --red: red;
-  --blue: #003CFF;
-  --white: #FFFFFF;
-  --black: #000;
-  --price-color: #E64783;
-  --light-grey: #dbdbdb;
-  --kym-blue: #12133f;
-  --border-width: 4px;
-  --color-border: 2px solid var(--blue);
-  --transparent: rgba(0,0,0,0);
-  --black-shadow: drop-shadow(0px 0px 5px rgba(0,0,0,.35));
-  --sm-shadow: drop-shadow(0px 0px 3px rgba(0,0,0,.125));
-  --light-shadow: drop-shadow(0px 0px 10px rgba(0,0,0,.05));
-
-  /* TYPOGRAPHY */
-  --font: 'Comic Sans MS', arial;
-  --terminal-font: 'Source Code Pro', Consolas, Menlo, Monaco, Courier, monospace;
-  --text-01: 1.45rem;
-  --text-02: 2rem;
-  --text-03: 2.5rem;
-  --text-04: 3rem;
-  --text-05: 4rem;
-
-  /* SPACING */
-  --space-lg: 3.5rem;
-  --space-md: 2.5rem;
-  --space-sm: 1.5rem;
-  --space-micro: calc(var(--space-sm) / 2);
-  --gutter: var(--space-sm);
-
-  /* LAYOUT */
-  --sidebar: 100%;
-  --innerheight: calc(100vh - (var(--space-md) * 2));
-  --content-wrapper: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)));
-  --button-height: var(--space-lg);
-  --card-radius: 3rem;
-  
-  /* ANIMATION */
-  --ease: cubic-bezier(0.7, 0, 0.3, 1);
-  --boing: cubic-bezier(.3,1.64,.83,-0.18);
-}
-
-@media(--sm) {
-  :root {
-    --text-01: 1.65rem;
-    --text-02: 2.25rem;
-    --text-03: 2.75rem;
-    --text-04: 3.75rem;
-    --text-05: 4rem;
-  }
-}
-
-@media (--lg) {
-  :root {
-    --sidebar: 30rem;
-    /* SPACING */
-    --space-lg: 3.5rem;
-    --space-md: 2.5rem;
-    --space-sm: 1.5rem;
-  }
-}
-
-@media (--xl) {
-  :root {
-    --sidebar: 27rem;
-    /* SPACING */
-    --space-lg: 3.5rem;
-    --space-md: 2.5rem;
-    --space-sm: 1.5rem;
-    /* TYPOGRAPHY */
-    --text-01: 1.5rem;
-    --text-02: 2.25rem;
-    --text-03: 3rem;
-    --text-04: 3.5vmin;
-    --text-05: 5vmin;
-  }
-}
-
-@media (--xxl) {
-  :root {
-    --sidebar: 30rem;
-    /* SPACING */
-    --space-lg: 5rem;
-    --space-md: 3rem;
-    --space-sm: 2rem;
-  }
 }
 
 * {
