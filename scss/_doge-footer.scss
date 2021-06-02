@@ -8,15 +8,20 @@
     align-items: center;
     z-index: 100;
     margin: 0 auto var(--space-lg);
-    background: var(--white);
+    background-color: var(--kym-blue);
     filter: var(--black-shadow);
     border-radius: var(--space-md);
+    width: calc(100% - (var(--space-md) * 2));
     p {
-      color: var(--black);
-      font-family: var(--terminal-font);
+      color: var(--white);
       font-size: var(--terminal-size);
       line-height: 1.2;
     }
+    /*
+    &.history {
+      display: none;
+    }
+    */
   }
   &_logos {
     display: flex;
@@ -78,23 +83,13 @@
 @media(--lg) {
   .doge-footer {
     &_wrapper {
-      &.product {
-        padding: 0 var(--space-md);
-        width: 100%;
-      }
-      &.history {
-        width: 100%;
-        display: none;
-      }
-      &.index {
-        margin: 0;
-        width: var(--sidebar);
-        position: fixed;
-        bottom: var(--space-md);
-        right: var(--space-md);
-        animation: fadeInUp 750ms var(--ease) 650ms;
-        animation-fill-mode: both;
-      }
+      margin: 0;
+      width: var(--sidebar);
+      position: fixed;
+      bottom: var(--space-md);
+      right: var(--space-md);
+      animation: fadeInUp 750ms var(--ease) 650ms;
+      animation-fill-mode: both;
     }
   }
 }
@@ -104,7 +99,7 @@
     &_wrapper {
       position: fixed;
       z-index: 100;
-      bottom: 0;
+      bottom: var(--space-md);
       right: var(--space-md);
     }
   }
