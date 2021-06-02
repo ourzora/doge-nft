@@ -1,21 +1,21 @@
 import Link from 'next/link'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-import characterRandomColor from '../scripts/characterRandomColor'
+import characterWrap from '../scripts/characterWrap'
 import { INTRO_COPY } from '../lib/constants'
 import DogeHead from './doge-head'
 
 const DogeSidebar = () => {
   
   /* FIX THIS */
-  const title = characterRandomColor('Doge NFT Auction', 'span', 'doge-title')
+  const title = characterWrap('Doge NFT Auction', 'span', 'doge-title_letter')
   
   return (
     <div className="doge-sidebar_wrapper">
       <div className="doge-sidebar_inner">
         <DogeHead />
         <div className="doge-sidebar_title">
-          <h1 className="text-04" dangerouslySetInnerHTML={{ __html: title }} />
+          <h1 className="text-04 doge-title" dangerouslySetInnerHTML={{ __html: title }} />
           <p className="doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: INTRO_COPY }} />
         </div>
         <div className="doge-sidebar_ui">

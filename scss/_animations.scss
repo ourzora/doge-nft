@@ -116,6 +116,24 @@
   }
 }
 
+@keyframes wavyAnimationFwd {
+  0% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes wavyAnimationBkwd {
+  0% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
 @media(--lg) {
   @keyframes fadeIn {
     from {
@@ -164,8 +182,4 @@
 
 .blink {
   animation: var(--blink-animation);
-} 
-
-.shadow-animation {
-  animation: shadowColor 2000ms alternate inifinite;
 }

@@ -5,7 +5,6 @@ export default (title, element, className) => {
   const titleArray = title.split('')
   let newTitle = []
   titleArray.forEach(char => {
-    console.log(char)
     newTitle.push(`<${element}${wrapperClass}>${char}</${element}>`)
   });
   return newTitle.join('')
