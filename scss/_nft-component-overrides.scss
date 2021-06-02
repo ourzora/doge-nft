@@ -155,10 +155,11 @@
     color: var(--price-color)!important;
   }
   &-mediaLoader {
-    display: block;
-    width: 15rem!important;
-    height: 15rem!important;
-    border-radius: 7.5rem;
+    display: block!important;
+    min-height: auto!important;
+    width: 12rem!important;
+    height: 12rem!important;
+    border-radius: 6rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -173,7 +174,7 @@
       0 0 7px 9px #f0f,
       0 0 10px 12px #0ff;
     span {
-      font-size: var(--text-02);
+      font-size: var(--text-01);
       color: var(--white)!important;
       position: relative;
       animation: var(--blink-animation)!important;

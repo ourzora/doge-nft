@@ -11,6 +11,7 @@
     * {
       color: var(--black);
       font-family: var(--terminal-font);
+      font-size: var(--terminal-size);
     }
   }
   &_zora-branding {
@@ -80,20 +81,21 @@
   }
 }
 
-/*
-@media (--hover) {
+@media(--xxxl) {
   .doge-footer {
-    &_blog-link,
     &_wrapper {
-      transition: transform 350ms var(--boing);
-      will-change: transform;
-    }
-    &_blog-link:hover {
-      transform: rotate(2deg);
-    }
-    &_wrapper:hover {
-      transform: scale(1.15);
+      position: fixed;
+      z-index: 100;
+      bottom: 0;
+      right: var(--space-md);
     }
   }
 }
-*/
+
+@media(--hover) {
+  .doge-footer {
+    &_wrapper a:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -142,15 +142,5 @@
     &:nth-of-type(5n) {
       color: orange;
     }
-    /*
-    animation-fill-mode: both;
-    display: inline-block;
-    &:nth-of-type(even) {
-      animation: wavyAnimationFwd 2000ms alternate infinite;
-    }
-    &:nth-of-type(odd) {
-      animation: wavyAnimationBkwd 2000ms alternate infinite;
-    }
-    */
   }
 }

@@ -1,8 +1,7 @@
-import { useContext } from 'react'
 import Head from '../../components/head'
 import GoHome from '../../components/go-home'
 import find from 'lodash/find'
-import { NFTFullPage, MediaConfiguration, NFTDataContext } from "@zoralabs/nft-components"
+import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
 import { MediaFetchAgent, Networks } from "@zoralabs/nft-hooks";
 
 import DogeFooter from '../../components/doge-footer'
