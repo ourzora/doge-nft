@@ -2,7 +2,7 @@ import Head from '../components/head'
 import DogeCards from '../components/doge-cards'
 import DogeFooter from '../components/doge-footer'
 import DogeSidebar from '../components/doge-sidebar'
-import ZoraCard from '../components/zora-kym-card'
+import ZoraKymCard from '../components/zora-kym-card'
 
 export default function Index({ data }) {
   return (
@@ -16,7 +16,7 @@ export default function Index({ data }) {
         <div className="doge-home_border" />
         <nav className="doge-home_nav-wrapper">
           <DogeCards/>
-          <ZoraCard/>
+          <ZoraKymCard/>
         </nav>
       </section>
       <DogeFooter location="index hide-mobile"/>

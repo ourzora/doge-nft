@@ -155,7 +155,9 @@
     color: var(--price-color)!important;
   }
   &-mediaLoader {
-    display: block!important;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
     min-height: auto!important;
     width: 12rem!important;
     height: 12rem!important;
@@ -177,8 +179,8 @@
       font-size: var(--text-01);
       color: var(--white)!important;
       position: relative;
-      animation: var(--blink-animation)!important;
-      animation-fill-mode: both;
+      width: 100%!important;
+      text-align: center!important;
     }
   }
 }

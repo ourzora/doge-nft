@@ -70,6 +70,21 @@ main {
   width: 100%;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: rgba(255,255,255,0)!important;
+  -webkit-appearance: none!important;
+}
+
+button {
+  background-color: rgba(255,255,255,0);
+  text-decoration: none!important;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 // SCROLLBAR
 *::-webkit-scrollbar {
   height: 10px;
@@ -113,7 +128,7 @@ main {
 }
 
 // UI
-@mixin lozengeButton {
+.lozenge-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,10 +148,6 @@ main {
   text-transform: lowercase;
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.lozenge-button {
-  @include lozengeButton;
 }
 
 @media(hover:hover) {
