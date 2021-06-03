@@ -19,18 +19,6 @@ const DogeHistory = () => {
         copy={copy}
       />
       <aside className="doge-history_bg"></aside>
-      {/*
-      <a href="https://knowyourmeme.com/" target="_blank" className="doge-history_kym">
-        <p>Written and prepared by Know Your Meme</p>
-        <div className="doge-history_kym-logo">
-          <Image
-            src={'/kym-logo/kym-50px.png'}
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
-      </a>
-      */}
       <DogeFooter location="history"/>
     </>
   )

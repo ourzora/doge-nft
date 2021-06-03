@@ -23,7 +23,7 @@ const ZoraCard = () => {
         <div className="sponsors-card_copy">
           <p><span className="blink">_ </span><a target="_blank" href="https://knowyourmeme.com/">Know Your Meme</a></p>
           <p><span className="blink">_ </span>The world’s largest internet meme database, which documents and catalogs memes and internet phenomena</p><br></br>
-          <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/">Sell Your Meme?</a></p>
+          <p><span className="blink">_ </span><a target="_blank" href="https://ourzora.typeform.com/to/YW1lLfuJ">Sell Your Meme?</a></p>
         </div>
         <a target="_blank" href="https://knowyourmeme.com/" className="sponsors-card_kym-logo">
           <img src="/kym-logo/kym-80px.png" alt="Know Your Meme Logo"/>
