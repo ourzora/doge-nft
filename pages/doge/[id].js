@@ -10,19 +10,15 @@ import { NFT_LIST } from '../../lib/constants'
 
 export const style = {
   theme: {
-    previewCard: {
-      background: "linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #696969",
-    },
     titleFont: {
-      color: "var(--black)",
-      fontWeight: 400,
+      fontWeight: 300,
       fontSize: 'var(--text-02)',
       fontFamily: 'var(--font)'
     },
     bodyFont: {
       color: "var(--blue)",
-      fontWeight: 300,
       fontSize: 'var(--text-02)',
+      fontWeight: 300,
       fontFamily: 'var(--font)'
     },
     defaultBorderRadius: 20
