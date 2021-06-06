@@ -102,7 +102,7 @@ const words = [
 ]
 
 const Background = () => {
-  /*
+
   const canvasRef = useRef(null);
   
   useEffect(() => {
@@ -123,7 +123,6 @@ const Background = () => {
       });
     }
   });
-  */
 
   return (
     <aside className="doge-bg">
@@ -138,17 +137,19 @@ const Background = () => {
           <Stroke className="paint-3 light-shadow" />
         </div>
       </div>
-      <div id="words">
-        {words.map((word, i) => (
-          <div
-            key={`word-${i}`}
-            className={`word ${word.pos}`}
-          >
-            <span>{word.word}</span>
-          </div>
-        ))}
-      </div>
-      {/*<canvas ref={canvasRef} id="doge-gradient"></canvas>*/}
+      {/*
+        <div id="words">
+          {words.map((word, i) => (
+            <div
+              key={`word-${i}`}
+              className={`word ${word.pos}`}
+            >
+              <span>{word.word}</span>
+            </div>
+          ))}
+        </div>
+      */}
+      <canvas ref={canvasRef} id="doge-gradient"></canvas>
     </aside>
   )
 }
