@@ -102,6 +102,7 @@ const words = [
 ]
 
 const Background = () => {
+  /*
   const canvasRef = useRef(null);
   
   useEffect(() => {
@@ -122,6 +123,7 @@ const Background = () => {
       });
     }
   });
+  */
 
   return (
     <aside className="doge-bg">
@@ -146,7 +148,7 @@ const Background = () => {
           </div>
         ))}
       </div>
-      <canvas ref={canvasRef} id="doge-gradient"></canvas>
+      {/*<canvas ref={canvasRef} id="doge-gradient"></canvas>*/}
     </aside>
   )
 }
