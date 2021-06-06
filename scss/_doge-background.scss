@@ -73,6 +73,7 @@
 
 #words {
   position: fixed;
+  display: block;
   top: 0;
   right: 0; 
   bottom: 0;
@@ -80,11 +81,12 @@
   margin: auto;
   height: 100%;
   overflow: hidden;
-  animation: FadeIn 3s ease-out;
-  user-select: none;
+  // animation: FadeIn 3s ease-out;
+  // user-select: none;
   z-index: 10;
   pointer-events: none;
   font-size: 2rem;
+  transform: translateZ(0);
 }
 
 @media(--lg) {
