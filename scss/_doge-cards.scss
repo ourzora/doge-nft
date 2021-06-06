@@ -12,9 +12,11 @@
     width: 100%;
     position: relative;
     padding-top: 75%;
-    animation: shadowColor 11750ms var(--ease) alternate infinite;
+    display: block;
+    transform: translateZ(0);
     &:first-child {
       padding-top: 110%;
+      overflow: visible;
       .zora {
         &-cardAuctionPricing {
           opacity: 1;
@@ -176,6 +178,7 @@
 @media(--lg) {
   .doge-cards {
     &_list-item {
+      animation: shadowColor 11750ms var(--ease) alternate infinite;
       &:first-child {
         padding-top: 75%;
         .zora {

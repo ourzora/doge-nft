@@ -35,20 +35,11 @@
   left: 0;
   z-index: 0;
   pointer-events: none;
+  display: block;
 }
 
 .strokes {
   z-index: 1;
-}
-
-.paint-1 * {
-  fill: beige
-}
-.paint-2 * {
-  fill: pink;
-}
-.paint-3 * {
-  fill: beige;
 }
 
 @keyframes Float {
@@ -71,6 +62,7 @@
 
 #words {
   position: fixed;
+  display: block;
   top: 0;
   right: 0; 
   bottom: 0;
@@ -78,16 +70,21 @@
   margin: auto;
   height: 100%;
   overflow: hidden;
-  animation: FadeIn 3s ease-out;
   user-select: none;
   z-index: 10;
   pointer-events: none;
   font-size: 2rem;
+  transform: translateZ(0);
 }
 
 @media(--lg) {
   #words {
     font-size: 2.5rem;
+  }
+  .paint-1-wrapper,
+  .paint-2-wrapper,
+  .paint-3-wrapper {
+    filter: var(--light-shadow);
   }
 }
 

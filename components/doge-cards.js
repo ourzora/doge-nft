@@ -5,7 +5,7 @@ import { NFT_LIST } from '../lib/constants'
 
 const DogeCard = (props) => {
   return (
-    <Link href={`/doge/${props.doge.slug}`}>
+    <Link passHref href={`/doge/${props.doge.slug}`}>
       <a className="doge-card_wrapper shadow">
         <div className="doge-card_wrapper-inner">
           <div className="zora-placeHolderInfo">
