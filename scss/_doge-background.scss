@@ -35,6 +35,8 @@
   left: 0;
   z-index: 0;
   pointer-events: none;
+  display: block;
+  transform: translateZ(0);
 }
 
 .strokes {

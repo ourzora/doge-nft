@@ -1,4 +1,4 @@
-export default (title, element, className) => {
+const characterWrap = (title, element, className) => {
   // RETURN CLASS
   let wrapperClass = className !== undefined ? ` class="${className}"` : ''
   // TITLE
@@ -9,3 +9,5 @@ export default (title, element, className) => {
   });
   return newTitle.join('')
 }
+
+export default characterWrap;
