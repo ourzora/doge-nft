@@ -126,19 +126,17 @@ const Background = () => {
 
   return (
     <aside className="doge-bg">
-      {/*
-        <div className="strokes">
-          <div className="paint-1-wrapper">
-            <Stroke className="paint-1 light-shadow" />
-          </div>
-          <div className="paint-2-wrapper">
-            <Stroke className="paint-2 light-shadow" />
-          </div>
-          <div className="paint-3-wrapper">
-            <Stroke className="paint-3 light-shadow" />
-          </div>
+      <div className="strokes">
+        <div className="paint-1-wrapper">
+          <img src="/svg/brush-stroke-1.svg" className="light-shadow"/>
         </div>
-      */}
+        <div className="paint-2-wrapper">
+          <img src="/svg/brush-stroke-2.svg" className="light-shadow"/>
+        </div>
+        <div className="paint-3-wrapper">
+          <img src="/svg/brush-stroke-1.svg" className="light-shadow"/>
+        </div>
+      </div>
       <div id="words">
         {words.map((word, i) => (
           <div
