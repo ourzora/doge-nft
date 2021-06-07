@@ -68,7 +68,9 @@
   &_kym-wrapper {
     color: var(--white);
     background: var(--kym-blue);
-    a {
+    a,
+    p {
+      color: #fff;
       color: var(--white);
     }
   }
