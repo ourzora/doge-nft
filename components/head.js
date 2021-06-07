@@ -6,7 +6,7 @@ import { INTRO_COPY } from '../lib/constants'
 const defaultDescription = INTRO_COPY;
 const defaultKeywords = 'Doge';
 const defaultOGURL = 'https://very.auction/';
-const defaultOGImage = '/doge-og-image.png';
+const defaultOGImage = 'https://very.auction/doge-og-image.png';
 
 const Head = (props) => (
   <NextHead>
