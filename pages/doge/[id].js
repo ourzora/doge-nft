@@ -26,11 +26,11 @@ export const style = {
 };
 
 const config = {
-  allowOffer: false
+  allowOffer: true
 }
 
 export const strings = {
-  OPEN_OFFERS: ''
+  // OPEN_OFFERS: ''
 }
 
 const Doge = ({ post, nftData }) => {
