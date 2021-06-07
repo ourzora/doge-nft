@@ -10,6 +10,7 @@ module.exports = {
             customMedia[`--${size}`] = `(min-width: ${screens[size]}px)`
           }
           customMedia[`--portrait`] = `(max-width: ${screens.lg - 1}px)`
+          customMedia[`--mobile`] = `(max-width: ${screens.md - 1}px)`
           customMedia[`--hover`] = `(hover:hover)`
           return { customMedia }
         }

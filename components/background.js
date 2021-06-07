@@ -126,17 +126,6 @@ const Background = () => {
 
   return (
     <aside className="doge-bg">
-      <div className="strokes">
-        <div className="paint-1-wrapper">
-          <img src="/svg/brush-stroke-1.svg" className="light-shadow"/>
-        </div>
-        <div className="paint-2-wrapper">
-          <img src="/svg/brush-stroke-2.svg" className="light-shadow"/>
-        </div>
-        <div className="paint-3-wrapper">
-          <img src="/svg/brush-stroke-1.svg" className="light-shadow"/>
-        </div>
-      </div>
       <div id="words">
         {words.map((word, i) => (
           <div
@@ -146,6 +135,17 @@ const Background = () => {
             <span>{word.word}</span>
           </div>
         ))}
+      </div>
+      <div className="strokes">
+        <div className="paint-1-wrapper">
+          <img src="/svg/brush-stroke-1.svg"/>
+        </div>
+        <div className="paint-2-wrapper">
+          <img src="/svg/brush-stroke-2.svg"/>
+        </div>
+        <div className="paint-3-wrapper">
+          <img src="/svg/brush-stroke-1.svg"/>
+        </div>
       </div>
       <canvas ref={canvasRef} id="doge-gradient"></canvas>
     </aside>
