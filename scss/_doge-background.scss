@@ -79,6 +79,10 @@
 
 @media(--mobile) {
   .strokes {
+    background-image: url('../public/mobile-brushes-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     * {
       display: none;
     }
