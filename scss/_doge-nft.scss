@@ -32,6 +32,14 @@
       right: 0;
       bottom: 0;
     }
+    &.hide {
+      .zora-infoContainer {
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          display: none;
+        }
+      }
+    }
   }
   &_title-wrapper {
     display: flex;

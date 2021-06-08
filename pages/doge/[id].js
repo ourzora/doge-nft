@@ -25,15 +25,14 @@ export const style = {
   }
 };
 
-const config = {
-  allowOffer: false
-}
-
 export const strings = {
   OPEN_OFFERS: ''
 }
 
 const Doge = ({ post, nftData }) => {
+  const config = {
+    allowOffer: post.auctionState
+  }
   return (
     <>
       <Head
@@ -42,7 +41,7 @@ const Doge = ({ post, nftData }) => {
         ogImage={`${nftData.zoraNFT.contentURI}`}
       />
       <GoHome />
-      <article className="doge-nft_wrapper">
+      <article className={`doge-nft_wrapper ${!post.auctionState ? 'hide' : ''}`}>
         <MediaConfiguration
           style={style}
           strings={strings}

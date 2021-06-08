@@ -4,6 +4,14 @@
     .zora-cardAuctionPricing {
       display: none;
     }
+    &:first-child {
+      .zora-cardAuctionPricing {
+        display: flex;
+      }
+      .zora-placeHolderInfo {
+        display: none;
+      }
+    }
   }
 }
 

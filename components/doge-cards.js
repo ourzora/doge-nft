@@ -9,7 +9,7 @@ const DogeCard = (props) => {
       <a className="doge-card_wrapper shadow">
         <div className="doge-card_wrapper-inner">
           <div className="zora-placeHolderInfo">
-            <span>{props.index === 0 ? 'Auction June 8th' : 'Coming Soon'}</span>
+            <span>Coming Soon</span>
           </div>
           <NFTPreview id={props.doge.id} />
         </div>
