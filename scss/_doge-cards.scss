@@ -7,8 +7,12 @@
     &:first-child {
       .zora-cardAuctionPricing {
         display: flex;
+        flex-direction: column;
         top: -1rem;
         left: 1rem;
+        span:first-child {
+          padding-bottom: .5rem;
+        }
       }
       .zora-placeHolderInfo {
         display: none;
