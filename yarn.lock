@@ -1263,10 +1263,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/promise-all-settled/-/promise-all-settled-1.1.2.tgz#aa58042711d6e3275dd37dc597e5d31e8c290a44"
   integrity sha512-sL/cEvJWAnClXw0wHk85/2L0G6Sj8UB0Ctc1TEMbKSsmpRosqhwj9gWgFRZSrBr2f9tiXISwNhCPmlfqUqyb9Q==
 
-"@zoralabs/nft-components@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.0.15.tgz#fc3749c0ff5cd65e0738d846927e36b14f8c45df"
-  integrity sha512-hJ4ZwyMazPYwYqlnTU4MgG2C8xqyaFDXh3BGhfxMp3gu3S4eC4APTzEFAiOBmUO0i7sEKLYW1vLRrcS5Xjv+OA==
+"@zoralabs/nft-components@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.0.16.tgz#0379c2e65bfd9af7af8c94f2ccdb73553cb8e1bb"
+  integrity sha512-Nz5dAmGvhtAwzaFxmUM7yYIGQDw+uq8d7aV+3eWTfpZjLkhwyKoFxBMLMjJEjjwzXoXzWvWxnZ4nqjWpNY1WVQ==
   dependencies:
     "@emotion/css" "^11.1.3"
     "@types/react" "^17.0.5"
