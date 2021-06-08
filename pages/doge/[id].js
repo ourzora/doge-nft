@@ -33,6 +33,7 @@ const Doge = ({ post, nftData }) => {
   const config = {
     allowOffer: post.auctionState,
     showPerpetual: false,
+    refreshInterval: 45,
   };
   return (
     <>
