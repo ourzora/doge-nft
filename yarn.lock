@@ -1263,24 +1263,24 @@
   resolved "https://registry.yarnpkg.com/@ungap/promise-all-settled/-/promise-all-settled-1.1.2.tgz#aa58042711d6e3275dd37dc597e5d31e8c290a44"
   integrity sha512-sL/cEvJWAnClXw0wHk85/2L0G6Sj8UB0Ctc1TEMbKSsmpRosqhwj9gWgFRZSrBr2f9tiXISwNhCPmlfqUqyb9Q==
 
-"@zoralabs/nft-components@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.0.12.tgz#8b24688c74b7a5107d42a538ae43d71085a9c408"
-  integrity sha512-3/qPd5z5OmlZPC6aLZ+sB73zjaSSlVFgvGAqX8waVBWGZLzn+VGcK/iXKH7x4nk+Z6vOoL/0iEHVz0I7h/IgVw==
+"@zoralabs/nft-components@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-0.0.15.tgz#fc3749c0ff5cd65e0738d846927e36b14f8c45df"
+  integrity sha512-hJ4ZwyMazPYwYqlnTU4MgG2C8xqyaFDXh3BGhfxMp3gu3S4eC4APTzEFAiOBmUO0i7sEKLYW1vLRrcS5Xjv+OA==
   dependencies:
     "@emotion/css" "^11.1.3"
     "@types/react" "^17.0.5"
-    "@zoralabs/nft-hooks" "^0.2.1"
+    "@zoralabs/nft-hooks" "^0.3.3"
     merge-anything "^4.0.1"
     react "^17.0.2"
     react-dom "^17.0.2"
     swr "^0.5.6"
     tslib "^2.2.0"
 
-"@zoralabs/nft-hooks@^0.2.1", "@zoralabs/nft-hooks@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.2.2.tgz#ad4e7aae015d040ecf7b738ea3eabd8ed7845d83"
-  integrity sha512-b/Tj/KYc5hy2WrLDrpy+FzuTfJl+ahos+53FypVv7rnzZ1I9EFHF/G4bu2Izhz65gGYFbw9N4tbojbtWZ3QyEQ==
+"@zoralabs/nft-hooks@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@zoralabs/nft-hooks/-/nft-hooks-0.3.3.tgz#8a4068673e7bb29d97eb2d33d86fa7f0e9410fd5"
+  integrity sha512-nj9IX67JRB8y0gSQJrHujS0UpQxl0/DK9xUMVAIPbl508gJzTtyvdmebQ5cejl7GSUQdjLD85rhtTGsduUyM8g==
   dependencies:
     big.js "^6.1.0"
     cross-fetch "^3.1.4"

@@ -1,37 +1,38 @@
-import Head from '../../components/head'
-import GoHome from '../../components/go-home'
-import find from 'lodash/find'
-import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components"
+import Head from "../../components/head";
+import GoHome from "../../components/go-home";
+import find from "lodash/find";
+import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components";
 import { MediaFetchAgent, Networks } from "@zoralabs/nft-hooks";
 
-import DogeFooter from '../../components/doge-footer'
+import DogeFooter from "../../components/doge-footer";
 
-import { NFT_LIST } from '../../lib/constants'
+import { NFT_LIST } from "../../lib/constants";
 
 export const style = {
   theme: {
     titleFont: {
       fontWeight: 300,
-      fontSize: 'var(--text-02)',
-      fontFamily: 'var(--font)'
+      fontSize: "var(--text-02)",
+      fontFamily: "var(--font)",
     },
     bodyFont: {
       color: "var(--blue)",
-      fontSize: 'var(--text-02)',
+      fontSize: "var(--text-02)",
       fontWeight: 300,
-      fontFamily: 'var(--font)'
+      fontFamily: "var(--font)",
     },
-    defaultBorderRadius: 20
-  }
+    defaultBorderRadius: 20,
+  },
 };
 
 const config = {
-  allowOffer: false
-}
+  allowOffer: false,
+  showPerpetual: false,
+};
 
 export const strings = {
-  OPEN_OFFERS: ''
-}
+  OPEN_OFFERS: "",
+};
 
 const Doge = ({ post, nftData }) => {
   return (
@@ -43,31 +44,24 @@ const Doge = ({ post, nftData }) => {
       />
       <GoHome />
       <article className="doge-nft_wrapper">
-        <MediaConfiguration
-          style={style}
-          strings={strings}
-        >
-          <NFTFullPage
-            id={post.id}
-            config={config}
-          >  
-          </NFTFullPage>
+        <MediaConfiguration style={style} strings={strings}>
+          <NFTFullPage id={post.id} config={config}></NFTFullPage>
         </MediaConfiguration>
       </article>
-      <DogeFooter location="product"/>
+      <DogeFooter location="product" />
     </>
-  ) 
-}
+  );
+};
 
 export async function getStaticPaths() {
   const paths = NFT_LIST.map((nft) => ({
     params: { id: nft.slug },
-  }))
-  return { paths, fallback: false }
+  }));
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const post = find(NFT_LIST, { slug: params.id })
+  const post = find(NFT_LIST, { slug: params.id });
   const fetcher = new MediaFetchAgent(Networks.MAINNET);
 
   const nft = await fetcher.loadZNFTData(post.id);
@@ -79,15 +73,15 @@ export async function getStaticProps({ params }) {
 
   const nftData = prepareJson({
     ...nft,
-    ...metadata
-  })
+    ...metadata,
+  });
 
   return {
     props: {
       post,
       nftData,
     },
-  }
+  };
 }
 
-export default Doge
+export default Doge;
