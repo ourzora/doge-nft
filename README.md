@@ -1,5 +1,7 @@
 # Doge NFT Auction
 
+![Doge NFT Auction](https://repository-images.githubusercontent.com/367550525/60e38280-c786-11eb-8b1c-c70d3110068a)
+
 The original Doge memes are being auctioned off as 1/1 NFTs for charity.
 
 Own these pieces of internet history.
