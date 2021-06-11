@@ -8,9 +8,6 @@ const DogeCard = (props) => {
     <Link passHref href={`/doge/${props.doge.slug}`}>
       <a className="doge-card_wrapper shadow">
         <div className="doge-card_wrapper-inner">
-          <div className="zora-placeHolderInfo">
-            <span>Coming Soon</span>
-          </div>
           <NFTPreview showPerpetual={false} id={props.doge.id} />
         </div>
       </a>
