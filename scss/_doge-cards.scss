@@ -1,9 +1,6 @@
 // LAUNCH OVERRIDES
 .doge-cards {
   &_list-item {
-    .zora-cardAuctionPricing {
-      display: none;
-    }
     &:first-child {
       .zora-cardAuctionPricing {
         display: flex;
@@ -128,12 +125,8 @@
     &-cardAuctionPricing,
     &-placeHolderInfo {
       position: absolute;
-      /*
       top: -1rem;
       left: -1rem;
-      */
-      top: -2rem;
-      left: -3rem;
       border-radius: 10px;
       background-color: var(--blue);
       filter: var(--black-shadow);
