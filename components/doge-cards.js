@@ -11,7 +11,7 @@ const DogeCard = (props) => {
           <div className="zora-placeHolderInfo">
             <span>Coming Soon</span>
           </div>
-          <NFTPreview id={props.doge.id} />
+          <NFTPreview showPerpetual={false} id={props.doge.id} />
         </div>
       </a>
     </Link>
