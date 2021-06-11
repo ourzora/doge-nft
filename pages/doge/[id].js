@@ -31,7 +31,7 @@ export const strings = {
 
 const Doge = ({ post, nftData }) => {
   const config = {
-    allowOffer: false,
+    allowOffer: post.allowOffer,
     showPerpetual: false,
     refreshInterval: 45,
   };
