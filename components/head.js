@@ -4,14 +4,14 @@ import { string } from 'prop-types';
 import { INTRO_COPY } from '../lib/constants'
 
 const defaultDescription = INTRO_COPY;
-const defaultKeywords = 'Doge';
-const defaultOGURL = 'https://very.auction/';
-const defaultOGImage = 'https://very.auction/doge-og-image.png';
+const defaultKeywords = 'JAWN';
+const defaultOGURL = 'https://jawn.fr/';
+const defaultOGImage = 'https://jawn.fr/og-image.png';
 
 const Head = (props) => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{`${props.title} | Doge` || ''}</title>
+    <title>{`${props.title} | Jawn  ` || ''}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={props.description || defaultDescription} />
     <meta name="keywords" content={props.keywords || defaultKeywords} />

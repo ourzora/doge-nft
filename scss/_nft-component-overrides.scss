@@ -168,12 +168,11 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    background: var(--blue);
-    animation: var(--spin-animation);
+    
     box-shadow:
       0 0 5px 0px var(--blue),
       0 0 5px 5px #fff,
-      0 0 7px 9px #f0f,
+      0 0 7px 9px black,
       0 0 10px 12px #0ff;
     span {
       font-size: var(--text-01);

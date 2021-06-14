@@ -68,11 +68,13 @@
       position: fixed;
       justify-content: center;
       top: 0;
+      color: var(--black);
       left: 0;
       padding-top: var(--space-md);
       width: calc(var(--sidebar) * .85);
       height: calc(var(--sidebar) * .85);
       transition: all 250ms var(--boing);
+      color: blue;
       animation: fadeIn 550ms var(--ease) 250ms;
       animation-fill-mode: both;
       z-index: 10;
@@ -90,6 +92,7 @@
       transform: translateY(-1rem);
       top: auto;
       right: auto;
+      color: var(--black);
     }
     &_link {
       display: block;
@@ -130,7 +133,7 @@
         animation: spin 5000ms infinite linear;
       }
       .go-home_cta {
-        transform: translateY(-.75rem) rotate(2deg) scale(1.125);
+        
         background-color: var(--blue);
         color: var(--white);
       }

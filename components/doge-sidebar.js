@@ -5,33 +5,38 @@ import characterWrap from '../scripts/characterWrap'
 import { INTRO_COPY } from '../lib/constants'
 import DogeHead from './doge-head'
 
+
+
+
 const DogeSidebar = () => {
   
   /* FIX THIS */
-  const title = characterWrap('Doge NFT Auction', 'span', 'doge-title_letter')
+ 
   
   return (
+   
+
     <div className="doge-sidebar_wrapper">
+      
       <div className="doge-sidebar_inner">
         <DogeHead />
         <div className="doge-sidebar_title">
-          <h1 className="text-04 doge-title" dangerouslySetInnerHTML={{ __html: title }} />
-          <p className="doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: INTRO_COPY }} />
+
+
+          
+        
         </div>
-        <div className="doge-sidebar_ui">
-          <Link href={'/charities'}>
-            <a className="lozenge-button doge-sidebar_history-button">Charities</a>
-          </Link>
-          <Link href={'/doge-history'}>
-            <a className="lozenge-button doge-sidebar_history-button">Doge History</a>
-          </Link>
-        </div>
-        <a className="doge-footer_blog-link" href="http://kabochan.blog.jp/" target="_blank">
-          <span>Visit Atsuko's & Kabochan's Blog!</span>
-        </a>
+          
+      
+          <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/jawn">Zora </a></p>
+          <p><span className="blink">_ </span><a target="_blank" href="https://twitter.com/jawnciego">Twitter</a></p>
+          <p><span className="blink">_ </span><a target="_blank" href="https://instagram.com/jawndiego">IG </a></p>
+ 
+        
       </div>
     </div>
   )
 }
+
 
 export default DogeSidebar;

@@ -139,6 +139,7 @@
       filter: var(--black-shadow);
       border: 0;
       opacity: 0;
+      visibility: hidden;
       transform: scale(.8);
       transition: transform 350ms var(--boing), opacity 150ms var(--ease);
       * {
@@ -151,16 +152,20 @@
       opacity: 1;
       padding: 2rem;
       z-index: 100;
+     
       * {
         font-size: var(--text-03);
       }
     }
     &-pricingAmount {
       padding-right: 2rem;
+      
+      
     }
     &-cardItemInfo {
       border: 0;
       padding: 0 var(--space-md);
+      visibility: hidden;
       height: var(--button-height);
       display: flex;
       justify-content: center;
@@ -184,6 +189,7 @@
       }
       .zora-cardTitle {
         display: block;
+        
       }
     }
   }
@@ -208,7 +214,8 @@
           &-cardMediaWrapper {
             top: 0rem;
             height: 100%!important;
-            transform: rotate(-.25deg);
+           
+         
           }
           &-placeHolderInfo {
             left: 3rem;
@@ -239,6 +246,7 @@
       width: calc(100vw - (var(--sidebar) + (var(--space-md) * 3)) - 8rem);
       height: calc(100vh - (var(--space-md) * 2) - 10rem);
       padding-top: 0;
+      
     }
   }
   .doge-card {
@@ -289,15 +297,15 @@
 
 @media(hover:hover) {
   .doge-card_wrapper:hover {
-    transform: rotate(-2deg) scale(1.05);
-    animation: shadowColor 250ms alternate-reverse infinite;
+    transform: scale(1.05);
+    
     z-index: 2000;
     .zora-cardAuctionPricing {
       opacity: 1;
       transform: scale(1);
     }
     .zora-cardItemInfo {
-      transform: rotate(2deg);
+     
       box-shadow:
         0 0 10px 0px blue,
         0 0 20px 10px #fff,

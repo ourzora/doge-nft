@@ -4,26 +4,9 @@ import find from "lodash/find";
 import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components";
 import { MediaFetchAgent, Networks } from "@zoralabs/nft-hooks";
 
-import DogeFooter from "../../components/doge-footer";
 
 import { NFT_LIST } from "../../lib/constants";
 
-export const style = {
-  theme: {
-    titleFont: {
-      fontWeight: 300,
-      fontSize: "var(--text-02)",
-      fontFamily: "var(--font)",
-    },
-    bodyFont: {
-      color: "var(--blue)",
-      fontSize: "var(--text-02)",
-      fontWeight: 300,
-      fontFamily: "var(--font)",
-    },
-    defaultBorderRadius: 20,
-  },
-};
 
 export const strings = {
   OPEN_OFFERS: "",
@@ -46,11 +29,11 @@ const Doge = ({ post, nftData }) => {
       <article
         className={`doge-nft_wrapper ${!post.auctionState ? "hide" : ""}`}
       >
-        <MediaConfiguration style={style} strings={strings}>
+        <MediaConfiguration strings={strings}>
           <NFTFullPage id={post.id} config={config} />
         </MediaConfiguration>
       </article>
-      <DogeFooter location="product" />
+    
     </>
   );
 };

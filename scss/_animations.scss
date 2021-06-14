@@ -1,39 +1,39 @@
 // ANIMATIONS
 @keyframes shadowColor {
   0% {
-    filter: drop-shadow(0 0 1.5rem yellow);
+    filter: drop-shadow(0 0 0 yellow);
     border-color: white;
   }
   25% {
-    filter: drop-shadow(0 0 0.75rem blue);
+    filter: drop-shadow(0 0 0 blue);
   }
   50% {
-    filter: drop-shadow(0 0 0.75rem green);
+    filter: drop-shadow(0 0 0 green);
   }
   75% {
-    filter: drop-shadow(0 0 0.75rem orange);
+    filter: drop-shadow(0 0 0 orange);
   }
   100% {
-    filter: drop-shadow(0 0 1.75rem red);
+    filter: drop-shadow(0 0 0 red);
     border-color: yellow;
   }
 }
 
 @keyframes simpleShadow {
   0% {
-    filter: drop-shadow(0 0 1.5rem #dbdbdb);
+    filter: drop-shadow(0 0 0 #dbdbdb);
   }
   25% {
-    filter: drop-shadow(0 0 0.75rem #888);
+    filter: drop-shadow(0 0 0 #888);
   }
   50% {
-    filter: drop-shadow(0 0 0.75rem #cbcbcb);
+    filter: drop-shadow(0 0 0 #cbcbcb);
   }
   75% {
-    filter: drop-shadow(0 0 0.75rem #999);
+    filter: drop-shadow(0 0 0 #999);
   }
   100% {
-    filter: drop-shadow(0 0 1.75rem #222);
+    filter: drop-shadow(0 0 0 #222);
   }
 }
 
@@ -50,11 +50,11 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(-6rem);
+    
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    
   }
 }
 
@@ -100,10 +100,10 @@
 
 @keyframes teeterAnimation {
   0% {
-    transform: rotate(-2deg);
+    transform: rotate(0 deg);
   }
   100% {
-    transform: rotate(2deg);
+    transform: rotate(0 deg);
   }
 }
 
@@ -116,14 +116,6 @@
   }
 }
 
-@keyframes wavyAnimationFwd {
-  0% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(1px);
-  }
-}
 
 @keyframes wavyAnimationBkwd {
   0% {
@@ -153,33 +145,3 @@
   }
 }
 
-
-
-:root {
-  --shadow-animation: shadowColor 2000ms alternate infinite;
-  --teeter-animation: teeterAnimation 2000ms alternate infinite;
-  --simple-shadow-animation: simpleShadow 2000ms alternate infinite;
-  --pulse-animation: pulseAnimation 15000ms alternate infinite;
-  --blink-animation: blink-animation .5s steps(5, start) infinite;
-  --spin-animation: spin 5000ms infinite linear;
-}
-
-.shadow-animation {
-  animation: shadowColor 2000ms alternate infinite;
-}
-
-.simple-shadow-animation {
-  animation: simpleShadow 2000ms alternate infinite;
-}
-
-.teeter-animation {
-  animation: teeterAnimation 2000ms alternate infinite;
-}
-
-.pulse-animation {
-  animation: var(--pulse-animation);
-}
-
-.blink {
-  animation: var(--blink-animation);
-}

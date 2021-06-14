@@ -13,8 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.4.0",
+    "@react-three/drei": "^6.1.2",
+    "@react-three/fiber": "^7.0.1",
     "@svgr/webpack": "^5.5.0",
     "@types/react": "^17.0.5",
+    "@types/three": "^0.129.1",
     "@zoralabs/nft-components": "^0.0.17",
     "@zoralabs/nft-hooks": "^0.2.2",
     "babel-plugin-inline-react-svg": "^2.0.1",
@@ -23,9 +26,11 @@
     "next": "^10.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-three": "^0.9.7",
     "react-youtube": "^7.13.1",
     "rm": "^0.1.8",
     "sass": "^1.32.12",
+    "three": "^0.129.0",
     "tslib": "^2.2.0"
   },
   "devDependencies": {

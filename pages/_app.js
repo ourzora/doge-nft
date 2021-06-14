@@ -1,5 +1,5 @@
 import '../scss/main.scss'
-import Background from '../components/background'
+
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
       <main>
         <Component {...pageProps} />
       </main>
-      <Background />
+      
     </>
   )
 }

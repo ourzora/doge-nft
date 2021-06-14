@@ -95,7 +95,7 @@ button {
   background: white;
 }
 *::-webkit-scrollbar-thumb {
-  background: yellow;
+  background: black;
   border-radius: 6rem;
 }
 *::-webkit-scrollbar-thumb:hover {
@@ -135,7 +135,7 @@ button {
   border: var(--color-border);
   background-color: var(--white);
   filter: var(--black-shadow);
-  color: var(--blue);
+  color: black;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;

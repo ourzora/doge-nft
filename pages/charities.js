@@ -8,14 +8,10 @@ import copy from '../lib/charities-copy'
 const DogeHistory = () => {
   return (
     <>
-      <Head
-        title="Charities"
-        description="A portion of the proceeds from these auctions are being donated to charities across the world."
-      />
+      <Head />
       <GoHome />
       <CopyBlock
-        title="Charities"
-        copy={copy}
+       
       />
       <aside className="doge-history_bg"></aside>
       <DogeFooter location="product"/>
@@ -23,4 +19,4 @@ const DogeHistory = () => {
   )
 }
 
-export default DogeHistory
+
