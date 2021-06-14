@@ -8,6 +8,8 @@ import DogeFooter from "../../components/doge-footer";
 
 import { NFT_LIST } from "../../lib/constants";
 
+const RELOAD_TIME_SECONDS = 30;
+
 export const style = {
   theme: {
     titleFont: {
@@ -47,7 +49,11 @@ const Doge = ({ post, nftData }) => {
         className={`doge-nft_wrapper ${!post.auctionState ? "hide" : ""}`}
       >
         <MediaConfiguration style={style} strings={strings}>
-          <NFTFullPage id={post.id} config={config} />
+          <NFTFullPage
+            id={post.id}
+            config={config}
+            refreshInterval={1000 * RELOAD_TIME_SECONDS}
+          />
         </MediaConfiguration>
       </article>
       <DogeFooter location="product" />
