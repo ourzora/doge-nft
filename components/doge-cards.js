@@ -8,7 +8,7 @@ const DogeCard = (props) => {
     <Link passHref href={`/doge/${props.doge.slug}`}>
       <a className="doge-card_wrapper shadow">
         <div className="doge-card_wrapper-inner">
-          <NFTPreview contract='0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7' showPerpetual={false} id={props.doge.id} />
+          <NFTPreview className="doge-card" contract='0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7' showPerpetual={false} id={props.doge.id} />
         </div>
       </a>
     </Link>

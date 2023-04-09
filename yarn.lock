@@ -958,10 +958,10 @@
     "@babel/helper-validator-identifier" "^7.14.0"
     to-fast-properties "^2.0.0"
 
-"@derpyvision/doge-nft-components@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@derpyvision/doge-nft-components/-/doge-nft-components-1.2.0.tgz#7ba7a778a50ac7bf0c634feb953179120246e51a"
-  integrity sha512-PakDVzGAj3784XiEtidU5aYcSokCh6vRduR5QG7AUjoao1+Arvn+naibuET4PXv8VcgprOwf7m/bdG2ueuz8iA==
+"@derpyvision/doge-nft-components@^1.2.12":
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/@derpyvision/doge-nft-components/-/doge-nft-components-1.2.12.tgz#014b30efdbd054bb2a01e2818854e7ec17990b63"
+  integrity sha512-oXmIfclMm5hlV/0B56i0Ub30SwgHjTuyx2uCF/7z1Ai7BGo7hiir0zQHm4Gy5CtXzI9bQT59W+72ilJY3ZrASQ==
   dependencies:
     "@emotion/css" "^11.1.3"
     "@zoralabs/nft-hooks" "1.2.0"

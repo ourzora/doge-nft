@@ -20,6 +20,7 @@ export const style = {
       fontFamily: "var(--font)",
     },
     defaultBorderRadius: 20,
+    useCollectionTag: false
   },
 };
 

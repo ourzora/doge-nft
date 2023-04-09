@@ -1,4 +1,8 @@
 // NFT COMPONENT STYLING
+
+.zora-textSubdued {
+  text-align: center;
+}
 .zora {
   &-fullMediaWrapper {
     margin: 0 auto var(--space-md)!important;
@@ -14,11 +18,13 @@
     opacity: 1!important;
     text-align: center;
     margin: auto;
+    justify-content: center;
   }
   &-pricingAmount,
   &-fullPageHistoryItemDatestamp {
     color: var(--price-color)!important;
     opacity: 1!important;
+    text-align: center!important;
   }
   &-fullTitle {
     margin: 0 auto!important;
@@ -44,9 +50,6 @@
     justify-content: space-between;
     border-radius: var(--gutter);
     filter: var(--sm-shadow);
-    &:last-child {
-      display: none;
-    }
   }
   &-fullPageHistoryItem {
     width: 100%;
@@ -59,6 +62,16 @@
       font-size: var(--text-01)!important;
     }
   }
+  &-addressLink {
+    color: var(--blue)!important;
+    text-decoration: underline!important;
+  }
+  &-fullPageHistoryTxnLink {
+    position: relative!important;
+    &::after {
+      display: none!important;
+    }
+  }
   &-fullCreatorOwnerSection {
     grid-column-gap: 2rem!important;
     align-items: center!important;
@@ -68,6 +81,7 @@
     justify-content: center;
     padding-top: 0!important;
     padding-bottom: 1.5rem!important;
+    border: 0!important;
     .zora-fullLabel {
       margin: 0!important;
     }
@@ -183,7 +197,7 @@
   .zora {
     &-fullInfoProofAuthenticityContainer {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     &-fullProofLink {
       margin-bottom: 0!important;
