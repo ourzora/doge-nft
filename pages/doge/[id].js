@@ -1,14 +1,10 @@
 import Head from "../../components/head";
 import GoHome from "../../components/go-home";
 import find from "lodash/find";
-import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components";
+import { NFTFullPage, MediaConfiguration, FullComponents, NFTDataProvider } from "@derpyvision/doge-nft-components";
 import { MediaFetchAgent, Networks } from "@zoralabs/nft-hooks";
-
 import DogeFooter from "../../components/doge-footer";
-
 import { NFT_LIST } from "../../lib/constants";
-
-const RELOAD_TIME_SECONDS = 30;
 
 export const style = {
   theme: {
@@ -31,28 +27,48 @@ export const strings = {
   OPEN_OFFERS: "",
 };
 
-const Doge = ({ post, nftData }) => {
+const Doge = ({ post }) => {
   const config = {
-    allowOffer: post.allowOffer,
+    allowOffer: false,
     showPerpetual: false,
-    refreshInterval: 45,
+    refreshInterval: false,
   };
+
+  // console.log(nftData?.description)
+
+  /*
+    description
+  : 
+  "One of the many classic photographs of the Shiba Inu “Kabosu,” this image was taken by her owner Atsuko Sato on February 13th, 2010, before going on to become an iconic meme throughout the 2010s. Snapped back when Kabosu was just a few years old during an impromptu photoshoot, this picture captures a rare side of the beloved Shiba behind the Doge meme."
+  mimeType
+  : 
+  "image/png"
+  name
+  : 
+  "Curious Doge"
+  */
+
   return (
     <>
+      {/*
       <Head
         title={post.title}
         description={nftData.description}
         ogImage={`${nftData.zoraNFT.contentURI}`}
       />
+       */}
       <GoHome />
       <article
-        className={`doge-nft_wrapper ${!post.auctionState ? "hide" : ""}`}
+        className={`doge-nft_wrapper`}
       >
-        <MediaConfiguration style={style} strings={strings}>
+        <MediaConfiguration
+          style={style}
+          strings={strings}
+        >
           <NFTFullPage
+            contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
             id={post.id}
             config={config}
-            refreshInterval={1000 * RELOAD_TIME_SECONDS}
           />
         </MediaConfiguration>
       </article>
@@ -72,8 +88,10 @@ export async function getStaticProps({ params }) {
   const post = find(NFT_LIST, { slug: params.id });
   const fetcher = new MediaFetchAgent(Networks.MAINNET);
 
-  const nft = await fetcher.loadZNFTData(post.id);
-  const metadata = await fetcher.fetchIPFSMetadata(nft.nft.metadataURI);
+  // const nft = await fetcher.loadZNFTData(post.id);
+  // const metadata = await fetcher.fetchIPFSMetadata(nft.nft.metadataURI);
+  /*
+  console.log(nft)
 
   function prepareJson(json) {
     return JSON.parse(JSON.stringify(json));
@@ -83,11 +101,11 @@ export async function getStaticProps({ params }) {
     ...nft,
     ...metadata,
   });
-
+  */
   return {
     props: {
       post,
-      nftData,
+      // nftData,
     },
   };
 }

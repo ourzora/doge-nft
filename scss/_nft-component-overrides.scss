@@ -74,12 +74,6 @@
     * {
       text-align: center!important;
     }
-    div {
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        display: none;
-      }
-    }
   }
   &-fullInfoAuctionWrapper {
     text-align: center!important;
