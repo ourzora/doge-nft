@@ -19,11 +19,11 @@ const DogeSidebar = () => {
           <p className="doge-sidebar_intro" dangerouslySetInnerHTML={{ __html: INTRO_COPY }} />
         </div>
         <div className="doge-sidebar_ui">
-          <Link href={'/charities'}>
-            <a className="lozenge-button doge-sidebar_history-button">Charities</a>
+          <Link href={'/charities'} className="lozenge-button doge-sidebar_history-button">
+            Charities
           </Link>
-          <Link href={'/doge-history'}>
-            <a className="lozenge-button doge-sidebar_history-button">Doge History</a>
+          <Link href={'/doge-history'} className="lozenge-button doge-sidebar_history-button">
+            Doge History
           </Link>
         </div>
         <a className="doge-footer_blog-link" href="http://kabochan.blog.jp/" target="_blank">
