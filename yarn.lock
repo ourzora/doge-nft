@@ -1329,7 +1329,7 @@
   resolved "https://registry.yarnpkg.com/@ungap/promise-all-settled/-/promise-all-settled-1.1.2.tgz#aa58042711d6e3275dd37dc597e5d31e8c290a44"
   integrity sha512-sL/cEvJWAnClXw0wHk85/2L0G6Sj8UB0Ctc1TEMbKSsmpRosqhwj9gWgFRZSrBr2f9tiXISwNhCPmlfqUqyb9Q==
 
-"@zoralabs/nft-components@1.2.1":
+"@zoralabs/nft-components@^1.2.1":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@zoralabs/nft-components/-/nft-components-1.2.1.tgz#e13f69f2580e471c7876d65735df55f38b91d419"
   integrity sha512-W+2Z9I7BY3JlWVFtMEUOcz6OHrHFdir/kL+enaTGL7aepVWQH3Y+hUQDUdb6wUOdXWXtTVLWrqYcIgmYQOg9Jw==

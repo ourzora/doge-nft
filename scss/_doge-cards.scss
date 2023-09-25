@@ -115,6 +115,10 @@
       * {
         font-family: var(--font)!important;
       }
+      > div:first-child {
+        width: 100%;
+        height: 100%;
+      }
       .media-thumnail-wrapper {
         aspect-ratio: 690 / 525;
       }

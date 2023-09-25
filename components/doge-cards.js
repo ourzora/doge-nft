@@ -1,9 +1,13 @@
 import Link from 'next/link'
-import { NFTPreview } from "@derpyvision/doge-nft-components";
+// import { NFTPreview } from "@derpyvision/doge-nft-components";
+import { NFTPreview } from "@zoralabs/nft-components";
+
 
 import { NFT_LIST } from '../lib/constants'
 
 const DogeCard = (props) => {
+  console.log(props.doge.id)
+  
   return (
     <Link passHref href={`/doge/${props.doge.slug}`}>
       <a className="doge-card_wrapper shadow">
