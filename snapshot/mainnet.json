@@ -68,10 +68,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeiejv7o3zqcizio3jpcc5geucdvci73klmf7kazyzpvyp5qn64ny4a",
         "mimeType": "image/png",
         "bytes": 332645,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3366/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeiftzakarjaccrwwk3kgdnxsu3e6yb2myruwgu4z5hrmhe4epfbkya",
@@ -82,7 +82,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 483,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3366/metadata.json"
       },
       "metadata": {
         "description": "The original image that started it all. This photo of the Shiba Inu “Kabosu” was taken by her owner Atsuko Sato on February 13th, 2010. After sharing it to her personal blog alongside the series of other famous images under the title “Taking a walk with Kabosu-chan,” these photos went on to kickstart the Doge meme and have circulated the web ever since — none more iconic than this picture.",
@@ -91,10 +92,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3366/image.png",
+        "ogImageSrc": "https://very.auction/media/3366/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "145",
@@ -580,10 +581,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeialp5jtrdgrn6febhd3q7i2ebjwmwchom7jgbmcizar6eabd6a6tq",
         "mimeType": "image/png",
         "bytes": 325888,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3367/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeiexz2ay663lm26ygnofw336twfbwkm6i23dt323niqfmmjp3yiv7i",
@@ -594,7 +595,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 415,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3367/metadata.json"
       },
       "metadata": {
         "description": "While not as well-known as some Doge images, this photo of the Shiba Inu “Kabosu” was taken by her owner Atsuko Sato on February 13th, 2010. Sato shared this image and several others to her personal blog under the title “Taking a walk with Kabosu-chan,” which went on to become one of the most iconic memes of all time.",
@@ -603,10 +605,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3367/image.png",
+        "ogImageSrc": "https://very.auction/media/3367/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "146",
@@ -820,10 +822,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeifr6ouzsvtt3nwofzxgra2fqi2wmpx4355sjb35gurff6k5xk4gmy",
         "mimeType": "image/png",
         "bytes": 330741,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3368/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeifr5prysdyjdtiamnknmnfvqzch7dvm7np3uxfel4vkbhzasar6ea",
@@ -834,7 +836,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 456,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3368/metadata.json"
       },
       "metadata": {
         "description": "Originally captured on February 13th, 2010, this photo of the Shiba Inu “Kabosu” was taken by her owner Atsuko Sato and shared on her personal blog before going viral. As one of the most iconic images of Doge, “Yelling Doge,” as this picture is sometimes called, has been used in thousands upon thousands of memes over the last decade all around the internet.",
@@ -843,10 +846,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3368/image.png",
+        "ogImageSrc": "https://very.auction/media/3368/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "147",
@@ -1300,10 +1303,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeicxvsr2uevlw34rwrd22ewujhjmrdlktbwx3jijvmcjjgfibv5qe4",
         "mimeType": "image/png",
         "bytes": 331185,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3369/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeiba7hqsqk7cvfb7lhrq2m2xrsygondvdmhilcbeiwtszxymwhezvq",
@@ -1314,7 +1317,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 447,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3369/metadata.json"
       },
       "metadata": {
         "description": "One of the many classic photographs of the Shiba Inu “Kabosu,” this image was taken by her owner Atsuko Sato on February 13th, 2010, before going on to become an iconic meme throughout the 2010s. Snapped back when Kabosu was just a few years old during an impromptu photoshoot, this picture captures a rare side of the beloved Shiba behind the Doge meme.",
@@ -1323,10 +1327,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3369/image.png",
+        "ogImageSrc": "https://very.auction/media/3369/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "148",
@@ -1524,10 +1528,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeiau72b3qgkj4lkqd4ipzux3y7t77rap23k2i7yrdqtqy7x63k2pvm",
         "mimeType": "image/png",
         "bytes": 340684,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3370/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeibd2zoaeqeuhpqqvzcnihozurkq43c5ljlmdrfpnjopshuukmf4tu",
@@ -1538,7 +1542,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 428,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3370/metadata.json"
       },
       "metadata": {
         "description": "Perhaps the second most famous image of Doge used in memes, this photo of the Shiba Inu “Kabosu” was taken by owner Atsuko Sato on February 13th, 2010. Over the years, “Angry Doge” has been a popular character in ironic Doge memes in communities, like Reddit’s r/DogeLore, where it’s been photoshopped into countless meme comics.",
@@ -1547,10 +1552,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3370/image.png",
+        "ogImageSrc": "https://very.auction/media/3370/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "144",
@@ -1868,10 +1873,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeia4rutog45r5a4uw3x2mnsetptxvu2qdvnitgiqhh4rk5fx2gnnqe",
         "mimeType": "image/png",
         "bytes": 382052,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3371/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeicyzz5pktwa3h3kgeqmbsjieibzc77gwp3kkq3a37sp6ijlmnxz5m",
@@ -1882,7 +1887,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 313,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3371/metadata.json"
       },
       "metadata": {
         "description": "Revealing a more candid side of Doge, this image from the original photographs captured by Kabosu’s owner Atsuko Sato in February 2010 has been used in many memes over the last decade, commonly known as “Shocked Doge.”",
@@ -1891,10 +1897,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3371/image.png",
+        "ogImageSrc": "https://very.auction/media/3371/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "149",
@@ -2180,10 +2186,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeig5mpzydrsbdszfnrkipsdl6wpii4bjh3ztsj7iw7ogknygmsqtfq",
         "mimeType": "image/png",
         "bytes": 351272,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3372/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeibalsrpnhpwtod36hyya46r6e2qgakuje2qj3hzfjzaaz7odzpkke",
@@ -2194,7 +2200,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 429,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3372/metadata.json"
       },
       "metadata": {
         "description": "A commonly known fact about Shiba Inus is their squishy faces and fluffy neckrolls, and Doge is no different IRL. This photo of the Shiba “Kabosu” was taken by her owner Atsuko Sato in February 2010, subsequently kicking off the Doge meme in the years to come. Since then, Kabosu has become the most well-known Shibe on the entire internet.",
@@ -2203,10 +2210,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3372/image.png",
+        "ogImageSrc": "https://very.auction/media/3372/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "150",
@@ -2548,10 +2555,10 @@
         "gatewayUrl": "https://ipfs.io/ipfs/bafybeigdyfekcd5lpxbrnbkup2blq6esfni3q54rnu2oqw3tvdp6m3nrja",
         "mimeType": "image/png",
         "bytes": 306777,
-        "verified": null,
-        "width": null,
-        "height": null,
-        "localPath": null
+        "verified": true,
+        "width": 640,
+        "height": 480,
+        "localPath": "/media/3373/image.png"
       },
       "metadataRef": {
         "uri": "https://ipfs.fleek.co/ipfs/bafybeiftcdmqtq6mk42wvvxjezr5xcmptzu3hbw3sed4u6tzifsz2spbaq",
@@ -2562,7 +2569,8 @@
         "gateway": "https://ipfs.io/ipfs/",
         "verified": true,
         "bytes": 438,
-        "contentType": "application/json"
+        "contentType": "application/json",
+        "localPath": "/media/3373/metadata.json"
       },
       "metadata": {
         "description": "As the cats of the dog world, it’s quite rare for a Shiba Inu to roll over for belly rubs, but even more rare to see the famous Doge doing so. Originally captured by her owner Atsuko Sato in February 2010, this image of Kabosu shows a rare side of the beloved meme icon in cuddly fashion before she became the most famous dog to ever grace the web.",
@@ -2571,10 +2579,10 @@
         "version": "zora-20210101"
       },
       "media": {
-        "imageSrc": null,
-        "ogImageSrc": null,
-        "width": null,
-        "height": null
+        "imageSrc": "/media/3373/image.png",
+        "ogImageSrc": "https://very.auction/media/3373/image.png",
+        "width": 640,
+        "height": 480
       },
       "sale": {
         "auctionId": "151",
