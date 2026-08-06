@@ -18,7 +18,11 @@ const SoldFor = ({ token, className }) => {
   if (!sale || sale.status !== 'sold') return null
 
   return (
-    <InfoContainer titleString="AUCTION_SOLD_FOR" className={className}>
+    // `doge-sold-for` centres the amount and the winner address. AuctionInfo's own
+    // markup relies on `.zora-fullInfoAuctionWrapper` for that, which is a 0.3.x class
+    // 1.2.1 no longer emits — its style entry is still in the map but returns an empty
+    // string and nothing calls it.
+    <InfoContainer titleString="AUCTION_SOLD_FOR" className={`doge-sold-for ${className || ''}`.trim()}>
       <div {...getStyles('fullInfoAuctionPricing')}>
         <span {...getStyles('pricingAmount')}>{sale.soldAmountLabel}</span>
       </div>

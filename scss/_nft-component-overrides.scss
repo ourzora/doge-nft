@@ -89,18 +89,6 @@
       text-align: center!important;
     }
   }
-  &-fullInfoAuctionWrapper {
-    text-align: center!important;
-    * {
-      text-align: center;
-      margin: 0 auto!important;
-    }
-    .zora-fullLabel {
-      width: 100%!important;
-      justify-content: center;
-      padding-bottom: 5px;
-    }
-  }
   &-textSubdued {
     color: orange!important;
     opacity: 1!important;
@@ -181,6 +169,21 @@
       width: 100%!important;
       text-align: center!important;
     }
+  }
+}
+
+// The "sold for" block, from components/nft-data/sold-for.js.
+//
+// .zora-infoContainer lays its children out in a flex column, which leaves the
+// amount and the winner address flush left under their centred labels. AuctionInfo
+// centred them through .zora-fullInfoAuctionWrapper, a 0.3.x class nft-components
+// 1.2.1 no longer emits.
+.doge-sold-for {
+  align-items: center;
+  text-align: center;
+  .zora-fullLabel {
+    width: 100%;
+    padding-bottom: 5px;
   }
 }
 
