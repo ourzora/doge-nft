@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "license": "ISC",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
