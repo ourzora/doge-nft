@@ -5,6 +5,9 @@ const ZoraCard = () => {
         <div className="sponsors-card_copy">
           <p><span className="blink">_ </span>Zora:</p>
           <p><span className="blink">_ </span>Decentralized Auction House.</p><br></br>
+          {/* The "Sell Your Meme?" typeform used to sit in the Know Your Meme card
+              below. Removed with the rest of the present-tense copy: the auctions
+              closed in June 2021 and the form no longer leads anywhere useful. */}
           <p><span className="blink">_ </span><a target="_blank" href="https://zora.co/">Website</a></p>
           <p><span className="blink">_ </span><a target="_blank" href="https://twitter.com/ourZORA">Twitter</a></p>
           <p><span className="blink">_ </span><a target="_blank" href="https://zora.mirror.xyz">Blog</a></p>
@@ -22,8 +25,7 @@ const ZoraCard = () => {
       <div className="sponsors-card_kym-wrapper shadow">
         <div className="sponsors-card_copy">
           <p><span className="blink">_ </span><a target="_blank" href="https://knowyourmeme.com/">Know Your Meme</a></p>
-          <p><span className="blink">_ </span>The world’s largest internet meme database, which documents and catalogs memes and internet phenomena</p><br></br>
-          <p><span className="blink">_ </span><a target="_blank" href="https://ourzora.typeform.com/to/YW1lLfuJ">Sell Your Meme?</a></p>
+          <p><span className="blink">_ </span>The world’s largest internet meme database, which documents and catalogs memes and internet phenomena</p>
         </div>
         <a target="_blank" href="https://knowyourmeme.com/" className="sponsors-card_kym-logo">
           <img src="/kym-logo/kym-80px.png" alt="Know Your Meme Logo"/>

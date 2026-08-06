@@ -11,6 +11,10 @@
 /dist
 /.next
 
+# snapshot scripts: cached IPFS downloads. The verified originals in public/media
+# are committed; this is just the fetch cache and can be re-fetched.
+/.media-cache
+
 # misc
 .DS_Store
 .env

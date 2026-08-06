@@ -1,79 +1,59 @@
-import Head from "../../components/head";
-import GoHome from "../../components/go-home";
-import find from "lodash/find";
-import { NFTFullPage, MediaConfiguration } from "@zoralabs/nft-components";
-import DogeFooter from "../../components/doge-footer";
-import { NFT_LIST } from "../../lib/constants";
+import { MediaConfiguration } from '@zoralabs/nft-components'
 
-export const style = {
-  theme: {
-    titleFont: {
-      fontWeight: 300,
-      fontSize: "var(--text-02)",
-      fontFamily: "var(--font)",
-    },
-    bodyFont: {
-      color: "var(--blue)",
-      fontSize: "var(--text-02)",
-      fontWeight: 300,
-      fontFamily: "var(--font)",
-    },
-    defaultBorderRadius: 20,
-    useCollectionTag: false
-  },
-};
+import Head from '../../components/head'
+import GoHome from '../../components/go-home'
+import DogeFooter from '../../components/doge-footer'
+import SnapshotProvider from '../../components/nft-data/snapshot-provider'
+import DogeNftFull from '../../components/nft-data/doge-nft-full'
+import { FULL_PAGE_STYLE } from '../../lib/media-theme'
+import { getSnapshotMeta, getTokenBySlug, getTokenSlugs } from '../../lib/snapshot'
 
-export const strings = {
-  OPEN_OFFERS: "",
-};
-
-const Doge = ({ post }) => {
-  const config = {
-    allowOffer: false,
-    showPerpetual: false,
-    refreshInterval: false,
-  };
-  return (
-    <>
-      <Head
-        title={post.title}
-        description={post?.description}
-        ogImage={post?.image}
-      />
-      <GoHome />
-      <article
-        className={`doge-nft_wrapper`}
-      >
-        <MediaConfiguration
-          style={style}
-          strings={strings}
-        >
-          <NFTFullPage
-            contract="0xabEFBc9fD2F806065b4f3C237d4b59D9A97Bcac7"
-            id={post.id}
-            config={config}
-          />
-        </MediaConfiguration>
-      </article>
-      <DogeFooter location="product" />
-    </>
-  );
-};
+const Doge = ({ token, meta }) => (
+  <>
+    <Head
+      title={token.metadata.name}
+      description={token.metadata.description}
+      ogImage={token.media.ogImageSrc}
+      ogImageWidth={token.media.width}
+      ogImageHeight={token.media.height}
+    />
+    <GoHome />
+    <article className="doge-nft_wrapper">
+      {/*
+        networkId is explicit so ProofAuthenticity's
+        VIEW_ETHERSCAN_URL_BASE_BY_NETWORK[networkId] lookup is deliberate rather than
+        relying on the context default.
+      */}
+      <MediaConfiguration networkId="1" style={FULL_PAGE_STYLE}>
+        <SnapshotProvider token={token} meta={meta}>
+          <DogeNftFull token={token} />
+        </SnapshotProvider>
+      </MediaConfiguration>
+    </article>
+    <DogeFooter location="product" />
+  </>
+)
 
 export async function getStaticPaths() {
-  const paths = NFT_LIST.map((nft) => ({
-    params: { id: nft.slug },
-  }));
-  return { paths, fallback: false };
+  return {
+    paths: getTokenSlugs().map((id) => ({ params: { id } })),
+    fallback: false,
+  }
 }
 
 export async function getStaticProps({ params }) {
-  const post = find(NFT_LIST, { slug: params.id });
+  const meta = getSnapshotMeta()
   return {
     props: {
-      post,
+      token: getTokenBySlug(params.id),
+      // Only what the shim reads. The rest of meta is provenance.
+      meta: {
+        contractName: meta.contractName,
+        contractSymbol: meta.contractSymbol,
+        auctionHouse: meta.auctionHouse,
+      },
     },
-  };
+  }
 }
 
-export default Doge;
+export default Doge

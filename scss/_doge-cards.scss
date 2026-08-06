@@ -11,9 +11,6 @@
           padding-bottom: .5rem;
         }
       }
-      .zora-placeHolderInfo {
-        display: none;
-      }
     }
   }
 }
@@ -119,9 +116,6 @@
         width: 100%;
         height: 100%;
       }
-      .media-thumnail-wrapper {
-        aspect-ratio: 690 / 525;
-      }
     }
     &-cardMediaWrapper {
       top: 0;
@@ -129,8 +123,7 @@
       height: 100%!important;
       border-radius: 3rem;
     }
-    &-cardAuctionPricing,
-    &-placeHolderInfo {
+    &-cardAuctionPricing {
       position: absolute;
       top: -1rem;
       left: -1rem;
@@ -196,11 +189,6 @@
       animation: shadowColor 11750ms var(--ease) alternate infinite;
       &:first-child {
         padding-top: 75%;
-        .doge-card_wrapper {
-          .zora-cardOuter .media-thumnail-wrapper {
-            aspect-ratio: 690 / 500;
-          }
-        }
         .zora {
           &-cardAuctionPricing {
             opacity: 1;

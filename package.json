@@ -1,20 +1,23 @@
 {
-  "name": "create-next-app-default",
+  "name": "doge-nft",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "license": "ISC",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "snapshot": "node scripts/snapshot/index.js",
+    "snapshot:media": "node scripts/snapshot/media.js",
+    "snapshot:verify": "node scripts/snapshot/verify.js",
+    "snapshot:probe": "node scripts/snapshot/probe.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@svgr/webpack": "^5.5.0",
-    "@types/react": "^17.0.5",
     "@zoralabs/nft-components": "^1.2.1",
     "@zoralabs/nft-hooks": "^1.2.1",
     "babel-plugin-inline-react-svg": "^2.0.1",
@@ -25,12 +28,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-youtube": "^7.13.1",
-    "rm": "^0.1.8",
     "sass": "^1.32.12",
     "tslib": "^2.2.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.5",
     "autoprefixer": "^10.2.5",
+    "ethers": "^5.7.2",
     "postcss-custom-media": "^8.0.0"
   }
 }
