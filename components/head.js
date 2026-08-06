@@ -1,12 +1,14 @@
 import NextHead from 'next/head';
-import { string } from 'prop-types';
+import { number, string } from 'prop-types';
 
-import { INTRO_COPY } from '../lib/constants'
+import { DEFAULT_DESCRIPTION, SITE_URL } from '../lib/constants'
 
-const defaultDescription = INTRO_COPY;
+const defaultDescription = DEFAULT_DESCRIPTION;
 const defaultKeywords = 'Doge';
-const defaultOGURL = 'https://very.auction/';
-const defaultOGImage = 'https://very.auction/doge-og-image.png';
+const defaultOGURL = `${SITE_URL}/`;
+const defaultOGImage = `${SITE_URL}/doge-og-image.png`;
+// The site-wide card. Token pages pass their own, which is 640x480.
+const defaultOGImageSize = { width: 1200, height: 630 };
 
 const Head = (props) => (
   <NextHead>
@@ -26,8 +28,20 @@ const Head = (props) => (
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={props.ogImage || defaultOGImage} />
     <meta property="og:image" content={props.ogImage || defaultOGImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {/*
+      These have to describe the image actually being served. They were hardcoded to
+      1200x630 while token pages advertised a 640x480 PNG, which is wrong for every
+      crawler that trusts them. Twitter's summary_large_image accepts anything above
+      300x157 and crops, so the real dimensions are fine.
+    */}
+    <meta
+      property="og:image:width"
+      content={String(props.ogImageWidth || defaultOGImageSize.width)}
+    />
+    <meta
+      property="og:image:height"
+      content={String(props.ogImageHeight || defaultOGImageSize.height)}
+    />
   </NextHead>
 );
 
@@ -36,7 +50,9 @@ Head.propTypes = {
   description: string,
   keywords: string,
   url: string,
-  ogImage: string
+  ogImage: string,
+  ogImageWidth: number,
+  ogImageHeight: number
 };
 
 export default Head;

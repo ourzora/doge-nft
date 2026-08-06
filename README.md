@@ -2,25 +2,53 @@
 
 ![Doge NFT Auction](https://repository-images.githubusercontent.com/367550525/60e38280-c786-11eb-8b1c-c70d3110068a)
 
-The original Doge memes are being auctioned off as 1/1 NFTs for charity.
+An archive of the Doge NFT auctions. The original Doge memes — Atsuko Sato's photographs of
+Kabosu — were auctioned as 1/1 NFTs for charity in June 2021, and all eight sold. This is no
+longer a live auction site; it is a static record of one.
 
-Own these pieces of internet history.
+Every page is built from `snapshot/mainnet.json`, a committed capture of the collection taken
+directly from Ethereum and IPFS, and from the artwork committed under `public/media/`. **The
+site makes no network calls at build or at runtime.** That is not an optimisation: Zora's
+indexer, the `ourzora/zora-v1` subgraph, Zora's IPFS gateway and the `ipfs.fleek.co` gateway
+named in the tokens' own on-chain URIs are all permanently offline, so the data had to be
+captured and committed.
 
-Brought to you by Atsuko Sato and Kabosu.
+Because Zora Media V1 records `sha256` of both the artwork and the metadata on chain, every
+committed file can be **proven** to be the bytes that were minted rather than merely trusted:
 
-This gallery uses `@zoralabs/nft-components` to render custom auctions. Fork this to create your own curated auction house or galleries of Zora media or ERC721s.
+```bash
+yarn snapshot:verify           # re-hash all 16 files against the snapshot, fully offline
+yarn snapshot:verify --chain   # also re-read the hashes from Ethereum and diff
+```
 
+## Running it
 
-#### Code structure:
-- `lib/`: Constants and content
-- `scss/`: Stylesheets
-- `components/`: Components used for the site. Zora integrations are in `zora-card` and `doge-nft-card`.
-- `scripts/`: Effect utils
-- `public/`: Public assets
-- `pages/`: Static next.js pages and server-side content fetching
+```bash
+yarn install
+yarn dev       # http://localhost:3000
+yarn build     # 13 static pages
+yarn start     # serve the production build
+```
 
-#### How to make your own:
-1. Update content and referenced NFTs in `lib/` and in `pages/`
-2. Update styles in `scss/`
-3. Publish! Next.js works well with vercel and netlify
+## Regenerating the archive
 
+```bash
+yarn snapshot         # rebuild snapshot/mainnet.json from chain + IPFS
+yarn snapshot:media   # re-download and re-verify public/media/**
+yarn snapshot --verify  # re-derive the chain half and diff against what's committed
+yarn snapshot:probe   # report which IPFS CIDs still resolve, and from where
+```
+
+## Code structure
+
+- `snapshot/` — `mainnet.json`, the single source of truth for every page
+- `scripts/snapshot/` — the offline pipeline that produces it (plain CommonJS, never bundled)
+- `lib/` — snapshot access (`snapshot.js`), the Zora data shim (`zora-shim.js`), site copy
+- `components/nft-data/` — the bridge between the snapshot and `@zoralabs/nft-components`
+- `components/` — everything else on the site
+- `scss/` — stylesheets, including the `.zora-*` overrides the Zora components depend on
+- `public/media/` — the verified artwork and metadata
+- `pages/` — Next.js pages
+
+`CLAUDE.md` has the detail, including why the Zora components are still installed and what it
+would take to remove them.

@@ -109,15 +109,6 @@
     display: flex;
     align-items: center;
   }
-  &-fullPlaceOfferButton {
-    margin-top: -3rem;
-    .zora-button {
-      font-size: var(--text-04);
-      max-width: 28rem!important;
-      height: 5rem;
-      text-align: center;
-    }
-  }
   &-fullInfoProofAuthenticityContainer {
     display: flex;
     flex-direction: column;
